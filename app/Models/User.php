@@ -20,6 +20,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'usn',
+        'semester',
+        'branch',
+        'phone',
+        'role',
+        'image',
+        'is_alumini',
+        'is_admin',
+        'is_verified',
     ];
 
     /**
@@ -42,6 +51,15 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean',
+            'is_verified' => 'boolean',
+            'is_alumini' => 'boolean',
         ];
     }
+
+    public function eventRegistrations()
+    {
+        return $this->hasMany(EventRegisteraion::class);
+    }
+    
 }

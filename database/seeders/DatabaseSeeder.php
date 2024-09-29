@@ -19,6 +19,16 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => bcrypt('admin'),
+            'is_admin' =>true,
+            'is_verified' => 1,
+            'usn' => '4JK21CS001',
+            'semester' => '5',
+            'branch' => 'CSE',
+            'phone' => '9876543210',
+            'role' => 'core_member',
+            'image' => 'https://ui-avatars.com/api/?name=admin&color=7F9CF5&background=EBF4FF',
+            'is_alumini' => 0,
+
         ]);
     }
 }
