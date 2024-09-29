@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'branch' => 'CSE',
             'phone' => '9876542210',
             'role' => 'core_member',
-            'image' => 'https://ui-avatars.com/api/?name=admin&color=7F9CF5&background=EBF4FF',
+            'image' => 'https://ui-avatars.com/api/?name=test&color=7F9CF5&background=EBF4FF',
             'is_alumini' => false,
 
         ]);
