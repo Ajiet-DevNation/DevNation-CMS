@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('phone')->unique()->nullable();
             $table->enum('role', ['core_member', 'member', 'cordinator'])->nullable();
             $table->string('image')->nullable();
-            $table->boolean('is_alumini')->default(0);
+            $table->boolean('is_alumini')->default(false);
             $table->boolean('is_admin')->default(false);
-            $table->boolean('is_verified')->default(0);
+            $table->boolean('is_verified')->default(false);
         });
     }
 
