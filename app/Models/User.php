@@ -19,7 +19,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = ['name', 'email', 'password', 'usn', 'semester', 'branch', 'phone', 'role', 'image', 'is_alumini', 'is_admin', 'is_verified',
+    protected $fillable = ['name', 'email', 'password', 'usn', 'semester', 'branch', 'phone', 'role', 'image', 'is_alumini',
+     'is_admin', 'is_verified',
     ];
 
     /**
@@ -84,4 +85,13 @@ class User extends Authenticatable
         $this->record->notify(new UserNotification($this->record));
     }
     
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function college()
+    {
+        return $this->belongsTo(College::class);
+    }
 }

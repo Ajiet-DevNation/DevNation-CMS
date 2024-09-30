@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Branch;
+use App\Models\College;
+use App\Models\Role;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,34 +18,35 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        College::factory()->create([
+            'name' => 'College of Engineering, Pune',
+            'city' => 'Pune',
+            'state' => 'Maharashtra',
+            'country' => 'India',
+        ]);
+
+        Branch::factory()->create([
+            'name' => 'Computer Science',
+            'slug' => 'CS',
+        ]);
+
+        Role::factory()->create([
+            'name' => 'admin',
+        ]);
+
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => bcrypt('admin'),
             'is_admin' =>true,
             'is_verified' => true,
-            'usn' => '4JK21CS001',
+            'is_alumini' => false,
+            'branch_id' => Branch::first()->id,
+            'college_id' => College::first()->id,
+            'role_id' => Role::first()->id,
+            'usn' => '4JK21CS016',
             'semester' => '5',
-            'branch' => 'CSE',
-            'phone' => '9876543210',
-            'role' => 'core_member',
-            'image' => 'https://ui-avatars.com/api/?name=admin&color=7F9CF5&background=EBF4FF',
-            'is_alumini' => false,
-
-        ]);
-        User::factory()->create([
-            'name' => 'test',
-            'email' => 'test@test.com',
-            'password' => bcrypt('test'),
-            'is_admin' =>false,
-            'is_verified' => false,
-            'usn' => '4JK21CS002',
-            'semester' => '6',
-            'branch' => 'CSE',
-            'phone' => '9876542210',
-            'role' => 'core_member',
-            'image' => 'https://ui-avatars.com/api/?name=test&color=7F9CF5&background=EBF4FF',
-            'is_alumini' => false,
+            'phone' => '1234567890',
 
         ]);
     }
