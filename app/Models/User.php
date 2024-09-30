@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Notifications\UserNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -75,6 +77,11 @@ class User extends Authenticatable
                 Storage::disk('public')->delete($user->image);
             }
         });
+    }
+
+    protected function afterCreate(): void
+    {
+        $this->record->notify(new UserNotification($this->record));
     }
     
 }
