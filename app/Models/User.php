@@ -19,7 +19,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = ['name', 'email', 'password', 'usn', 'semester', 'branch', 'phone', 'role', 'image', 'is_alumini',
+    protected $fillable = ['name', 'email', 'password', 'usn', 'semester', 'branch_id', 'college_id', 'phone', 'role_id', 'image', 'is_alumini',
      'is_admin', 'is_verified',
     ];
 
@@ -93,5 +93,10 @@ class User extends Authenticatable
     public function college()
     {
         return $this->belongsTo(College::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
     }
 }

@@ -25,28 +25,14 @@ class CreateUser extends CreateRecord
                 TextInput::make('name')->label('Name')->required(),
                 TextInput::make('email')->label('Email')->email()->required(),
                 TextInput::make('phone')->label('Phone')->required(),
-                Select::make('role')->label('Role')->options([
-                    'core_member' => 'Core Member',
-                    'cordinator' => 'Cordinator',
-                    'member' => 'Member',
-                ])->required()->default('member'),
+                Select::make('role_id')->label('Role')->relationship('role', 'name')->required(),
             ])->columns(2),
             Step::make('Academic Information')->schema([
                 FileUpload::make('image')->label('Image')->image()->required()->acceptedFileTypes(['image/*'])->columnSpanFull()
                     ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))->imageEditor()
                     ->directory('users')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
-                Select::make('branch')->label('Branch')->required()->options([
-                    'CSE' => 'Computer Science and Engineering',
-                    'ISE' => 'Information Science and Engineering',
-                    'ECE' => 'Electronics and Communication Engineering',
-                    'EEE' => 'Electrical and Electronics Engineering',
-                    'ME' => 'Mechanical Engineering',
-                    'CE' => 'Civil Engineering',
-                    'AE' => 'Aeronautical Engineering',
-                    'EIE' => 'Electronics and Instrumentation Engineering',
-                    'MCA' => 'Master of Computer Applications',
-                    'MBA' => 'Master of Business Administration',
-                ]),
+                Select::make('branch_id')->label('Branch')->required()->relationship('branch', 'name'),
+                Select::make('college_id')->label('College')->required()->relationship('college', 'name'),
                 TextInput::make('usn')->required()
                     ->rules(['regex:/^[0-9]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/'])
                     ->validationAttribute('USN')->unique(ignoreRecord: true)
