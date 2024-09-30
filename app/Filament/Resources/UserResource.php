@@ -44,26 +44,14 @@ class UserResource extends Resource
             ->schema([
                 Section::make('User Information')->schema([
                     FileUpload::make('image')->image()->columnSpanFull()->acceptedFileTypes(['image/*'])
-                    ->deleteUploadedFileUsing(fn ($file) => Storage::disk('public')->delete($file))
-                    ->directory('users') ->uploadingMessage('Uploading attachment...')->downloadable()->preserveFilenames()->openable(),
+                        ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
+                        ->directory('users')->uploadingMessage('Uploading attachment...')->downloadable()->preserveFilenames()->openable(),
                     TextInput::make('name')->required(),
                     TextInput::make('email')->email()->required()->maxLength(255)->unique(ignoreRecord: true),
                     TextInput::make('phone')->required()->maxLength(255)->unique(ignoreRecord: true),
-                    Select::make('role')->options([
-                        'core_member' => 'Core Member',
-                        'cordinator' => 'Cordinator',
-                        'member' => 'Member',
-                    ])->required()->default('member'),
-                    Select::make('branch')->required()->options([
-                        'CSE' => 'Computer Science and Engineering',
-                        'ISE' => 'Information Science and Engineering',
-                        'ECE' => 'Electronics and Communication Engineering',
-                        'ME' => 'Mechanical Engineering',
-                        'CV' => 'Civil Engineering',
-                        'AIDS' => 'Artificial Intelligence and Data Science',
-                        'ICB' => 'IoT, Cyber Security and Blockchain',
-                        'AIML' => 'Artificial Intelligence and Machine Learning',
-                    ]),
+                    Select::make('role')->required()->relationship('role', 'name'),
+                    Select::make('branch')->required()->relationship('branch', 'name'),
+                    Select::make('college')->required()->relationship('college', 'name'),
                     Select::make('semester')->options([
                         '1' => '1',
                         '2' => '2',
@@ -74,18 +62,18 @@ class UserResource extends Resource
                         '7' => '7',
                         '8' => '8',
                     ])->required()->default('1'),
-                    TextInput::make('password')->required()->required(fn(Page $livewire): bool => $livewire instanceof CreateRecord)
-                        ->password()->placeholder('********')->dehydrated(fn($state) => filled($state)),
                     TextInput::make('usn')->required()
                         ->rules(['regex:/^[0-9]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/'])
                         ->validationAttribute('USN')->unique(ignoreRecord: true)
                         ->helperText('Ex: 4JK21CS016'),
                 ])->columns(2)->collapsible(),
                 Section::make('Permission and Roles')->schema([
+                    TextInput::make('password')->required()->required(fn(Page $livewire): bool => $livewire instanceof CreateRecord)
+                        ->password()->placeholder('********')->dehydrated(fn($state) => filled($state)),
                     Toggle::make('is_alumini')->default(false),
                     Toggle::make('is_admin')->default(false),
                     Toggle::make('is_verified')->default(false),
-                ])->columns(3)->collapsible(),
+                ])->columns(2)->collapsible(),
             ]);
     }
 
@@ -97,13 +85,14 @@ class UserResource extends Resource
                 TextColumn::make('name')->searchable()->sortable(),
                 TextColumn::make('email')->searchable()->sortable(),
                 TextColumn::make('phone')->searchable()->sortable(),
-                IconColumn::make('is_verified')->boolean(),
                 // ->icon(fn (User $user) => $user->is_verified ? 'heroicon-s-check-circle' : 'heroicon-s-x-circle')
                 // ->label(fn (User $user) => $user->is_verified ? 'Verified' : 'Not Verified'),
-                TextColumn::make('role')->searchable()->sortable(),
-                TextColumn::make('branch')->searchable()->sortable(),
+                TextColumn::make('role.name')->searchable()->sortable(),
+                TextColumn::make('college.name')->searchable()->sortable(),
+                TextColumn::make('branch.name')->searchable()->sortable(),
                 TextColumn::make('semester')->searchable()->sortable(),
-                IconColumn::make('is_alumini')->boolean(),
+                IconColumn::make('is_verified')->boolean()->toggleable(true),
+                IconColumn::make(name: 'is_alumini')->boolean()->toggleable(true),
                 IconColumn::make('is_admin')->boolean(),
             ])
             ->filters([
