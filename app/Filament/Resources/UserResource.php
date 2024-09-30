@@ -7,7 +7,14 @@ use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Pages\Page;
+use Filament\Resources\Pages\CreateRecord;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
@@ -34,7 +41,48 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Section::make('User Information')->schema([
+                    FileUpload::make('image')->image()->required()->columnSpanFull(),
+                    TextInput::make('name')->required(),
+                    TextInput::make('email')->email()->required()->maxLength(255)->unique(ignoreRecord: true),
+                    TextInput::make('phone')->required()->maxLength(255)->unique(ignoreRecord: true),
+                    Select::make('role')->options([
+                        'core_member' => 'Core Member',
+                        'cordinator' => 'Cordinator',
+                        'member' => 'Member',
+                    ])->required()->default('member'),
+                    Select::make('branch')->required()->options([
+                        'CSE' => 'Computer Science and Engineering',
+                        'ISE' => 'Information Science and Engineering',
+                        'ECE' => 'Electronics and Communication Engineering',
+                        'ME' => 'Mechanical Engineering',
+                        'CV' => 'Civil Engineering',
+                        'AIDS' => 'Artificial Intelligence and Data Science',
+                        'ICB' => 'IoT, Cyber Security and Blockchain',
+                        'AIML' => 'Artificial Intelligence and Machine Learning',
+                    ]),
+                    Select::make('semester')->options([
+                        '1' => '1',
+                        '2' => '2',
+                        '3' => '3',
+                        '4' => '4',
+                        '5' => '5',
+                        '6' => '6',
+                        '7' => '7',
+                        '8' => '8',
+                    ])->required()->default('1'),
+                    TextInput::make('password')->required()->required(fn(Page $livewire): bool => $livewire instanceof CreateRecord)
+                        ->password()->placeholder('********')->dehydrated(fn($state) => filled($state)),
+                    TextInput::make('usn')->required()
+                        ->rules(['regex:/^[0-9]{1}[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/'])
+                        ->validationAttribute('USN')->unique(ignoreRecord: true)
+                        ->helperText('Ex: 4JK21CS016'),
+                ])->columns(2)->collapsible(),
+                Section::make('Permission and Roles')->schema([
+                    Toggle::make('is_alumini')->default(false),
+                    Toggle::make('is_admin')->default(false),
+                    Toggle::make('is_verified')->default(false),
+                ])->columns(3)->collapsible(),
             ]);
     }
 
@@ -47,8 +95,8 @@ class UserResource extends Resource
                 TextColumn::make('email')->searchable()->sortable(),
                 TextColumn::make('phone')->searchable()->sortable(),
                 IconColumn::make('is_verified')->boolean(),
-                    // ->icon(fn (User $user) => $user->is_verified ? 'heroicon-s-check-circle' : 'heroicon-s-x-circle')
-                    // ->label(fn (User $user) => $user->is_verified ? 'Verified' : 'Not Verified'),
+                // ->icon(fn (User $user) => $user->is_verified ? 'heroicon-s-check-circle' : 'heroicon-s-x-circle')
+                // ->label(fn (User $user) => $user->is_verified ? 'Verified' : 'Not Verified'),
                 TextColumn::make('role')->searchable()->sortable(),
                 TextColumn::make('branch')->searchable()->sortable(),
                 TextColumn::make('semester')->searchable()->sortable(),
@@ -69,7 +117,7 @@ class UserResource extends Resource
                     'ECE' => 'ECE',
                     'ME' => 'ME',
                     'CV' => 'CV',
-                    'AIDS' => 'AIDS',  
+                    'AIDS' => 'AIDS',
                     'ICB' => 'ICB',
                     'AIML' => 'AIML',
                 ])->label('Branch'),
