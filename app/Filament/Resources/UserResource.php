@@ -30,6 +30,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class UserResource extends Resource
 {
@@ -42,7 +43,9 @@ class UserResource extends Resource
         return $form
             ->schema([
                 Section::make('User Information')->schema([
-                    FileUpload::make('image')->image()->required()->columnSpanFull(),
+                    FileUpload::make('image')->image()->columnSpanFull()->acceptedFileTypes(['image/*'])
+                    ->deleteUploadedFileUsing(fn ($file) => Storage::disk('public')->delete($file))
+                    ->directory('users'),
                     TextInput::make('name')->required(),
                     TextInput::make('email')->email()->required()->maxLength(255)->unique(ignoreRecord: true),
                     TextInput::make('phone')->required()->maxLength(255)->unique(ignoreRecord: true),
