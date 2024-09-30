@@ -45,7 +45,7 @@ class UserResource extends Resource
                 Section::make('User Information')->schema([
                     FileUpload::make('image')->image()->columnSpanFull()->acceptedFileTypes(['image/*'])
                     ->deleteUploadedFileUsing(fn ($file) => Storage::disk('public')->delete($file))
-                    ->directory('users'),
+                    ->directory('users') ->uploadingMessage('Uploading attachment...')->downloadable()->preserveFilenames()->openable(),
                     TextInput::make('name')->required(),
                     TextInput::make('email')->email()->required()->maxLength(255)->unique(ignoreRecord: true),
                     TextInput::make('phone')->required()->maxLength(255)->unique(ignoreRecord: true),
