@@ -21,8 +21,14 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class BranchResource extends Resource
 {
     protected static ?string $model = Branch::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-identification';
+    protected static ?string $navigationGroup = 'Institution Management';
+    protected static ?string $navigationLabel = 'Branches';
+    protected static ?string $navigationBadgeTooltip = 'The number of branches';
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {

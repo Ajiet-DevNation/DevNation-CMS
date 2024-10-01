@@ -26,6 +26,15 @@ class RoleResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-flag';
 
+    protected static ?string $navigationGroup = 'Role Management';
+    protected static ?string $navigationLabel = 'Role';
+    protected static ?string $navigationBadgeTooltip = 'The number of roles';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
