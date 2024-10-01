@@ -59,6 +59,7 @@ class AdminPanelProvider extends PanelProvider
                 VerifyAdmin::class,
             ])->brandLogo(asset('images/logo-dark.png'))
             ->brandName('DevNation')
-            ->brandLogoHeight('2rem')->favicon(asset('images/logo.png'));
+            ->brandLogoHeight('2rem')->favicon(asset('images/logo.png'))
+            ->sidebarCollapsibleOnDesktop();
     }
 }
