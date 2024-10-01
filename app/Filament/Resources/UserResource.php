@@ -38,6 +38,19 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
+    protected static ?string $navigationGroup = 'User Management';
+    protected static ?string $navigationLabel = 'Community Members';
+
+    // protected static ?string $activeNavigationIcon = 'heroicon-o-document-text';
+
+    protected static ?string $navigationBadgeTooltip = 'The number of users';
+
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -91,8 +104,8 @@ class UserResource extends Resource
                 TextColumn::make('college.name')->searchable()->sortable(),
                 TextColumn::make('branch.name')->searchable()->sortable(),
                 TextColumn::make('semester')->searchable()->sortable(),
-                IconColumn::make('is_verified')->boolean()->toggleable(true),
-                IconColumn::make(name: 'is_alumini')->boolean()->toggleable(true),
+                IconColumn::make('is_verified')->boolean()->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make(name: 'is_alumini')->boolean()->toggleable(isToggledHiddenByDefault: true),
                 IconColumn::make('is_admin')->boolean(),
             ])
             ->filters([
