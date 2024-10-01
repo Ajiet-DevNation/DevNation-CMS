@@ -26,6 +26,15 @@ class CollegeResource extends Resource
     protected static ?string $model = College::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-building-library';
+    protected static ?string $navigationGroup = 'Institution Management';
+    protected static ?string $navigationLabel = 'College';
+    protected static ?string $navigationBadgeTooltip = 'The number of colleges';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
 
     public static function form(Form $form): Form
     {
