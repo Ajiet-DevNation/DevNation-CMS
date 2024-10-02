@@ -19,15 +19,28 @@ use Filament\Tables;
 use Filament\Tables\Actions\BulkActionGroup;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
 
 class EventsResource extends Resource
 {
     protected static ?string $model = Events::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Event Management';
+    protected static ?string $navigationLabel = 'Events';
+
+    // protected static ?string $activeNavigationIcon = 'heroicon-o-document-text';
+    protected static ?string $navigationBadgeTooltip = 'The number of events';
+
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
@@ -45,7 +58,9 @@ class EventsResource extends Resource
                         'hackathon' => 'Hackathon',
                     ])->required()->default('workshop'),
                     RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
-                    FileUpload::make('banner')->required()->label('Event Banner'),
+                    FileUpload::make('banner')->required()->label('Event Banner')->image()->acceptedFileTypes(['image/*'])
+                    ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
+                    ->directory('events')->downloadable()->preserveFilenames()->openable(),
                     TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
                     Select::make('status')->options([
                         'draft' => 'Draft',
@@ -76,7 +91,22 @@ class EventsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->label('Event Name')->searchable()->sortable(),
+                TextColumn::make('event_type')->label('Event Type')->searchable()->sortable(),
+                TextColumn::make('location')->label('Location')->searchable()->sortable(),
+                TextColumn::make('status')->label('Status')->searchable()->sortable(),
+                TextColumn::make('max_attendees')->label('Max Attendees')->searchable()->sortable(),
+                TextColumn::make('start_date')->label('Start Date')->searchable()->sortable(),
+                TextColumn::make('end_date')->label('End Date')->searchable()->sortable(),
+                TextColumn::make('speaker')->label('Speaker')->searchable()->sortable(),
+                TextColumn::make('speaker_mail')->label('Speaker Email')->searchable()->sortable(),
+                TextColumn::make('is_featured')->label('Featured')->searchable()->sortable(),
+                TextColumn::make('requires_registration')->label('Requires Registration')->searchable()->sortable(),
+                TextColumn::make('has_certificate')->label('Has Certificate')->searchable()->sortable(),
+                TextColumn::make('notify_attendees')->label('Notify Attendees')->searchable()->sortable(),
+                TextColumn::make('notify_attendance')->label('Notify Attendance')->searchable()->sortable(),
+                TextColumn::make('created_at')->label('Created At')->searchable()->sortable(),
+                TextColumn::make('updated_at')->label('Updated At')->searchable()->sortable(),
             ])
             ->filters([
                 //
