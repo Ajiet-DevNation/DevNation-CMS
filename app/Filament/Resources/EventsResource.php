@@ -43,31 +43,32 @@ class EventsResource extends Resource
                         'expo' => 'Expo',
                         'meetup' => 'Meetup',
                         'hackathon' => 'Hackathon',
-                        ])->required()->default('workshop'),
-                        RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
-                        FileUpload::make('banner')->required()->label('Event Banner'),
-                        TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
+                    ])->required()->default('workshop'),
+                    RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
+                    FileUpload::make('banner')->required()->label('Event Banner'),
+                    TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
+                    Select::make('status')->options([
+                        'draft' => 'Draft',
+                        'published' => 'Published',
+                        'cancelled' => 'Cancelled',
+                    ])->required()->default('draft'),
+                    TextInput::make('max_attendees')->required()->label('Max Attendees')->placeholder('Enter the maximum number of attendees'),
                 ])->columns(2)->collapsible(),
                 Section::make('Speaker Information')->schema([
                     TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
                     TextInput::make('speaker_mail')->required()->label('Speaker Email')->placeholder('Enter the speaker email'),
-                ])->columns(2)->collapsible(),  
-                TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
-                TextInput::make('speaker_mail')->required()->label('Speaker Email')->placeholder('Enter the speaker email'),
-                Select::make('status')->options([
-                    'draft' => 'Draft',
-                    'published' => 'Published',
-                    'cancelled' => 'Cancelled',
-                ])->required()->default('draft'),
-                TextInput::make('max_attendees')->required()->label('Max Attendees')->placeholder('Enter the maximum number of attendees'),
-                ToggleButtons::make('is_featured')->label('is Featured?')->boolean()->grouped()->default(false),
-                ToggleButtons::make('requires_registration')->label('Requires Registration?')->boolean()->grouped()->default(false),
-                ToggleButtons::make('has_certificate')->label('Has Certificate?')->boolean()->grouped()->default(false),
-                ToggleButtons::make('notify_attendees')->label('Notify Attendees?')->boolean()->grouped()->default(false),
-                ToggleButtons::make('notify_attendance')->label('Notify Attendance?')->boolean()->grouped()->default(false),
+                ])->columns(2)->collapsible(),
+                Section::make('Event Settings')->schema([
+                    ToggleButtons::make('is_featured')->label('is Featured?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('requires_registration')->label('Requires Registration?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('has_certificate')->label('Has Certificate?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('notify_attendees')->label('Notify Attendees?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('notify_attendance')->label('Notify Attendance?')->boolean()->grouped()->default(false),
+                    ])->columns(5)->collapsible(),
+                Section::make('Event Dates')->schema([
                 DatePicker::make('start_date')->required()->label('Start Date')->placeholder('Select the start date')->default(now()),
                 DatePicker::make('end_date')->required()->label('End Date')->placeholder('Select the end date')->default(now()),
-
+                ])->columns(2)->collapsible(),
             ]);
     }
 
