@@ -422,18 +422,7 @@
                                                             href="shop-checkout.html">Checkout</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown dropdown-submenu dropend"><a
-                                                    class="dropdown-item dropdown-toggle" href="#"
-                                                    data-bs-toggle="dropdown">Contact</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="contact.html">Contact I</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="contact2.html">Contact II</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="contact3.html">Contact III</a></li>
-                                                </ul>
-                                            </li>
+                                            <li class="nav-item"><a class="dropdown-item" href="{{route('contact')}}">Contact</a></li>
                                             <li class="dropdown dropdown-submenu dropend"><a
                                                     class="dropdown-item dropdown-toggle" href="#"
                                                     data-bs-toggle="dropdown">Career</a>

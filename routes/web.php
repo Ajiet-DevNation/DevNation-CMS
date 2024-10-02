@@ -9,3 +9,8 @@ Route::get('/', function () {
 Route::get('/events', function () {
     return view('pages.events');
 })->name('events');
+
+Route::get('/contacts', function () {
+    return view('pages.contact');
+})->name('contact');
+
