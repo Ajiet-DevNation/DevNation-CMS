@@ -4975,7 +4975,7 @@ fieldset:disabled .btn {
     font-weight: 700 !important;
     content: "";
     border: 0;
-    content: "\e844";
+    content: "\e82d";
 }
 .dropdown-toggle:empty::after {
     margin-left: 0;
@@ -33138,9 +33138,9 @@ button.hamburger:before {
     align-items: center;
     padding-right: 0.5rem;
     color: rgba(96, 105, 123, 0.35);
-    content: "\e931";
+    content: "\e830";
     margin-top: -1px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .breadcrumb.text-white .breadcrumb-item.active,
 .breadcrumb.text-white .breadcrumb-item:hover {
