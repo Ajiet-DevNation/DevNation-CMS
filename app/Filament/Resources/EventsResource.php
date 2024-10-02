@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\ToggleButtons;
@@ -32,19 +33,25 @@ class EventsResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required()->label('Event Name')->placeholder('Enter the event name'),
-                Select::make('event_type')->options([
-                    'workshop' => 'Workshop',
-                    'webinar' => 'Webinar',
-                    'seminar' => 'Seminar',
-                    'conference' => 'Conference',
-                    'expo' => 'Expo',
-                    'meetup' => 'Meetup',
-                    'hackathon' => 'Hackathon',
-                ])->required()->default('workshop'),
-                RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
-                FileUpload::make('banner')->required()->label('Event Banner'),
-                TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
+                Section::make('Event Information')->schema([
+                    TextInput::make('name')->required()->label('Event Name')->placeholder('Enter the event name'),
+                    Select::make('event_type')->options([
+                        'workshop' => 'Workshop',
+                        'webinar' => 'Webinar',
+                        'seminar' => 'Seminar',
+                        'conference' => 'Conference',
+                        'expo' => 'Expo',
+                        'meetup' => 'Meetup',
+                        'hackathon' => 'Hackathon',
+                        ])->required()->default('workshop'),
+                        RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
+                        FileUpload::make('banner')->required()->label('Event Banner'),
+                        TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
+                ])->columns(2)->collapsible(),
+                Section::make('Speaker Information')->schema([
+                    TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
+                    TextInput::make('speaker_mail')->required()->label('Speaker Email')->placeholder('Enter the speaker email'),
+                ])->columns(2)->collapsible(),  
                 TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
                 TextInput::make('speaker_mail')->required()->label('Speaker Email')->placeholder('Enter the speaker email'),
                 Select::make('status')->options([
