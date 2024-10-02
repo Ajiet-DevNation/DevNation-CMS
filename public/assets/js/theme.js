@@ -786,7 +786,7 @@ var theme = {
               if(isContactForm) {
                 var data = new FormData(form);
                 var alertClass = 'alert-danger';
-                fetch("assets/php/contact.html", {
+                fetch("assets/php/contact.php", {
                   method: "post",
                   body: data
                 }).then((data) => {
