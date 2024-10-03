@@ -16,7 +16,7 @@
 <div align="center">
 
 <a href="https://github.com/Ajiet-DevNation/DevNation-CMS/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Ajiet-DevNation/DevNation-CMS" />
+  <img src="https://contrib.rocks/image?repo=Ajiet-DevNation/DevNation-CMS" /> 
 </a>
   
 </div>
