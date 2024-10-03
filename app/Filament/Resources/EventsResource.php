@@ -29,7 +29,7 @@ class EventsResource extends Resource
 {
     protected static ?string $model = Events::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
     protected static ?string $navigationGroup = 'Event Management';
     protected static ?string $navigationLabel = 'Events';
 
