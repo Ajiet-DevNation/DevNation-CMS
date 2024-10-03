@@ -1,7 +1,7 @@
 # Setup Guide for DevNation CMS
 
 <p align="center">
-     <img src="https://github.com/user-attachments/assets/5121ff55-079b-4393-9588-0cf2d2790909"> 
+     <img src="https://github.com/user-attachments/assets/03765de4-b19f-42a9-9508-3b0dd087f40a"> 
 </p>
 
 ## Overview
@@ -127,6 +127,19 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
     node -v
     ```
   - If it's outdated, consider updating Node.js.
+
+- **Error**: `laravel\framework` ![Error Screenshot](https://github.com/user-attachments/assets/8f111bb8-6714-4b4b-945e-0e2381ec5e91)  
+  - If your project encounters this type of error, navigate to the installed PHP directory and open the `php.ini` file. Make the following changes:
+    ```bash
+    ;extension=intl   # Change this line to:
+    extension=intl
+
+    ;extension=fileinfo  # Change this line to:
+    extension=fileinfo
+    ```
+
+- **Error**: `Composer certificate error` ![Error Screenshot](https://github.com/user-attachments/assets/c79ca3de-dcb7-4111-ac90-ec1fa8b87bc1)  
+  - To resolve this error, reinstall Composer from the [official Composer website](https://getcomposer.org/download/). Additionally, ensure you download the latest version of PHP from the [official PHP website](https://www.php.net/downloads) and update your environment variables accordingly.
 
 ## Conclusion
 
