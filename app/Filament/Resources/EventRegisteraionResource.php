@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\EventRegisteraionResource\Pages;
 use App\Filament\Resources\EventRegisteraionResource\RelationManagers;
 use App\Models\EventRegisteraion;
+use BladeUI\Icons\Components\Icon;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -12,6 +13,15 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\SelectColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -22,6 +32,13 @@ class EventRegisteraionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
     protected static ?string $modelLabel = 'Registeration';
+    protected static ?string $navigationGroup = 'Event Management';
+
+    protected static ?string $navigationBadgeTooltip = 'The number of registerations';
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
@@ -42,17 +59,29 @@ class EventRegisteraionResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('user.name')->label('User')->searchable()->sortable(),
+                TextColumn::make('event.name')->label('Event')->searchable()->sortable(),
+                SelectColumn::make('status')->options([
+                    'pending' => 'Pending',
+                    'success' => 'Success',
+                    'rejected' => 'Rejected',
+                ])->label('Status')->sortable(),
+                IconColumn::make('attended')->label('Attended')->boolean(),    
+
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ActionGroup::make([
+                    ViewAction::make(),
+                    EditAction::make(),
+                    DeleteAction::make(),
+                ]),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
