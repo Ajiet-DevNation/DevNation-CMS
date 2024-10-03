@@ -1,4 +1,4 @@
-<h1 align="center" >DevNation CMS - Hacktoberfest 2024</h1>
+<h1 align="center">DevNation CMS - Hacktoberfest 2024</h1>
 
 <p align="center">
      <img src="https://github.com/user-attachments/assets/5121ff55-079b-4393-9588-0cf2d2790909"> 
@@ -14,11 +14,9 @@
 ## Contributors of `Hacktoberfest 2024`
 
 <div align="center">
-
 <a href="https://github.com/Ajiet-DevNation/DevNation-CMS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Ajiet-DevNation/DevNation-CMS" /> 
 </a>
-  
 </div>
 
 # What is Hacktoberfest?
@@ -34,15 +32,17 @@ This is a community level open-source project that serves as a CMS(Content Manag
 We welcome all contributions, suggestions & ideas for improvement from the community.
 You can contribute by assigning the issue and fix or upgrade the task mentioned in issue.
 
-## First star the repository
+## First, star the repository
 
-### Pre-Requistes 
+### Pre-Requisites 
 
-- GitHub Account - [click here to create account](https://github.com/join)
+- **GitHub Account** - [Click here to create an account](https://github.com/join)
+- **Visual Studio Code** or any other code editor - [Click here to download](https://code.visualstudio.com/download)
+- **Git version control** - [Click here to download](https://git-scm.com/downloads)
 
-- Visual Studio Code or any other code editor - [click here to download](https://code.visualstudio.com/download)
+#### Fork the repository
+- Fork the repository by clicking [here](https://github.com/Ajiet-DevNation/DevNation-CMS/fork).
+- Before contributing, please refer to the `contribution.md` file for the rules and regulations of contributing to the project.
 
-- Git version control - [click here to download](https://git-scm.com/downloads)
-
-
-#### Fork the repository [click here](https://github.com/Ajiet-DevNation/DevNation-CMS/fork)
+#### Setup Instructions
+- After forking the repository, clone it to your local machine and follow the setup instructions in the repository `Setup.md`. Make sure to check the setup thoroughly for any additional configurations or dependencies needed to get started!
