@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\EventsResource\Pages;
 use App\Filament\Resources\EventsResource\RelationManagers;
+use App\Filament\Resources\EventsResource\RelationManagers\EventRegistrationsRelationManager;
 use App\Models\Events;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
