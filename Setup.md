@@ -105,6 +105,9 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
 
 ## Common Errors and Troubleshooting
 
+<details>
+  <summary>Click to expand Common Errors and Troubleshooting</summary>
+
 - **Error: `Failed to connect to database`**
   - Ensure your database credentials in the `.env` file are correct. Verify that the database you specified exists and that the username and password are accurate.
 
@@ -143,6 +146,8 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
 
 - **Error**: `Composer certificate error` ![Error Screenshot](https://github.com/user-attachments/assets/c79ca3de-dcb7-4111-ac90-ec1fa8b87bc1)  
   - To resolve this error, reinstall Composer from the [official Composer website](https://getcomposer.org/download/). Additionally, ensure you download the latest version of PHP from the [official PHP website](https://www.php.net/downloads) and update your environment variables accordingly.
+
+</details>
 
 ## Conclusion
 
