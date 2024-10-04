@@ -14,3 +14,7 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::get('/profile',function(){
+    return view('pages.profile');
+})->name('profile');
+
