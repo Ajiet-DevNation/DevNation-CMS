@@ -136,6 +136,9 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
 
     ;extension=fileinfo  # Change this line to:
     extension=fileinfo
+
+    ;extension=exe  # Change this line to:
+    extension=exe
     ```
 
 - **Error**: `Composer certificate error` ![Error Screenshot](https://github.com/user-attachments/assets/c79ca3de-dcb7-4111-ac90-ec1fa8b87bc1)  
