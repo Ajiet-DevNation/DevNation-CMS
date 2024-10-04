@@ -1,7 +1,7 @@
 # Setup Guide for DevNation CMS
 
 <p align="center">
-     <img src="https://github.com/user-attachments/assets/03765de4-b19f-42a9-9508-3b0dd087f40a"> 
+  <img src="https://github.com/user-attachments/assets/03765de4-b19f-42a9-9508-3b0dd087f40a"> 
 </p>
 
 ## Overview
@@ -123,6 +123,10 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
     composer --version
     ```
   - If it’s not recognized, revisit the [Composer installation guide](https://getcomposer.org/download/) to resolve any issues.
+  - Another potential reason could be missing PHP extensions, like `mbstring` or `openssl`. Install the required extensions for your OS:
+    ```bash
+    sudo apt-get install php-mbstring php-xml php-zip
+    ```
 
 - **Error: `npm install failed`** (if applicable)
   - If your project has a `package.json` file and you need to install JavaScript dependencies, ensure you have Node.js and npm installed. Check the Node.js version by running:
@@ -131,21 +135,77 @@ To run Laravel applications locally, you can use either XAMPP or WAMP as your PH
     ```
   - If it's outdated, consider updating Node.js.
 
-- **Error**: `laravel\framework` ![Error Screenshot](https://github.com/user-attachments/assets/8f111bb8-6714-4b4b-945e-0e2381ec5e91)  
-  - If your project encounters this type of error, navigate to the installed PHP directory and open the `php.ini` file. Make the following changes:
+- **Error: `PHP version compatibility`**
+  - The project may require a specific PHP version. Check the required version in the `composer.json` file under the `"php":` key and make sure your local PHP version matches.
+    - To check your PHP version, run:
+      ```bash
+      php -v
+      ```
+    - If the version is outdated, update your PHP to the latest stable version or the required version for the project. On Ubuntu, you can run:
+      ```bash
+      sudo add-apt-repository ppa:ondrej/php
+      sudo apt-get update
+      sudo apt-get install php7.4
+      ```
+
+- **Error: `Laravel Framework not detected`**  ![Error Screenshot](https://github.com/user-attachments/assets/8f111bb8-6714-4b4b-945e-0e2381ec5e91)  
+
+  - If the error mentions something like `laravel/framework` is missing, it might be due to missing or incomplete Composer installation. Run:
     ```bash
-    ;extension=intl   # Change this line to:
-    extension=intl
-
-    ;extension=fileinfo  # Change this line to:
-    extension=fileinfo
-
-    ;extension=exe  # Change this line to:
-    extension=exe
+    composer install
+    ```
+  - If that fails, try manually requiring the Laravel framework in your project using:
+    ```bash
+    composer require laravel/framework
     ```
 
-- **Error**: `Composer certificate error` ![Error Screenshot](https://github.com/user-attachments/assets/c79ca3de-dcb7-4111-ac90-ec1fa8b87bc1)  
+- **Error: `php.ini configuration issues`**
+  - If certain PHP extensions are not enabled, it can lead to issues with Composer and PHP scripts.
+    - Open the `php.ini` file (located in your PHP installation folder) and ensure the following extensions are uncommented:
+      ```bash
+      ;extension=intl   # Change this line to:
+      extension=intl
+
+      ;extension=fileinfo  # Change this line to:
+      extension=fileinfo
+
+      ;extension=zip  # Change this line to:
+      extension=zip
+      ```
+
+- **Error: `php.ini post_max_size` and `upload_max_filesize`**
+  - If you're uploading files and encounter errors due to file size limits, adjust these values in your `php.ini` file:
+    ```bash
+    post_max_size = 100M
+    upload_max_filesize = 100M
+    ```
+
+- **Error: `Class 'PDO' not found`**
+  - This error indicates that the `pdo_mysql` extension is not enabled in your PHP configuration. To enable it:
+    1. Open your `php.ini` file.
+    2. Search for `;extension=pdo_mysql` and remove the semicolon (`;`) at the beginning of the line.
+
+- **Error: `Composer certificate error`** ![Error Screenshot](https://github.com/user-attachments/assets/c79ca3de-dcb7-4111-ac90-ec1fa8b87bc1)  
   - To resolve this error, reinstall Composer from the [official Composer website](https://getcomposer.org/download/). Additionally, ensure you download the latest version of PHP from the [official PHP website](https://www.php.net/downloads) and update your environment variables accordingly.
+  - Another potential issue could be missing OpenSSL on your system. Ensure it's installed:
+    - On Ubuntu:
+      ```bash
+      sudo apt-get install openssl
+      ```
+    - On Windows, ensure the `openssl` extension is enabled in `php.ini`.
+
+- **Error: `Mcrypt PHP extension is required`**
+  - Laravel versions older than 5.1 use Mcrypt, which is deprecated in PHP 7.2 and later. If you're using an older Laravel project with a newer PHP version, either downgrade your PHP version or upgrade Laravel. Alternatively, you can replace Mcrypt with newer encryption libraries supported by Laravel.
+
+- **Error: `Memory Limit Exhausted`**
+  - If you encounter a `Fatal error: Allowed memory size of X bytes exhausted` error while running Composer or PHP scripts, increase the memory limit in your `php.ini` file:
+    ```bash
+    memory_limit = 512M
+    ```
+  - For Composer-related memory errors, try running Composer with more memory:
+    ```bash
+    COMPOSER_MEMORY_LIMIT=-1 composer install
+    ```
 
 </details>
 
