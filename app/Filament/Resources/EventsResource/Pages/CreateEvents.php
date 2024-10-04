@@ -48,8 +48,8 @@ class CreateEvents extends CreateRecord
             ])->columns(2),
 
             Step::make('Speaker Information')->schema([
-                TextInput::make('speaker_name')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
-                TextInput::make('speaker_email')->required()->label('Speaker Email')->email()->placeholder('Enter the speaker email'),
+                TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
+                TextInput::make('speaker_mail')->required()->label('Speaker Email')->email()->placeholder('Enter the speaker email'),
             ])->columns(2),
             Step::make('Event Settings')->schema([
                 ToggleButtons::make('is_featured')->label('is Featured?')->boolean()->grouped()->default(false),
