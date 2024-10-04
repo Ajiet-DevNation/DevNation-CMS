@@ -1,255 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from sandbox.elemisthemes.com/demo17.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 05:32:00 GMT -->
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
-    <meta name="keywords"
-        content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
-    <meta name="author" content="elemis">
-    <title>DevNation</title>
-    <link rel="shortcut icon" href={{asset("./images/logo.png")}}>
-    <link rel="stylesheet" href={{asset("/assets/css/plugins.css")}}>
-    <link rel="stylesheet" href={{asset("/assets/css/style.css")}}>
-    <link rel="stylesheet" href={{asset("/assets/css/colors/navy.css")}}>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css">
-</head>
-
-<body>
-    <div class="content-wrapper">
-        <header class="wrapper bg-gray">
-            <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none">
-                <div class="container">
-                    <div
-                        class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                        <div class="navbar-brand w-100">
-                            <a href="index.html">
-                                <img src="{{ asset('assets/img/logo-dark.png') }}" class="img-fluid h-8 w-auto"
-                                    srcset="./assets/img/logo-dark@2x.png 2x" alt="DevNation Logo" />
-                            </a>
-                        </div>
-                        <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                            <div class="offcanvas-header d-lg-none">
-                                <h3 class="text-white fs-30 mb-0">DevNation</h3>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item dropdown dropdown-mega">
-                                        <a class="nav-link" href="{{ route('home') }}">Home</a>
-                                        {{-- <ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
-                                            <li class="mega-menu-content mega-menu-scroll">
-                                                <ul
-                                                    class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
-                                                    <li class="col">
-                                                        <a class="dropdown-item" href="demo1.html">
-                                                            <figure class="rounded lift d-none d-lg-block"><img
-                                                                    src="assets/img/demos/mi1.jpg"
-                                                                    srcset="./assets/img/demos/mi1@2x.jpg 2x" alt="">
-                                                            </figure>
-                                                            <span class="d-lg-none">Demo 1</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <!--/.row -->
-                                                <span class="d-none d-lg-flex"><i
-                                                        class="uil uil-direction"></i><strong>Scroll to view
-                                                        more</strong></span>
-                                            </li>
-                                            <!--/.mega-menu-content-->
-                                        </ul> --}}
-                                        <!--/.dropdown-menu -->
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="#">About Us</a>
-                                        {{-- <ul class="dropdown-menu">
-                                            <li class="dropdown dropdown-submenu dropend"><a
-                                                    class="dropdown-item dropdown-toggle" href="#"
-                                                    data-bs-toggle="dropdown">Services</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="services.html">Services I</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="services2.html">Services II</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul> --}}
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="{{ route('events') }}">Events</a>
-                                        {{-- <div class="dropdown-menu dropdown-lg">
-                                            <div class="dropdown-lg-content">
-                                                <div>
-                                                    <h6 class="dropdown-header">Project Pages</h6>
-                                                    <ul class="list-unstyled">
-                                                        <li><a class="dropdown-item" href="projects.html">Projects
-                                                                I</a></li>
-                                                        <li><a class="dropdown-item" href="projects2.html">Projects
-                                                                II</a></li>
-                                                        <li><a class="dropdown-item" href="projects3.html">Projects
-                                                                III</a></li>
-                                                        <li><a class="dropdown-item" href="projects4.html">Projects
-                                                                IV</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.column -->
-                                                <div>
-                                                    <h6 class="dropdown-header">Single Projects</h6>
-                                                    <ul class="list-unstyled">
-                                                        <li><a class="dropdown-item" href="single-project.html">Single
-                                                                Project I</a></li>
-                                                        <li><a class="dropdown-item" href="single-project2.html">Single
-                                                                Project II</a></li>
-                                                        <li><a class="dropdown-item" href="single-project3.html">Single
-                                                                Project III</a></li>
-                                                        <li><a class="dropdown-item" href="single-project4.html">Single
-                                                                Project IV</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.column -->
-                                            </div>
-                                            <!-- /auto-column -->
-                                        </div> --}}
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link " href="#">Gallery</a>
-                                        {{-- data-bs-toggle="dropdown">Blog</a> --}}
-                                        {{-- <ul class="dropdown-menu">
-                                            <li class="nav-item"><a class="dropdown-item" href="blog.html">Blog
-                                                    without Sidebar</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="blog2.html">Blog with
-                                                    Sidebar</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="blog3.html">Blog with
-                                                    Left Sidebar</a></li>
-                                            <li class="dropdown dropdown-submenu dropend"><a
-                                                    class="dropdown-item dropdown-toggle" href="#"
-                                                    data-bs-toggle="dropdown">Blog Posts</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post.html">Post without Sidebar</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post2.html">Post with Sidebar</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post3.html">Post with Left Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul> --}}
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link" href="#">Contact Us</a>
-                                        {{-- data-bs-toggle="dropdown">Blog</a> --}}
-                                        {{-- <ul class="dropdown-menu">
-                                            <li class="nav-item"><a class="dropdown-item" href="blog.html">Blog
-                                                    without Sidebar</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="blog2.html">Blog with
-                                                    Sidebar</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="blog3.html">Blog with
-                                                    Left Sidebar</a></li>
-                                            <li class="dropdown dropdown-submenu dropend"><a
-                                                    class="dropdown-item dropdown-toggle" href="#"
-                                                    data-bs-toggle="dropdown">Blog Posts</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post.html">Post without Sidebar</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post2.html">Post with Sidebar</a></li>
-                                                    <li class="nav-item"><a class="dropdown-item"
-                                                            href="blog-post3.html">Post with Left Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul> --}}
-                                    </li>
-                                </ul>
-                                <!-- /.navbar-nav -->
-                                <div class="offcanvas-footer d-lg-none">
-                                    <div>
-                                        <a href="cdn-cgi/l/email-protection.html#d3b5baa1a0a7fdbfb2a0a793b6beb2babffdb0bcbe"
-                                            class="link-inverse"><span class="__cf_email__"
-                                                data-cfemail="a6cfc8c0c9e6c3cbc7cfca88c5c9cb">[email&#160;protected]</span></a>
-                                        <br /> 00 (123) 456 78 90 <br />
-                                        <nav class="nav social social-white mt-4">
-                                            <a href="#"><i class="uil uil-linkedin"></i></a>
-                                            <a href="#"><i class="uil uil-youtube"></i></a>
-                                            <a href="#"><i class="uil uil-instagram"></i></a>
-                                        </nav>
-                                        <!-- /.social -->
-                                    </div>
-                                </div>
-                                <!-- /.offcanvas-footer -->
-                            </div>
-                            <!-- /.offcanvas-body -->
-                        </div>
-                        <!-- /.navbar-collapse -->
-                        <div class="navbar-other w-100 d-flex ms-auto">
-                            <ul class="navbar-nav flex-row align-items-center ms-auto">
-                                <li class="nav-item">
-                                    <nav class="nav social social-muted justify-content-end text-end">
-                                        <a href="#"><i class="uil uil-linkedin"></i></a>
-                                        <a href="#"><i class="uil uil-youtube"></i></a>
-                                        <a href="#"><i class="uil uil-instagram"></i></a>
-                                    </nav>
-                                    <!-- /.social -->
-                                </li>
-                                <li class="nav-item d-lg-none">
-                                    <button class="hamburger offcanvas-nav-btn"><span></span></button>
-                                </li>
-                            </ul>
-                            <!-- /.navbar-nav -->
-                        </div>
-                        <!-- /.navbar-other -->
+<x-layout>
+    <x-nav />
+    <section class="wrapper bg-gray">
+        <div class="container pt-12 pt-md-16 text-center">
+            <div class="row">
+                <div class="col-lg-8 col-xxl-7 mx-auto text-center" data-cues="slideInDown" data-group="page-title"
+                    data-delay="600">
+                    <h2 class="fs-16 text-uppercase ls-xl text-dark mb-4" data-cue="slideInDown" data-group="page-title"
+                        data-delay="600" data-show="true"
+                        style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 600ms; animation-direction: normal; animation-fill-mode: both;">
+                        Hello! This is Sandbox</h2>
+                    <h1 class="display-1 fs-58 mb-7" data-cue="slideInDown" data-group="page-title" data-delay="600"
+                        data-show="true"
+                        style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                        We bring rapid solutions for your business.</h1>
+                    <div class="d-flex justify-content-center mb-5 mb-md-0" data-cues="slideInDown"
+                        data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true"
+                        data-show="true"
+                        style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
+                        <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
+                            style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a
+                                href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore
+                                Now</a></span>
+                        <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
+                            style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
+                                href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact
+                                Us</a></span>
                     </div>
-                    <!-- /.navbar-collapse-wrapper -->
+                    <!-- <span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore Now</a></span>
+          <span><a href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact Us</a></span> -->
                 </div>
-                <!-- /.container -->
-            </nav>
-            <!-- /.navbar -->
-        </header>
-        <!-- /header -->
-        <section class="wrapper bg-gray">
-            <div class="container pt-12 pt-md-16 text-center">
-                <div class="row">
-                    <div class="col-lg-8 col-xxl-7 mx-auto text-center" data-cues="slideInDown" data-group="page-title"
-                        data-delay="600">
-                        <h2 class="fs-16 text-uppercase ls-xl text-dark mb-4" data-cue="slideInDown"
-                            data-group="page-title" data-delay="600" data-show="true"
-                            style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 600ms; animation-direction: normal; animation-fill-mode: both;">
-                            Hello! This is Sandbox</h2>
-                        <h1 class="display-1 fs-58 mb-7" data-cue="slideInDown" data-group="page-title" data-delay="600"
-                            data-show="true"
-                            style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                            We bring rapid solutions for your business.</h1>
-                        <div class="d-flex justify-content-center mb-5 mb-md-0" data-cues="slideInDown"
-                            data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true"
-                            data-show="true"
-                            style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                            <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900"
-                                data-show="true"
-                                style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a
-                                    href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore
-                                    Now</a></span>
-                            <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900"
-                                data-show="true"
-                                style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
-                                    href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact
-                                    Us</a></span>
-                        </div>
-                        <!-- <span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore Now</a></span>
-              <span><a href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact Us</a></span> -->
-                    </div>
-                </div>
-                <!--/column -->
             </div>
-            <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg" alt="" />
-    </figure>
+            <!--/column -->
+        </div>
+        <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg"
+                alt="" /></figure>
     </section>
     <!-- /section -->
     <section class="wrapper bg-gray">
@@ -386,7 +173,8 @@
                                 <div class="p-10 p-xl-13">
                                     <div class="swiper-container dots-closer mb-6 swiper-container-0" data-margin="30"
                                         data-dots="true">
-                                        <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                        <div
+                                            class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                                             <div class="swiper-wrapper" id="swiper-wrapper-bdaa3b99a5eb97cf"
                                                 aria-live="off"
                                                 style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
@@ -450,7 +238,8 @@
                                                 <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
                                                     tabindex="0" role="button" aria-label="Go to slide 1"
                                                     aria-current="true"></span><span class="swiper-pagination-bullet"
-                                                    tabindex="0" role="button" aria-label="Go to slide 2"></span><span
+                                                    tabindex="0" role="button"
+                                                    aria-label="Go to slide 2"></span><span
                                                     class="swiper-pagination-bullet" tabindex="0" role="button"
                                                     aria-label="Go to slide 3"></span>
                                             </div>
@@ -569,8 +358,9 @@
                                 <div class="swiper-slide" role="group" aria-label="4 / 4"
                                     style="width: 290px; margin-right: 30px;">
                                     <article>
-                                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img
-                                                    src="./assets/img/photos/b7.jpg" alt=""><span class="bg"></span></a>
+                                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
+                                                <img src="./assets/img/photos/b7.jpg" alt=""><span
+                                                    class="bg"></span></a>
                                             <figcaption>
                                                 <h5 class="from-top mb-0">Read More</h5>
                                             </figcaption>
@@ -750,92 +540,5 @@
     <!-- /section -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="bg-dark text-inverse">
-        <div class="container pt-20 pt-lg-21 pb-7">
-            <div class="row gy-6 gy-lg-0">
-                <div class="col-lg-4">
-                    <div class="widget">
-                        <h3 class="h2 mb-3 text-white">Join the Community</h3>
-                        <p class="lead mb-5">Let's make something great together. We are trusted by over 5000+
-                            clients. Join them by using our services and grow your business.</p>
-                        <a href="#" class="btn btn-white  rounded-pill">Join Us</a>
-                    </div>
-                    <!-- /.widget -->
-                </div>
-                <!-- /column -->
-                <div class="col-md-4 col-lg-2 offset-lg-2">
-                    <div class="widget">
-                        <h4 class="widget-title text-white mb-3">Need Help?</h4>
-                        <ul class="list-unstyled text-reset mb-0">
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Get Started</a></li>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget -->
-                </div>
-                <!-- /column -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="widget">
-                        <h4 class="widget-title text-white mb-3">Learn More</h4>
-                        <ul class="list-unstyled  mb-0">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Story</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Features</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget -->
-                </div>
-                <!-- /column -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="widget">
-                        <h4 class="widget-title text-white mb-3">Get in Touch</h4>
-                        <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
-                        <a href="cdn-cgi/l/email-protection.html#96f0ffe4e5e2b8faf7e5e2d6f3fbf7fffab8f5f9fb"><span
-                                class="__cf_email__"
-                                data-cfemail="f79e999198b7929a969e9bd994989a">[email&#160;protected]</span></a><br />
-                        00 (123) 456 78 90
-                    </div>
-                    <!-- /.widget -->
-                </div>
-                <!-- /column -->
-            </div>
-            <!--/.row -->
-            <hr class="mt-13 mt-md-15 mb-7" />
-            <div class="d-md-flex align-items-center justify-content-between">
-                <p class="mb-2 mb-lg-0">©
-                    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-                    </script>
-                    <script>
-                        document.write(new Date().getUTCFullYear());
-                    </script> Sandbox. All rights reserved.
-                </p>
-                <nav class="nav social social-white text-md-end">
-                    <a href="#"><i class="uil uil-twitter"></i></a>
-                    <a href="#"><i class="uil uil-facebook-f"></i></a>
-                    <a href="#"><i class="uil uil-dribbble"></i></a>
-                    <a href="#"><i class="uil uil-instagram"></i></a>
-                    <a href="#"><i class="uil uil-youtube"></i></a>
-                </nav>
-                <!-- /.social -->
-            </div>
-            <!-- /div -->
-        </div>
-        <!-- /.container -->
-    </footer>
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <script src="/assets/js/plugins.js"></script>
-    <script src="/assets/js/theme.js"></script>
-</body>
 
-
-<!-- Mirrored from sandbox.elemisthemes.com/demo17.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 05:33:07 GMT -->
-
-</html>
+</x-layout>
