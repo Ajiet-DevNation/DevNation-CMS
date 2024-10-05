@@ -17,6 +17,10 @@ Route::get('/profile',function(){
     return view('pages.profile');
 })->name('profile');
 
-Route::get('gallery', function () {
+Route::get('/gallery', function () {
     return view('pages.gallery');
 })->name('gallery');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
