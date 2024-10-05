@@ -1,9 +1,9 @@
-<div class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none">
+<div class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none" style="height: fit-content">
     <div class="container">
         <nav
             class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
             <div class="navbar-brand w-100">
-                <a href="index.html">
+                <a href={{ route('home') }}>
                     <img src="{{ asset('assets/img/logo-dark.png') }}" class="img-fluid h-8 w-auto"
                         srcset="./assets/img/logo-dark@2x.png 2x" alt="DevNation Logo" />
                 </a>
