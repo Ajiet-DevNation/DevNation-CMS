@@ -23,7 +23,18 @@ class DeveloperGroupResource extends Resource
 {
     protected static ?string $model = DeveloperGroup::class;
 
+    protected static ?string $navigationLabel = 'Student Developer Groups';
+
+    protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?string $navigationBadgeTooltip = 'The number of Developer Groups';
+
     protected static ?string $navigationIcon = 'heroicon-o-code-bracket-square';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {

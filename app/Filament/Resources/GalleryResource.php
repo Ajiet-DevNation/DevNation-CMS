@@ -31,6 +31,12 @@ class GalleryResource extends Resource
 {
     protected static ?string $model = Gallery::class;
 
+    protected static ?string $navigationLabel = 'DevNation Gallery';
+
+    protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?string $navigationBadgeTooltip = 'The number of galleries';
+
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
     public static function form(Form $form): Form
