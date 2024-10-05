@@ -61,7 +61,7 @@
                         <div class="widget">
                             <h4 class="widget-title text-white mb-3">Learn More</h4>
                             <ul class="list-unstyled  mb-0">
-                                <li><a href="#">About Us</a></li>
+                                <li><a href="/about">About Us</a></li>
                                 <li><a href="#">Our Story</a></li>
                                 <li><a href="#">Projects</a></li>
                                 <li><a href="#">Pricing</a></li>
