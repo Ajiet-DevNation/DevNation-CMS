@@ -16,3 +16,8 @@ Route::get('/events/{id}', [EventController::class,"details"])->name('event');
 Route::get('/profile',function(){
     return view('pages.profile');
 })->name('profile');
+
+
+Route::get('/about',function(){
+    return view('pages.about');
+})->name('about');
