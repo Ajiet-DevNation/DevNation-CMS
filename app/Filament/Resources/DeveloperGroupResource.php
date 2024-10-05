@@ -6,6 +6,7 @@ use App\Filament\Resources\DeveloperGroupResource\Pages;
 use App\Filament\Resources\DeveloperGroupResource\RelationManagers;
 use App\Models\DeveloperGroup;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
@@ -37,9 +38,10 @@ class DeveloperGroupResource extends Resource
                 ])->columns(2)->collapsible(),
                 Section::make('Provider Organisation')->schema([
                     TextInput::make('company')->label('Company')->required(),
-                    TextInput::make('academic_year')->label('Academic Year'),
                     TextInput::make('website')->label('Website')->required(),
-                ])->columns(3)->collapsible(),
+                    DatePicker::make('start_date')->label('Start Date')->required()->default(now()),
+                    DatePicker::make('end_date')->label('End Date')->required()->default(now()),
+                ])->columns(2)->collapsible(),
             ]);
     }
 

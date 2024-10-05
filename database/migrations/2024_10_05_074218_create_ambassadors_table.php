@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('developer_groups', function (Blueprint $table) {
+        Schema::create('ambassadors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-            $table->string('company');
-            $table->string('website');
-            $table->string('image');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->foreignId('user_id')->constrained('users')->onDeleteCascade();
+            $table->foreignId('developer_group_id')->constrained('developer_groups')->onDeleteCascade();
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('developer_groups');
+        Schema::dropIfExists('ambassadors');
     }
 };
