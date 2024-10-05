@@ -13,6 +13,12 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -54,17 +60,23 @@ class AmbassadorsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->label('Ambassador/lead')->searchable()->sortable(),
+                TextColumn::make('user.name')->label('Community Member')->searchable()->sortable(),
+                TextColumn::make('developerGroup.name')->label('Developer Group')->searchable()->sortable(),
+                TextColumn::make('start_date')->searchable()->sortable()->date('d-m-Y'),
+                TextColumn::make('end_date')->searchable()->sortable()->date('d-m-Y'),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ViewAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
