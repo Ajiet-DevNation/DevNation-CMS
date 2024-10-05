@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('description');
-            $table->foreignId('event_id')->constrained('events')->onDelete('cascade');
             $table->longText('meta_description')->nullable();
             $table->longText('meta_keywords')->nullable();
             $table->string('meta_title')->nullable();
