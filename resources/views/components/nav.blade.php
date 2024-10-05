@@ -5,7 +5,7 @@
             <div class="navbar-brand w-100">
                 <a href={{ route('home') }}>
                     <img src="{{ asset('assets/img/logo-dark.png') }}" class="img-fluid h-8 w-auto"
-                        srcset="./assets/img/logo-dark@2x.png 2x" alt="DevNation Logo" />
+                        srcset="./assets/img/logo-dark.png 2x" alt="DevNation Logo" />
                 </a>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -42,7 +42,7 @@
                             <!--/.dropdown-menu -->
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="/about">About Us</a>
                             {{-- <ul class="dropdown-menu">
                                             <li class="dropdown dropdown-submenu dropend"><a
                                                     class="dropdown-item dropdown-toggle" href="#"

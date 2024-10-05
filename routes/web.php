@@ -11,8 +11,16 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-Route::get('/events/{id}', [EventController::class,"details"])->name('event');
+Route::get('/event-details/{id}', [EventController::class,"details"])->name('event');
 
 Route::get('/profile',function(){
     return view('pages.profile');
 })->name('profile');
+
+Route::get('/gallery', function () {
+    return view('pages.gallery');
+})->name('gallery');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
