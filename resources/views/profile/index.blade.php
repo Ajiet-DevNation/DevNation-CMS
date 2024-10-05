@@ -1,5 +1,7 @@
-<x-layout>
-    <x-nav />
+@extends('layouts.app')
+
+@section('content')
+    @include('layouts.inlcudes.nav')
     <div class="padding">
         <div class="row container d-flex justify-content-center">
             <div class="col-xl-12" style="width: 80%; padding: 0px !important;box-shadow: 0px 0px 500px rgb(21 45 90 / 22%);">
@@ -56,4 +58,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+@endsection

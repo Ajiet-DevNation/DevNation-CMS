@@ -57,7 +57,7 @@
                                         </ul> --}}
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ route('events') }}">Events</a>
+                            <a class="nav-link" href="{{ route('event.index') }}">Events</a>
                             {{-- <div class="dropdown-menu dropdown-lg">
                                             <div class="dropdown-lg-content">
                                                 <div>
@@ -93,7 +93,7 @@
                                         </div> --}}
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link " href="#">Gallery</a>
+                            <a class="nav-link " href="{{ route('gallery.index') }}">Gallery</a>
                             {{-- data-bs-toggle="dropdown">Blog</a> --}}
                             {{-- <ul class="dropdown-menu">
                                             <li class="nav-item"><a class="dropdown-item" href="blog.html">Blog

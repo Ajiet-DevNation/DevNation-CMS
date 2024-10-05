@@ -1,8 +1,13 @@
 <?php
-use App\Http\Controllers\EventController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
@@ -12,6 +17,5 @@ Route::get('/about',[HomeController::class, 'about'])->name('about');
 
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index');
-
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery.index');
 Route::get('/gallery/{id}', [HomeController::class, 'galleryDetails'])->name('gallery.show');
