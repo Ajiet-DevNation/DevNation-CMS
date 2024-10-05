@@ -42,7 +42,6 @@ main .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
-    width: max(80vw, 760px);
     max-width: 1200px;
     box-shadow: 0px 0px 100px rgba(5, 10, 65, 0.356);
     border-radius: 2rem;
@@ -51,6 +50,10 @@ main .container {
     background: white;
     & p {
         padding-left: 2rem;
+    }
+
+    & .speaker {
+        border-left: 1px solid black;
     }
 
     & button {
@@ -89,5 +92,53 @@ main .container {
 @media screen and (max-width: 760px) {
     main .container {
         border-radius: 0;
+        grid-template-columns: 1fr;
+        & .speaker {
+            border: none;
+            border-top: 1px solid black;
+        }
+    }
+}
+
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem 1rem;
+    justify-items: center;
+}
+
+.post-footer {
+    text-align: center;
+}
+
+.post-footer button {
+    margin-top: 1rem;
+    padding: 0.4rem 0.7rem;
+    background-color: #152d5a;
+    border-radius: 0.4rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.post-footer button:hover {
+    transform: scale(1.1);
+}
+
+.post-footer button span::after {
+    content: "\e84f";
+    font-family: Unicons;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
     }
 }

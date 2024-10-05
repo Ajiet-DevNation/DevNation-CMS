@@ -14,8 +14,11 @@
     @if (Request::is('events'))
         <link rel="stylesheet" href={{ asset('/assets/css/events.css') }}>
     @endif
-    @if (Request::is('events/*'))
+    @if (Request::is('event-details/*'))
         <link rel="stylesheet" href={{ asset('/assets/css/event-details.css') }}>
+    @endif
+    @if (Request::is('gallery'))
+        <link rel="stylesheet" href={{ asset('/assets/css/gallery.css') }}>
     @endif
     <link rel="stylesheet" href={{ asset('/assets/css/plugins.css') }}>
     <link rel="stylesheet" href={{ asset('/assets/css/style.css') }}>
@@ -108,8 +111,9 @@
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
         </div>
-        <script src="/assets/js/plugins.js"></script>
-        <script src="/assets/js/theme.js"></script>
+    </div>
+    <script src="/assets/js/plugins.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 
 
