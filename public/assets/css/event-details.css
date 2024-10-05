@@ -1,0 +1,93 @@
+header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header * {
+    z-index: 1;
+}
+
+.h {
+    text-align: center;
+    align-self: center;
+}
+
+main {
+    z-index: 1;
+    position: relative;
+    transform: translate(0, -3rem);
+}
+main .container {
+    gap: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+    width: max(80vw, 760px);
+    max-width: 1200px;
+    box-shadow: 0px 0px 100px rgba(5, 10, 65, 0.356);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+    z-index: 1;
+    background: white;
+    & p {
+        padding-left: 2rem;
+    }
+
+    & button {
+        margin-top: 1rem;
+        padding: 0.4rem 0.7rem;
+        background-color: #152d5a;
+        border-radius: 0.4rem;
+        color: white;
+        font-weight: bold;
+        border: none;
+        transition: 0.3s;
+    }
+
+    & button:not(:disabled):hover {
+        transform: scale(1.1);
+    }
+
+    & button span::after {
+        content: "\e84f";
+        font-family: Unicons;
+    }
+
+    & button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    & button:disabled span::after {
+        content: "";
+    }
+    & > div {
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    main .container {
+        border-radius: 0;
+    }
+}

@@ -11,7 +11,8 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+Route::get('/events/{id}', [EventController::class,"details"])->name('event');
+
 Route::get('/profile',function(){
     return view('pages.profile');
 })->name('profile');
-

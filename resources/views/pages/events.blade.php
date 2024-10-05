@@ -6,15 +6,15 @@
             <div class="cards-wrapper">
                 @foreach ($upcomingEvents as $event)
                     <article>
-                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img
-                                    src={{ $event->banner }} alt=""><span class="bg"></span></a>
+                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a
+                                href="{{ route('event', $event->id) }}"> <img src={{ $event->banner }}
+                                    alt=""><span class="bg"></span></a>
                             <figcaption>
                                 <h5 class="from-top mb-0">Read More</h5>
                             </figcaption>
                         </figure>
                         <div class="post-header">
-                            <h2 class="post-title h3 mb-3 text-center"><a class="link-dark"
-                                    href="./blog-post.html">{{ $event->name }}</a></h2>
+                            <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
                         </div>
                         <!-- /.post-header -->
                         <div class="post-footer">
@@ -41,15 +41,15 @@
             <div class="cards-wrapper">
                 @foreach ($pastEvents as $event)
                     <article>
-                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#"> <img
-                                    src={{ $event->banner }} alt=""><span class="bg"></span></a>
+                        <figure class="overlay overlay-1 hover-scale rounded mb-6"><a
+                                href="{{ route('event', $event->id) }}"> <img src={{ $event->banner }}
+                                    alt=""><span class="bg"></span></a>
                             <figcaption>
                                 <h5 class="from-top mb-0">Read More</h5>
                             </figcaption>
                         </figure>
                         <div class="post-header">
-                            <h2 class="post-title h3 mb-3 text-center"><a class="link-dark"
-                                    href="./blog-post.html">{{ $event->name }}</a></h2>
+                            <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
                         </div>
                         <!-- /.post-header -->
                         <div class="post-footer">
