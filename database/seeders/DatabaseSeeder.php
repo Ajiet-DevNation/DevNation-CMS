@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             $randDate = randomDate(date('Y-m-d', strtotime('-10 days')), date('Y-m-d', strtotime('+10 days')));
             Events::factory()->create([
                 'name' => 'Webinar',
-                'description' => 'Webinar on Laravel',
+                'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ipsum? Vero, quo. Laudantium consectetur inventore non placeat harum ab perferendis explicabo molestias reprehenderit amet tempora, suscipit dolor. Nihil quisquam est quod quo praesentium culpa, corporis asperiores reiciendis harum expedita sunt nobis, voluptates ratione consequatur nulla, iure fugiat dolorem modi suscipit.',
                 'event_type' => 'webinar',
                 'location' => 'Pune, India',
                 'banner' => '/assets/img/photos/b6.jpg',
@@ -66,6 +66,7 @@ class DatabaseSeeder extends Seeder
                 'max_attendees' => 100,
                 'start_date' => $randDate,
                 'end_date' => now(),
+                'has_certificate' => true,
             ]);
         }
     }
