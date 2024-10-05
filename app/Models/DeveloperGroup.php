@@ -14,17 +14,19 @@ class DeveloperGroup extends Model
         'name',
         'description',
         'company',
-        'academic_year',
         'website',
         'image',
+        'start_date',
+        'end_date',
     ];
 
     protected $casts = [
         'name' => 'string',
         'description' => 'string',
         'company' => 'string',
-        'academic_year' => 'string',
         'website' => 'string',
         'image' => 'string',
+        'start_date' => 'date',
+        'end_date' => 'date',
     ];
 }
