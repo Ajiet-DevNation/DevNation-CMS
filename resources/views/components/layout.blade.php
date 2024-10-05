@@ -14,6 +14,9 @@
     @if (Request::is('events'))
         <link rel="stylesheet" href={{ asset('/assets/css/events.css') }}>
     @endif
+    @if (Request::is('events/*'))
+        <link rel="stylesheet" href={{ asset('/assets/css/event-details.css') }}>
+    @endif
     <link rel="stylesheet" href={{ asset('/assets/css/plugins.css') }}>
     <link rel="stylesheet" href={{ asset('/assets/css/style.css') }}>
     <link rel="stylesheet" href={{ asset('/assets/css/colors/navy.css') }}>

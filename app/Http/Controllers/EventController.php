@@ -14,4 +14,13 @@ class EventController extends Controller
         $pastEvents = Events::where('start_date', '<', date('Y-m-d'))->get();
         return view('pages.events', ['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents]);
     }
+
+    function details($id)
+    {
+        $event = Events::find($id);
+        if (!$event) {
+            abort(404);
+        }
+        return view('pages.event-details', ['event' => $event]);
+    }
 }
