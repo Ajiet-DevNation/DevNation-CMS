@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('developer_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->string('company');
+            $table->string('academic_year')->nullable();
+            $table->string('website');
+            $table->string('image');
             $table->timestamps();
         });
     }
