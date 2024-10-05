@@ -14,7 +14,6 @@ class gallery extends Model
         'name',
         'image',
         'description',
-        'event_id',
         'meta_description',
         'meta_keywords',
         'meta_title',
