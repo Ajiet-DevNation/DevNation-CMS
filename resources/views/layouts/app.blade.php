@@ -9,7 +9,14 @@
     <meta name="keywords"
         content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
-    <title>DevNation</title>
+
+    {{-- renders dynamic meta data --}}
+    @yield('meta')
+
+    {{-- renders dynamic title --}}
+    <title>DevNation | @yield('title')</title>
+
+
     <link rel="shortcut icon" href={{ asset('/assets/img/favicon.png') }}>
     @if (Request::is('events'))
         <link rel="stylesheet" href={{ asset('/assets/css/events.css') }}>

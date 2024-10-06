@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
+<meta name="keywords"
+    content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Home')
+
 @section('content')
 <section class="wrapper bg-gray">
     @include('layouts.inlcudes.nav')
@@ -37,8 +47,8 @@
     <!-- /.row -->
     </div>
     <!-- /.container -->
-    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg"
-            alt="" /></figure>
+    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg" alt="" />
+    </figure>
 </section>
 <!-- /section -->
 <section class="wrapper bg-gray">
@@ -172,10 +182,8 @@
                             <div class="p-10 p-xl-13">
                                 <div class="swiper-container dots-closer mb-6 swiper-container-0" data-margin="30"
                                     data-dots="true">
-                                    <div
-                                        class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                        <div class="swiper-wrapper" id="swiper-wrapper-bdaa3b99a5eb97cf"
-                                            aria-live="off"
+                                    <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                                        <div class="swiper-wrapper" id="swiper-wrapper-bdaa3b99a5eb97cf" aria-live="off"
                                             style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
                                             <div class="swiper-slide swiper-slide-active" role="group"
                                                 aria-label="1 / 3" style="width: 510px; margin-right: 30px;">
@@ -183,8 +191,7 @@
                                                     <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                                                         dolor auctor. Vestibulum ligula porta felis euismod semper.”
                                                     </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
+                                                    <div class="blockquote-details justify-content-center text-center">
                                                         <div class="info ps-0">
                                                             <h5 class="mb-1">Coriss Ambady</h5>
                                                             <p class="mb-0">Financial Analyst</p>
@@ -193,14 +200,13 @@
                                                 </blockquote>
                                             </div>
                                             <!--/.swiper-slide -->
-                                            <div class="swiper-slide swiper-slide-next" role="group"
-                                                aria-label="2 / 3" style="width: 510px; margin-right: 30px;">
+                                            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
+                                                style="width: 510px; margin-right: 30px;">
                                                 <blockquote class="icon icon-top fs-lg text-center">
                                                     <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                                                         dolor auctor. Vestibulum ligula porta felis euismod semper.”
                                                     </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
+                                                    <div class="blockquote-details justify-content-center text-center">
                                                         <div class="info ps-0">
                                                             <h5 class="mb-1">Cory Zamora</h5>
                                                             <p class="mb-0">Marketing Specialist</p>
@@ -215,8 +221,7 @@
                                                     <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
                                                         dolor auctor. Vestibulum ligula porta felis euismod semper.”
                                                     </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
+                                                    <div class="blockquote-details justify-content-center text-center">
                                                         <div class="info ps-0">
                                                             <h5 class="mb-1">Nikolas Brooten</h5>
                                                             <p class="mb-0">Sales Manager</p>
@@ -237,8 +242,7 @@
                                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
                                                 tabindex="0" role="button" aria-label="Go to slide 1"
                                                 aria-current="true"></span><span class="swiper-pagination-bullet"
-                                                tabindex="0" role="button"
-                                                aria-label="Go to slide 2"></span><span
+                                                tabindex="0" role="button" aria-label="Go to slide 2"></span><span
                                                 class="swiper-pagination-bullet" tabindex="0" role="button"
                                                 aria-label="Go to slide 3"></span>
                                         </div>
@@ -262,8 +266,8 @@
                     <!-- /column -->
                 </div>
                 <!-- /.row -->
-                <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30"
-                    data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
+                <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
+                    data-items-xl="3" data-items-md="2" data-items-xs="1">
                     <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                         <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
                             style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
@@ -271,8 +275,7 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b4.jpg" alt=""><span
-                                                class="bg"></span></a>
+                                            <img src="./assets/img/photos/b4.jpg" alt=""><span class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -300,8 +303,7 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b5.jpg" alt=""><span
-                                                class="bg"></span></a>
+                                            <img src="./assets/img/photos/b5.jpg" alt=""><span class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -329,8 +331,7 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b6.jpg" alt=""><span
-                                                class="bg"></span></a>
+                                            <img src="./assets/img/photos/b6.jpg" alt=""><span class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -358,8 +359,7 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b7.jpg" alt=""><span
-                                                class="bg"></span></a>
+                                            <img src="./assets/img/photos/b7.jpg" alt=""><span class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -393,8 +393,8 @@
                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
                                 role="button" aria-label="Go to slide 1" aria-current="true"></span><span
                                 class="swiper-pagination-bullet" tabindex="0" role="button"
-                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
-                                tabindex="0" role="button" aria-label="Go to slide 3"></span>
+                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                role="button" aria-label="Go to slide 3"></span>
                         </div>
                     </div>
                 </div>
@@ -467,8 +467,8 @@
                                         aria-controls="collapseTwo"> Hands-On Experience </button>
                                 </div>
                                 <!--/.card-header -->
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
                                     <div class="card-body">
                                         <p>Participants gain practical skills through interactive sessions led by industry experts, enhancing their knowledge and confidence in real-world applications.
                                         </p>
