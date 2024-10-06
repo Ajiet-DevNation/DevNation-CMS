@@ -10,11 +10,11 @@
                 <h2 class="fs-16 text-uppercase ls-xl text-dark mb-4" data-cue="slideInDown" data-group="page-title"
                     data-delay="600" data-show="true"
                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 600ms; animation-direction: normal; animation-fill-mode: both;">
-                    Hello! This is Devnation</h2>
-                <h1 class="display-1 fs-58 mb-7" data-cue="slideInDown" data-group="page-title" data-delay="600"
+                    Welcome to AJIET Community!</h2>
+                <h1 class="display-1 text-xs mb-7" data-cue="slideInDown" data-group="page-title" data-delay="600"
                     data-show="true"
                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
-                    We bring rapid solutions for your business.</h1>
+                    A collaborative community of tech enthusiasts guiding young students into open-source through training and skill development.</h1>
                 <div class="d-flex justify-content-center mb-5 mb-md-0" data-cues="slideInDown"
                     data-group="page-title-buttons" data-delay="900" data-cue="slideInDown" data-disabled="true"
                     data-show="true"
@@ -48,8 +48,7 @@
                 <div class="row text-center">
                     <div class="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
-                        <h3 class="display-4 mb-9">The service we offer is specifically designed to meet your
-                            needs.</h3>
+                        <h3 class="display-4 mb-9">AJIET DevNation focuses on mutual learning and improvement through workshops and training led by industry speakers and student experts. Stay updated with the latest technologies while attending and even hosting non-profit events to help others.</h3>
                     </div>
                     <!-- /column -->
                 </div>
@@ -59,8 +58,8 @@
                         <div class="icon btn btn-block btn-lg btn-soft-purple pe-none mb-5"> <i
                                 class="uil uil-phone-volume"></i> </div>
                         <h4>24/7 Support</h4>
-                        <p class="mb-3">Fusce dapibus tellus cursus porta tortor condimentum euismod massa justo
-                            vehicula sit amet et risus cras.</p>
+                        <p class="mb-3"> 
+                        We provide round-the-clock support to help you navigate your learning journey. Our dedicated team is here to assist you with any questions or challenges you may face, ensuring you have the resources and guidance you need to succeed.</p>
                         <a href="#" class="more hover link-purple">Learn More</a>
                     </div>
                     <!--/column -->
@@ -68,8 +67,8 @@
                         <div class="icon btn btn-block btn-lg btn-soft-green pe-none mb-5"> <i
                                 class="uil uil-shield-exclamation"></i> </div>
                         <h4>Secure Payments</h4>
-                        <p class="mb-3">Fusce dapibus tellus cursus porta tortor condimentum euismod massa justo
-                            vehicula sit amet et risus cras.</p>
+                        <p class="mb-3">  
+                        We ensure secure payments for all workshop speakers and related activities. Your transactions are protected, allowing you to focus on learning and collaboration without worry. Trust us to handle payments smoothly and efficiently.</p>
                         <a href="#" class="more hover link-green">Learn More</a>
                     </div>
                     <!--/column -->
@@ -77,8 +76,8 @@
                         <div class="icon btn btn-block btn-lg btn-soft-orange pe-none mb-5"> <i
                                 class="uil uil-laptop-cloud"></i> </div>
                         <h4>Daily Updates</h4>
-                        <p class="mb-3">Fusce dapibus tellus cursus porta tortor condimentum euismod massa justo
-                            vehicula sit amet et risus cras.</p>
+                        <p class="mb-3">
+                        AJIET DevNation Offers daily updates on upcoming workshops, events, and tech trends. Stay connected and seize every opportunity to enhance your skills.</p>
                         <a href="#" class="more hover link-orange">Learn More</a>
                     </div>
                     <!--/column -->
@@ -87,12 +86,10 @@
                 <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Strategy</h2>
-                        <h3 class="display-4 mb-5">3 working steps to organize our business projects.</h3>
-                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam
-                            porta sem malesuada magna mollis euismod eget. Nullam id dolor id nibh ultricies
-                            vehicula ut id elit. Nullam quis risus.</p>
-                        <p class="mb-6">Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id
-                            ligula porta felis euismod semper. Aenean lacinia bibendum consectetur.</p>
+                        <h3 class="display-4 mb-5"> We organize our events through three key steps.</h3>
+                        <p>Our Strategy
+                        Planning with clear objectives, effective execution via collaboration on workshops and events, and continuous evaluation to enhance future initiatives. This strategic approach ensures impactful experiences that foster learning and community growth.</p>
+                        <p class="mb-6"></p>
                         <a href="#" class="btn btn-primary rounded-pill mb-0">Learn More</a>
                     </div>
                     <!--/column -->
@@ -104,8 +101,8 @@
                             </div>
                             <div>
                                 <h4 class="mb-1">Collect Ideas</h4>
-                                <p class="mb-0">Nulla vitae elit libero pharetra augue dapibus. Fusce dapibus,
-                                    tellus ac cursus commodo.</p>
+                                <p class="mb-0">
+                                Gather innovative ideas from our community through brainstorming sessions and surveys. Encourage participation from students and industry professionals to ensure diverse perspectives that align with current tech trends.</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row mt-8 ms-lg-10">
@@ -114,9 +111,9 @@
                                         class="number fs-22">02</span></span>
                             </div>
                             <div>
-                                <h4 class="mb-1">Data Analysis</h4>
-                                <p class="mb-0">Vivamus sagittis lacus vel augue laoreet tortor mauris
-                                    condimentum fermentum.</p>
+                                <h4 class="mb-1">Evaluate Insights</h4>
+                                <p class="mb-0"> 
+                                Evaluate the collected ideas by analyzing feedback and market trends. Identify the most promising concepts and assess their feasibility to ensure that our workshops and events are relevant and impactful.</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row mt-8">
@@ -125,9 +122,9 @@
                                         class="number fs-22">03</span></span>
                             </div>
                             <div>
-                                <h4 class="mb-1">Finalize Product</h4>
-                                <p class="mb-0">Cras mattis consectetur purus sit amet massa justo sit amet risus
-                                    consectetur magna elit.</p>
+                                <h4 class="mb-1">Launch Initiatives</h4>
+                                <p class="mb-0">
+                                Develop a comprehensive plan for the selected workshops and events, including topics, speakers, and schedules. Ensure all logistics are in place for a smooth execution, creating an engaging and educational experience for participants.</p>
                             </div>
                         </div>
                     </div>
@@ -411,26 +408,20 @@
                     <!--/column -->
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Team</h2>
-                        <h3 class="display-4 mb-5">Save your time by choosing our professional team.</h3>
-                        <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent
-                            commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                        <h3 class="display-4 mb-5">Maximize your potential by partnering with the skilled team at DevNation.</h3>
+                        <p class="mb-6">We are a passionate and dedicated team of tech enthusiasts committed to fostering innovation and collaboration in the developer community. Our mission is to empower developers through hands-on workshops, engaging tech events, and insightful discussions that inspire creativity and growth.</p>
                         <div class="row gy-3 gx-xl-8">
                             <div class="col-xl-6">
                                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                                    <li><span><i class="uil uil-check"></i></span><span>Aenean eu leo quam ornare
-                                            curabitur blandit tempus.</span></li>
-                                    <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Nullam
-                                            quis risus eget urna mollis ornare donec elit.</span></li>
+                                    <li><span><i class="uil uil-check"></i></span><span>Our team of industry professionals conducts hands-on workshops and provide practical skills.</span></li>
+                                    <li class="mt-3"><span><i class="uil uil-check"></i></span><span>We cover diverse topics, including software development and other skills .</span></li>
                                 </ul>
                             </div>
                             <!--/column -->
                             <div class="col-xl-6">
                                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                                    <li><span><i class="uil uil-check"></i></span><span>Etiam porta sem malesuada
-                                            magna mollis euismod.</span></li>
-                                    <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Fermentum
-                                            massa vivamus faucibus amet euismod.</span></li>
+                                    <li><span><i class="uil uil-check"></i></span><span>We foster an inclusive space for networking and idea-sharing among all developers.</span></li>
+                                    <li class="mt-3"><span><i class="uil uil-check"></i></span><span>We host tech events that foster creativity, collaboration, and the sharing of new ideas.</span></li>
                                 </ul>
                             </div>
                             <!--/column -->
@@ -448,21 +439,21 @@
                     <!--/column -->
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Why Choose Us?</h2>
-                        <h3 class="display-4 mb-7">A few reasons why our valued customers choose us.</h3>
+                        <h3 class="display-4 mb-7">A few reasons why our valued participants choose DevNation.</h3>
                         <div class="accordion accordion-wrapper" id="accordionExample">
                             <div class="card plain accordion-item">
                                 <div class="card-header" id="headingOne">
                                     <button class="accordion-button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne"> Professional Design </button>
+                                        aria-controls="collapseOne"> Diverse Learning Opportunities </button>
                                 </div>
                                 <!--/.card-header -->
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                                            ut fermentum massa justo sit amet risus. Cras mattis consectetur purus
-                                            sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                                        <p>DevNation offers a wide range of tech-related events, workshops, and webinars, catering to various interests and skill levels.
+
+</p>
                                     </div>
                                     <!--/.card-body -->
                                 </div>
@@ -473,15 +464,14 @@
                                 <div class="card-header" id="headingTwo">
                                     <button class="collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo"> Top-Notch Support </button>
+                                        aria-controls="collapseTwo"> Hands-On Experience </button>
                                 </div>
                                 <!--/.card-header -->
                                 <div id="collapseTwo" class="accordion-collapse collapse"
                                     aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                                            ut fermentum massa justo sit amet risus. Cras mattis consectetur purus
-                                            sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                                        <p>Participants gain practical skills through interactive sessions led by industry experts, enhancing their knowledge and confidence in real-world applications.
+                                        </p>
                                     </div>
                                     <!--/.card-body -->
                                 </div>
@@ -492,15 +482,13 @@
                                 <div class="card-header" id="headingThree">
                                     <button class="collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree"> Header and Slider Options </button>
+                                        aria-controls="collapseThree"> Networking and Community </button>
                                 </div>
                                 <!--/.card-header -->
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-                                            ut fermentum massa justo sit amet risus. Cras mattis consectetur purus
-                                            sit amet fermentum. Praesent commodo cursus magna, vel.</p>
+                                        <p>The platform fosters a vibrant community, allowing learners to connect with peers and professionals, share ideas, and collaborate on projects.</p>
                                     </div>
                                     <!--/.card-body -->
                                 </div>
