@@ -2,9 +2,8 @@
 
 @section('content')
     @include('layouts.inlcudes.nav')
-    <main class="row">
-        <section class="m-8">
-            <h1>Gallery</h1>
+    {{-- <main class="row"> --}}
+        <section class="px-lg-16 m-lg-8">
             <div class="cards-wrapper">
                 @foreach ($galleries as $gallery)
                     <article style="text-align: center;">
@@ -27,5 +26,5 @@
                 @endforeach
             </div>
         </section>
-    </main>
+    {{-- </main> --}}
 @endsection
