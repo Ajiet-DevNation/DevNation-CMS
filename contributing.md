@@ -1,6 +1,25 @@
 # Contributing to DevNation CMS
 
-Welcome to DevNation CMS! We're excited that you're interested in contributing to our project. This document will guide you through the process of contributing to our repository.
+Welcome to DevNation CMS! We're excited that you're interested in contributing to our project. This guide will walk you through the process of contributing to our repository.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/03765de4-b19f-42a9-9508-3b0dd087f40a" alt="DevNation CMS Logo"> 
+</p>
+
+## Table of Contents
+- [How to Contribute](#how-to-contribute)
+  - [1. Star the Repository](#1-star-the-repository)
+  - [2. Fork the Repository](#2-fork-the-repository)
+  - [3. Clone the Repository](#3-clone-the-repository)
+  - [4. Create a New Branch](#4-create-a-new-branch)
+  - [5. Make Changes](#5-make-changes)
+  - [6. Commit Your Changes](#6-commit-your-changes)
+  - [7. Push Changes to GitHub](#7-push-changes-to-github)
+  - [8. Create a Pull Request](#8-create-a-pull-request)
+  - [9. Wait for Review](#9-wait-for-review)
+- [Raising an Issue](#raising-an-issue)
+- [Adding a File](#adding-a-file)
+- [Running the Laravel Server](#running-the-laravel-server)
 
 ## How to Contribute
 
@@ -15,30 +34,30 @@ Before you start contributing, please star our repository to show your support!
 1. Navigate to the [DevNation CMS repository](https://github.com/Ajiet-DevNation/DevNation-CMS).
 2. Click on the "Fork" button in the top-right corner of the page.
 
-![Fork option](https://github.com/user-attachments/assets/4aa093c8-236c-428f-97d0-f23c9d1a79fb)
+   ![Fork option](https://github.com/user-attachments/assets/4aa093c8-236c-428f-97d0-f23c9d1a79fb)
 
 3. Give your forked repository a name and description (optional).
 4. Click on "Create fork".
 
-![Create fork](https://github.com/user-attachments/assets/87872869-6aa4-4c70-a699-56dbbeb49102)
+   ![Create fork](https://github.com/user-attachments/assets/87872869-6aa4-4c70-a699-56dbbeb49102)
 
 ### 3. Clone the Repository
 
 1. Go to your forked repository on GitHub.
 2. Click on the "Code" button and copy the HTTPS URL.
 3. Open your terminal and run:
-   ```
-   git clone https://github.com/your-user-name/DevNation-CMS
+   ```bash
+   git clone https://github.com/your-username/DevNation-CMS.git
    ```
 
 ### 4. Create a New Branch
 
 1. Change to the repository directory on your computer:
-   ```
+   ```bash
    cd DevNation-CMS
    ```
 2. Create a new branch using:
-   ```
+   ```bash
    git checkout -b your-branch-name
    ```
 
@@ -50,18 +69,18 @@ Before you start contributing, please star our repository to show your support!
 ### 6. Commit Your Changes
 
 1. Stage your changes:
-   ```
+   ```bash
    git add .
    ```
 2. Commit your changes:
-   ```
+   ```bash
    git commit -m "Brief description of your changes"
    ```
 
 ### 7. Push Changes to GitHub
 
 Push your changes to your forked repository:
-```
+```bash
 git push origin your-branch-name
 ```
 
@@ -69,13 +88,13 @@ git push origin your-branch-name
 
 1. Go to your forked repository on GitHub.
 2. Click on "Compare & pull request".
-3. **Please ensure that your pull request does not contain spam.** 
-4. Add a title and description for your pull request. 
-5. Ensure to label the issue tags for all pull requests. 
-6. If no relevant issues are present, please create a new issue related to your pull request. 
+3. **Important:** Ensure that your pull request does not contain spam.
+4. Add a title and description for your pull request.
+5. Label the issue tags for all pull requests.
+6. If no relevant issues exist, create a new issue related to your pull request.
 7. Click on "Create pull request".
 
-![Create a Pull Request](https://github.com/user-attachments/assets/0f2f0ded-5f3a-4492-90c0-e9d56ef3b45a)
+   ![Create a Pull Request](https://github.com/user-attachments/assets/0f2f0ded-5f3a-4492-90c0-e9d56ef3b45a)
 
 ### 9. Wait for Review
 
@@ -87,11 +106,11 @@ If you find a bug or have a suggestion for improvement:
 
 1. Go to the "Issues" tab in the repository.
 
-![Issues tab](https://github.com/user-attachments/assets/bdee4836-7db3-45aa-a3bc-c5af644e8a8b)
+   ![Issues tab](https://github.com/user-attachments/assets/bdee4836-7db3-45aa-a3bc-c5af644e8a8b)
 
 2. Click on "New issue".
 
-![New issue](https://github.com/user-attachments/assets/1fc24dcf-cd1b-45cf-ac92-7e9f3cc693ce)
+   ![New issue](https://github.com/user-attachments/assets/1fc24dcf-cd1b-45cf-ac92-7e9f3cc693ce)
 
 3. Add a descriptive title and detailed description of the issue.
 4. Click on "Submit new issue".
