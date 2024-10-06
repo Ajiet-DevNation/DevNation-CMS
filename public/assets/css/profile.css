@@ -1,158 +1,248 @@
-
-
-.padding {
-    padding: 8rem 3rem 8rem!important;
+/* .Fdiv{
+    width: 100%;
+    height: 50%;
+    background: red;
+  } */
+  
+  @media (max-width: 984px) {
+    .certificate{
+    grid-template-columns:none !important;
+    justify-items: center !important;
+    height: fit-content !important;
+    }
+    .acertificate{
+        padding-left: 0rem !important;
+    }
+    .cardInfo>h3{
+      font-size: large !important;
+    }
+    .cardInfo>.button{
+      font-size: medium !important;
+    }
+    .certiCard{
+      width: 75%  !important;
+    }
+    .cover{
+      grid-template-columns: 1fr !important;
+        grid-template-rows: auto 1fr;
+        justify-items: center;
+  }
+  .containerB{
+    width: 100%;
+    padding: 30px;
+    border-radius: 29px;
+  }
+  .rect{
+    height: 50vh !important;
+  }
+.circle{
+    margin-top: calc(-2rem + -278px) !important;
+    margin-bottom: 3rem !important;
+    width: 105px !important;
+    height: 103px !important;
+  
 }
-
-.user-card-full {
-    overflow: hidden;
+.circleCover>h2{
+  margin-left: -59px;
+  color: white;
+  margin-top: -45px;
 }
-.row p {
-    text-decoration: underline;
-    margin-bottom: 0;
-}
-.row h6{
-    margin-bottom: 2rem;
-}
-.card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    border: none;
-    
-}
-
-.m-r-0 {
-    margin-right: 0px;
-}
-
-.m-l-0 {
-    margin-left: 0px;
-}
-
-.user-card-full .user-profile {
-    border-radius: 5px 0 0 5px;
-}
-
-.bg-c-lite-green {
-        background: -webkit-gradient(linear, left top, right top, from(#152d5a), to(#336ac1));
-        background: (to right, #152d5a, #336ac1);
-}
-
-.user-profile {
-    padding: 20px 0;
-}
-
-.card-block {
-    padding: 1.25rem;
-}
-
-.m-b-25 {
-    margin-bottom: 25px;
-}
-
-.img-radius {
-    border-radius: 5px;
-}
-
-
- 
-h6 {
-    font-size: 14px;
-}
-
-.card .card-block p {
-    line-height: 25px;
-}
-
-@media only screen and (min-width: 1400px){
-p {
-    font-size: 14px;
+.circleCover>button{
+  margin-right: 83px;
+        padding-left: 18px;
 }
 }
-
-.card-block {
-    padding: 1.25rem;
+  .circleCover{
+    text-align: center;
 }
-
 button{
-    margin-top: 1rem;
-    padding: 0.4rem 0.7rem;
-    background-color: #ffffff;
-    border-radius: 0.4rem;
-    color:#15235a;
-    font-weight: bold;
+    margin-top:0rem ;
     border: none;
-    transition: 0.3s;
+    background: none;
+    color: green;
+}
+.rect{
+    height: 40vh;
+    /* background: linear-gradient(45deg, #1a1a48, #076b7feb,#1a1a48); */
+    background: #152d5a;
+  }
+  
+  .cover{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding:2rem;
+    padding-right:0px ;
+    margin-inline: auto;
+    column-gap: 4rem;
+    max-width: 1250px;
+}
+.circleCover h2{
+    text-align: center;
     
 }
-
-/* button span::before {
-    content: "\eb0e";
-    font-family: Unicons;
-} */
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
+.circle{
+    margin-top: calc(-2rem + -100px);
+    margin-bottom: 2rem;
+    width: 250px;
+    height: 250px;
+    background: #d5d5d5;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  
+  .details>div>p{
+    font-size: small;
+  }
+  .details{
+    width: 100%;
+    height: 500px;
+    overflow-y: auto;
+    padding-left: 2rem;
+    border-left: 2px solid grey;
+    display: grid;
+    grid-template-rows: auto auto;
+    transform: translate(20px, -15px);
+  }
+  .di{
+    border: none;
+    border:solid 2px grey;
+  }
+  .details>div *{
+    margin:0%;
+    padding:0%;
+    height: fit-content;
+  }
+  .details>div{
+    height: fit-content;
+    display: grid;
+  }
+.button{
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
-.m-b-20 {
-    margin-bottom: 20px;
+.button>button{
+  border:2px solid greenyellow;
+  padding:8px;
+  border-radius: 10px;
 }
-
-.p-b-5 {
-    padding-bottom: 5px !important;
+.button>button + button{
+  color:red;
+  border:2px solid rgb(255, 47, 47)
 }
-
-.card .card-block p {
-    line-height: 25px;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.text-muted {
-    color: #919aa3 !important;
-}
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.f-w-600 {
-    font-weight: 600;
-}
-
-.m-b-20 {
-    margin-bottom: 20px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.user-card-full .social-link li {
-    display: inline-block;
-}
-
-.user-card-full .social-link li a {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
+  .InfoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: CENTER;
+    
+  }
+  .InfoDiv>h3{
+    border-bottom: solid 2px black;
+    color: white;
+  }
 
 
+  
+  
+  .containerB{
+  width: 100%;
+  padding: 30px;
+  transform: translate(-40px, -137px);
+  border-radius: 29px;
+  }
+  
+  .tab_box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  align-items: center;
+  border-bottom: 2px solid rgba(229, 229, 229);
+   position:relative;
+  }
+  
+  .tab_box .tab_btn{
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 18px;
+   cursor:pointer;
+  }
+  
+  .tab_box .tab_btn.active{
+  color:#ffffff;
+  }
+  
+  .content_box{
+  padding: 2epx;
+  }
+  .content_box .content h2{
+  margin-bottom: 10px;
+  }
+  
+  .content_box .content{
+    display:none;
+    animation:moving .5s ease;
+  }
+  @keyframes moving {
+    from{transform: translateX(50px);opacity:0;}
+    to{transform: translateX(0px);opacity:1;}
+  }
+  
+  .content_box .content.active{
+    display:block;
+  }
+    
+    
+  .line{
+  position: absolute;
+  top: 55px;
+  left: 72px;
+  width: 90px;
+  height: 5px;
+  background:#ffffff00;
+    border-radius:10px;
+    transition: all .3s ease-in-out;
+  }
+  .certiCard{
+
+    width: fit-content;
+  }
+  .certiCard>.img>img{
+    width: 100%;
+    height: auto;
+
+  }
+  .cardInfo{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+  }
+
+  .cardInfo>h3{
+    font-size: medium;
+    color: #31466e;
+
+  }
+  .cardInfo>button{
+    border: none;
+    width: max-content;
+    font-size: small;
+    color: GREEN;
+  }
+  .certificate{
+    display: grid;
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding-right: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .particle{
+    width: 100%;
+    height: auto;
+  }
+
+  
+ 
