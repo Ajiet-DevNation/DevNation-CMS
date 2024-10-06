@@ -25,7 +25,7 @@
                             Now</a></span>
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
-                            href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact
+                            href="{{ route('contact') }}" class="btn btn-lg btn-outline-primary rounded-pill">Contact
                             Us</a></span>
                 </div>
                 <!-- <span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore Now</a></span>
