@@ -40,9 +40,8 @@
             </div>
         </div>
     </div>
-    <!-- /.container -->
-    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg" alt="" />
-    </figure>
+    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg"
+            alt="" /></figure>
 </section>
 <section class="wrapper bg-gray">
     <div class="container">
@@ -135,86 +134,30 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/.row -->
-                    </div>
-                    <!-- /column -->
-                </div>
-                <!-- /.row -->
-                <div class="card bg-gray shadow-lg mb-14 mb-md-17">
-                    <div class="row gx-0">
-                        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start"
-                            data-image-src="./assets/img/photos/tm1.jpg"
-                            style="background-image: url(&quot;./assets/img/photos/tm1.jpg&quot;);">
-                        </div>
-                        <!--/column -->
-                        <div class="col-lg-6">
-                            <div class="p-10 p-xl-13">
-                                <div class="swiper-container dots-closer mb-6 swiper-container-0" data-margin="30"
-                                    data-dots="true">
-                                    <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                        <div class="swiper-wrapper" id="swiper-wrapper-bdaa3b99a5eb97cf" aria-live="off"
-                                            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
-                                            <div class="swiper-slide swiper-slide-active" role="group"
-                                                aria-label="1 / 3" style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Coriss Ambady</h5>
-                                                            <p class="mb-0">Financial Analyst</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                            <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3"
-                                                style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Cory Zamora</h5>
-                                                            <p class="mb-0">Marketing Specialist</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                            <div class="swiper-slide" role="group" aria-label="3 / 3"
-                                                style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Nikolas Brooten</h5>
-                                                            <p class="mb-0">Sales Manager</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                        </div>
-                                        <!--/.swiper-wrapper -->
-                                        <span class="swiper-notification" aria-live="assertive"
-                                            aria-atomic="true"></span>
+                        <div class="card ms-lg-13 mt-6">
+                            <div class="card-body p-6">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span
+                                                class="number">02</span></span>
                                     </div>
-                                    <!-- /.swiper -->
-                                    <div class="swiper-controls">
-                                        <div
-                                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
-                                                tabindex="0" role="button" aria-label="Go to slide 1"
-                                                aria-current="true"></span><span class="swiper-pagination-bullet"
-                                                tabindex="0" role="button" aria-label="Go to slide 2"></span><span
-                                                class="swiper-pagination-bullet" tabindex="0" role="button"
-                                                aria-label="Go to slide 3"></span>
-                                        </div>
+                                    <div>
+                                        <h4 class="mb-1">Code Sprints</h4>
+                                        <p class="mb-0">Intensive coding sessions to build practical projects and enhance skills.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mx-lg-6 mt-6">
+                            <div class="card-body p-6">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span
+                                                class="number">03</span></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-1">Hackathons</h4>
+                                        <p class="mb-0">Exciting competitions to solve real-world problems and showcase innovation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -233,9 +176,8 @@
                         <h3 class="display-4 mb-9">Explore our upcoming events and activities.</h3>
                     </div>
                 </div>
-                <!-- /.row -->
-                <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
-                    data-items-xl="3" data-items-md="2" data-items-xs="1">
+                <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30"
+                    data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
                     <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                         <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
                             style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
@@ -243,7 +185,8 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b4.jpg" alt=""><span class="bg"></span></a>
+                                            <img src="./assets/img/photos/b4.jpg" alt=""><span
+                                                class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -265,7 +208,8 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b5.jpg" alt=""><span class="bg"></span></a>
+                                            <img src="./assets/img/photos/b5.jpg" alt=""><span
+                                                class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -287,7 +231,8 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b6.jpg" alt=""><span class="bg"></span></a>
+                                            <img src="./assets/img/photos/b6.jpg" alt=""><span
+                                                class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
@@ -315,14 +260,15 @@
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a href="#">
-                                            <img src="./assets/img/photos/b7.jpg" alt=""><span class="bg"></span></a>
+                                            <img src="./assets/img/photos/b7.jpg" alt=""><span
+                                                class="bg"></span></a>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Dharshan na Madime</a></h2>
+                                                href="./blog-post.html">Darshan na Madime</a></h2>
                                     </div>
                                     <div class="post-footer">
                                         <ul class="post-meta">
@@ -342,8 +288,8 @@
                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
                                 role="button" aria-label="Go to slide 1" aria-current="true"></span><span
                                 class="swiper-pagination-bullet" tabindex="0" role="button"
-                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
-                                role="button" aria-label="Go to slide 3"></span>
+                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
+                                tabindex="0" role="button" aria-label="Go to slide 3"></span>
                         </div>
                     </div>
                 </div>
@@ -383,73 +329,70 @@
     <div class="col-md-8 col-lg-6">
                         <figure class="rounded"><img src="assets/img/photos/about25.jpg"
                                 srcset="./assets/img/photos/about25@2x.jpg 2x" alt=""></figure>
-                    </div>
-                    <!--/column -->
-                    <div class="col-lg-6">
-                        <h2 class="fs-15 text-uppercase text-muted mb-3">Why Choose Us?</h2>
-                        <h3 class="display-4 mb-7">A few reasons why our valued participants choose DevNation.</h3>
-                        <div class="accordion accordion-wrapper" id="accordionExample">
-                            <div class="card plain accordion-item">
-                                <div class="card-header" id="headingOne">
-                                    <button class="accordion-button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne"> Diverse Learning Opportunities </button>
-                                </div>
-                                <!--/.card-header -->
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>DevNation offers a wide range of tech-related events, workshops, and webinars, catering to various interests and skill levels.
-
-</p>
-                                    </div>
-                                    <!--/.card-body -->
-                                </div>
-                                <!--/.accordion-collapse -->
-                            </div>
-                            <!--/.accordion-item -->
-                            <div class="card plain accordion-item">
-                                <div class="card-header" id="headingTwo">
-                                    <button class="collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo"> Hands-On Experience </button>
-                                </div>
-                                <!--/.card-header -->
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>Participants gain practical skills through interactive sessions led by industry experts, enhancing their knowledge and confidence in real-world applications.
-                                        </p>
-                                    </div>
-                                    <!--/.card-body -->
-                                </div>
-                                <!--/.accordion-collapse -->
-                            </div>
-                            <!--/.accordion-item -->
-                            <div class="card plain accordion-item">
-                                <div class="card-header" id="headingThree">
-                                    <button class="collapsed" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree"> Networking and Community </button>
-                                </div>
-                                <!--/.card-header -->
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="card-body">
-                                        <p>The platform fosters a vibrant community, allowing learners to connect with peers and professionals, share ideas, and collaborate on projects.</p>
-                                    </div>
-                                    <!--/.card-body -->
-                                </div>
-                                <!--/.accordion-collapse -->
-                            </div>
-                            <!--/.accordion-item -->
-                        </div>
-                        <!--/.accordion -->
-                    </div>
-                    <!--/column -->
+    </div>
+    <!--/column -->
+    <div class="col-lg-6">
+        <h2 class="fs-15 text-uppercase text-muted mb-3">Why Join DevNation?</h2>
+        <h3 class="display-4 mb-7">Discover the advantages of being part of our thriving developer community.</h3>
+        <div class="accordion accordion-wrapper" id="accordionExample">
+            <div class="card plain accordion-item">
+                <div class="card-header" id="headingOne">
+                    <button class="accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true"
+                        aria-controls="collapseOne"> Skill Enhancement </button>
                 </div>
-                <!--/.row -->
-                <div class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
+                <!--/.card-header -->
+                <div id="collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>Boost your technical skills through hands-on workshops, coding sessions, and project collaborations. Learn from experienced developers and stay updated with the latest industry trends and technologies.</p>
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.accordion-collapse -->
+            </div>
+            <!--/.accordion-item -->
+            <div class="card plain accordion-item">
+                <div class="card-header" id="headingTwo">
+                    <button class="collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false"
+                        aria-controls="collapseTwo"> Networking Opportunities </button>
+                </div>
+                <!--/.card-header -->
+                <div id="collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>Connect with like-minded developers, industry professionals, and potential employers. Build lasting relationships that can lead to exciting career opportunities and collaborations on innovative projects.</p>
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.accordion-collapse -->
+            </div>
+            <!--/.accordion-item -->
+            <div class="card plain accordion-item">
+                <div class="card-header" id="headingThree">
+                    <button class="collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree"> Real-world Project Experience </button>
+                </div>
+                <!--/.card-header -->
+                <div id="collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>Gain valuable experience by working on real-world projects and participating in hackathons. Develop a strong portfolio that showcases your skills and creativity to potential employers or clients.</p>
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.accordion-collapse -->
+            </div>
+            <!--/.accordion-item -->
+        </div>
+        <!--/.accordion -->
+    </div>
+    <!--/column -->
+</div>
+<!--/.row -->
+<div class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
                     data-image-src="./assets/img/map.png"
                     style="background-image: url(&quot;./assets/img/map.png&quot;);">
     <div class="container py-md-16 py-lg-18">
