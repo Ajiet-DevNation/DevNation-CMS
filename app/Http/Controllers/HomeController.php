@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Events;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,12 +25,19 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('gallery.index');
+        $galleries = Gallery::all();
+        
+        return view('gallery.index', ['galleries'=>$galleries]);
     }
 
     public function galleryDetails($id)
     {
-        return view('gallery.show');
+        $gallery = Gallery::find($id);
+
+        if (!$gallery) {
+            abort(404);
+        }
+        return view('gallery.show', ['gallery'=>$gallery]);
     }
 
     public function events()
