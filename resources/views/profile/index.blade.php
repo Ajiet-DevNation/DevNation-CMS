@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+
+@section('meta')
+<meta name="description"
+    content="Manage your DevNation profile to keep your developer information, preferences, and progress up to date. Customize your profile to showcase your skills, interests, and achievements.">
+<meta name="keywords"
+    content="DevNation profile, developer profile, DevOps skills, software engineering profile, developer achievements, manage profile, DevNation account, developer interests">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Profile')
+
 @section('content')
     @include('layouts.inlcudes.nav')
     <div class="padding">
