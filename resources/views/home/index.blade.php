@@ -21,26 +21,18 @@
                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a
-                            href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore
-                            Now</a></span>
+                            href="#" class="btn btn-lg btn-primary rounded-pill me-2">Join Us</a></span>
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
                             href="{{ route('contact') }}" class="btn btn-lg btn-outline-primary rounded-pill">Contact
                             Us</a></span>
                 </div>
-                <!-- <span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2">Explore Now</a></span>
-      <span><a href="#" class="btn btn-lg btn-outline-primary rounded-pill">Contact Us</a></span> -->
             </div>
         </div>
-        <!--/column -->
     </div>
-    <!-- /.row -->
-    </div>
-    <!-- /.container -->
     <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg"
             alt="" /></figure>
 </section>
-<!-- /section -->
 <section class="wrapper bg-gray">
     <div class="container">
         <div class="card shadow-none my-n13 my-md-n15 my-lg-n17">
@@ -50,9 +42,7 @@
                         <h2 class="fs-15 text-uppercase text-muted mb-3">What We Do?</h2>
                         <h3 class="display-4 mb-9">AJIET DevNation focuses on mutual learning and improvement through workshops and training led by industry speakers and student experts. Stay updated with the latest technologies while attending and even hosting non-profit events to help others.</h3>
                     </div>
-                    <!-- /column -->
                 </div>
-                <!-- /.row -->
                 <div class="row gx-md-8 gx-xl-12 gy-8 mb-14 mb-md-16 text-center">
                     <div class="col-md-4">
                         <div class="icon btn btn-block btn-lg btn-soft-purple pe-none mb-5"> <i
@@ -62,7 +52,6 @@
                         We provide round-the-clock support to help you navigate your learning journey. Our dedicated team is here to assist you with any questions or challenges you may face, ensuring you have the resources and guidance you need to succeed.</p>
                         <a href="#" class="more hover link-purple">Learn More</a>
                     </div>
-                    <!--/column -->
                     <div class="col-md-4">
                         <div class="icon btn btn-block btn-lg btn-soft-green pe-none mb-5"> <i
                                 class="uil uil-shield-exclamation"></i> </div>
@@ -71,7 +60,6 @@
                         We ensure secure payments for all workshop speakers and related activities. Your transactions are protected, allowing you to focus on learning and collaboration without worry. Trust us to handle payments smoothly and efficiently.</p>
                         <a href="#" class="more hover link-green">Learn More</a>
                     </div>
-                    <!--/column -->
                     <div class="col-md-4">
                         <div class="icon btn btn-block btn-lg btn-soft-orange pe-none mb-5"> <i
                                 class="uil uil-laptop-cloud"></i> </div>
@@ -80,9 +68,7 @@
                         AJIET DevNation Offers daily updates on upcoming workshops, events, and tech trends. Stay connected and seize every opportunity to enhance your skills.</p>
                         <a href="#" class="more hover link-orange">Learn More</a>
                     </div>
-                    <!--/column -->
                 </div>
-                <!--/.row -->
                 <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Strategy</h2>
@@ -92,7 +78,6 @@
                         <p class="mb-6"></p>
                         <a href="#" class="btn btn-primary rounded-pill mb-0">Learn More</a>
                     </div>
-                    <!--/column -->
                     <div class="col-lg-6">
                         <div class="d-flex flex-row">
                             <div>
@@ -128,140 +113,66 @@
                             </div>
                         </div>
                     </div>
-                    <!--/column -->
                 </div>
-                <!--/.row -->
                 <hr class="my-14 my-md-16" />
-                <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mb-11 align-items-end">
-                    <div class="col-lg-4">
-                        <h2 class="fs-15 text-uppercase text-muted mb-3">Company Facts</h2>
-                        <h3 class="display-4 mb-0">We are proud of our works</h3>
-                    </div>
-                    <!-- /column -->
-                    <div class="col-lg-8 mt-lg-2">
-                        <div class="row align-items-center counter-wrapper gy-6 text-center">
-                            <div class="col-md-4">
-                                <h3 class="counter counter-lg" style="visibility: visible;">1000+</h3>
-                                <p>Completed Projects</p>
-                            </div>
-                            <!--/column -->
-                            <div class="col-md-4">
-                                <h3 class="counter counter-lg" style="visibility: visible;">500+</h3>
-                                <p>Happy Clients</p>
-                            </div>
-                            <!--/column -->
-                            <div class="col-md-4">
-                                <h3 class="counter counter-lg" style="visibility: visible;">150+</h3>
-                                <p>Awards Won</p>
-                            </div>
-                            <!--/column -->
-                        </div>
-                        <!--/.row -->
-                    </div>
-                    <!-- /column -->
-                </div>
-                <!-- /.row -->
-                <div class="card bg-gray shadow-lg mb-14 mb-md-17">
-                    <div class="row gx-0">
-                        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start"
-                            data-image-src="./assets/img/photos/tm1.jpg"
-                            style="background-image: url(&quot;./assets/img/photos/tm1.jpg&quot;);">
-                        </div>
-                        <!--/column -->
-                        <div class="col-lg-6">
-                            <div class="p-10 p-xl-13">
-                                <div class="swiper-container dots-closer mb-6 swiper-container-0" data-margin="30"
-                                    data-dots="true">
-                                    <div
-                                        class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
-                                        <div class="swiper-wrapper" id="swiper-wrapper-bdaa3b99a5eb97cf"
-                                            aria-live="off"
-                                            style="cursor: grab; transform: translate3d(0px, 0px, 0px);">
-                                            <div class="swiper-slide swiper-slide-active" role="group"
-                                                aria-label="1 / 3" style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Coriss Ambady</h5>
-                                                            <p class="mb-0">Financial Analyst</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                            <div class="swiper-slide swiper-slide-next" role="group"
-                                                aria-label="2 / 3" style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Cory Zamora</h5>
-                                                            <p class="mb-0">Marketing Specialist</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                            <div class="swiper-slide" role="group" aria-label="3 / 3"
-                                                style="width: 510px; margin-right: 30px;">
-                                                <blockquote class="icon icon-top fs-lg text-center">
-                                                    <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                                                        dolor auctor. Vestibulum ligula porta felis euismod semper.”
-                                                    </p>
-                                                    <div
-                                                        class="blockquote-details justify-content-center text-center">
-                                                        <div class="info ps-0">
-                                                            <h5 class="mb-1">Nikolas Brooten</h5>
-                                                            <p class="mb-0">Sales Manager</p>
-                                                        </div>
-                                                    </div>
-                                                </blockquote>
-                                            </div>
-                                            <!--/.swiper-slide -->
-                                        </div>
-                                        <!--/.swiper-wrapper -->
-                                        <span class="swiper-notification" aria-live="assertive"
-                                            aria-atomic="true"></span>
+                <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="card me-lg-6">
+                            <div class="card-body p-6">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span
+                                                class="number">01</span></span>
                                     </div>
-                                    <!-- /.swiper -->
-                                    <div class="swiper-controls">
-                                        <div
-                                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
-                                                tabindex="0" role="button" aria-label="Go to slide 1"
-                                                aria-current="true"></span><span class="swiper-pagination-bullet"
-                                                tabindex="0" role="button"
-                                                aria-label="Go to slide 2"></span><span
-                                                class="swiper-pagination-bullet" tabindex="0" role="button"
-                                                aria-label="Go to slide 3"></span>
-                                        </div>
+                                    <div>
+                                        <h4 class="mb-1">Tech Talks</h4>
+                                        <p class="mb-0">Regular sessions featuring industry experts and alumni sharing insights.</p>
                                     </div>
                                 </div>
-                                <!-- /.swiper-container -->
                             </div>
-                            <!--/div -->
                         </div>
-                        <!--/column -->
+                        <div class="card ms-lg-13 mt-6">
+                            <div class="card-body p-6">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span
+                                                class="number">02</span></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-1">Code Sprints</h4>
+                                        <p class="mb-0">Intensive coding sessions to build practical projects and enhance skills.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mx-lg-6 mt-6">
+                            <div class="card-body p-6">
+                                <div class="d-flex flex-row">
+                                    <div>
+                                        <span class="icon btn btn-circle btn-lg btn-soft-primary pe-none me-4"><span
+                                                class="number">03</span></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-1">Hackathons</h4>
+                                        <p class="mb-0">Exciting competitions to solve real-world problems and showcase innovation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!--/.row -->
+                    <div class="col-lg-6">
+                        <h2 class="fs-15 text-uppercase text-muted mb-3">Upcoming Events</h2>
+                        <h3 class="display-4 mb-5">Join our exciting developer events and activities.</h3>
+                        <p class="mb-6">Stay tuned for our upcoming events designed to challenge, inspire, and grow your skills as a developer. From workshops to competitions, there's something for everyone at DevNation.</p>
+                        <a href="#" class="btn btn-primary rounded-pill mb-0">View All Events</a>
+                    </div>
                 </div>
-                <!-- /.card -->
                 <div class="row text-center">
                     <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
-                        <h2 class="fs-15 text-uppercase text-muted mb-3">Case Studies</h2>
-                        <h3 class="display-4 mb-9">Check out some of our awesome projects with creative ideas and
-                            great design.</h3>
+                        <h2 class="fs-15 text-uppercase text-muted mb-3">DevNation Events</h2>
+                        <h3 class="display-4 mb-9">Explore our upcoming events and activities.</h3>
                     </div>
-                    <!-- /column -->
                 </div>
-                <!-- /.row -->
                 <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30"
                     data-dots="true" data-items-xl="3" data-items-md="2" data-items-xs="1">
                     <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
@@ -279,23 +190,17 @@
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Ligula tristique quis risus</a></h2>
+                                                href="./blog-post.html">AI Workshop Series</a></h2>
                                     </div>
-                                    <!-- /.post-header -->
                                     <div class="post-footer">
                                         <ul class="post-meta">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>14 Apr
-                                                    2022</span></li>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>15 May 2024</span></li>
                                             <li class="post-comments"><a href="#"><i
-                                                        class="uil uil-file-alt fs-15"></i>Coding</a></li>
+                                                        class="uil uil-file-alt fs-15"></i>Workshop</a></li>
                                         </ul>
-                                        <!-- /.post-meta -->
                                     </div>
-                                    <!-- /.post-footer -->
                                 </article>
-                                <!-- /article -->
                             </div>
-                            <!--/.swiper-slide -->
                             <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 4"
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
@@ -308,23 +213,17 @@
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Nullam id dolor elit id nibh</a></h2>
+                                                href="./blog-post.html">Web Dev Bootcamp</a></h2>
                                     </div>
-                                    <!-- /.post-header -->
                                     <div class="post-footer">
                                         <ul class="post-meta">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>29 Mar
-                                                    2022</span></li>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>1 Jun 2024</span></li>
                                             <li class="post-comments"><a href="#"><i
-                                                        class="uil uil-file-alt fs-15"></i>Workspace</a></li>
+                                                        class="uil uil-file-alt fs-15"></i>Bootcamp</a></li>
                                         </ul>
-                                        <!-- /.post-meta -->
                                     </div>
-                                    <!-- /.post-footer -->
                                 </article>
-                                <!-- /article -->
                             </div>
-                            <!--/.swiper-slide -->
                             <div class="swiper-slide" role="group" aria-label="3 / 4"
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
@@ -337,15 +236,15 @@
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Ultricies fusce porta elit</a></h2>
+                                                href="./blog-post.html">DevNation Hackathon</a></h2>
                                     </div>
                                     <!-- /.post-header -->
                                     <div class="post-footer">
                                         <ul class="post-meta">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Feb
-                                                    2022</span></li>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>26 Nov
+                                                    2024</span></li>
                                             <li class="post-comments"><a href="#"><i
-                                                        class="uil uil-file-alt fs-15"></i>Meeting</a></li>
+                                                        class="uil uil-file-alt fs-15"></i>Hackathon</a></li>
                                         </ul>
                                         <!-- /.post-meta -->
                                     </div>
@@ -366,27 +265,20 @@
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"
-                                                href="./blog-post.html">Morbi leo risus porta eget</a></h2>
+                                                href="./blog-post.html">Dharshan na Madime</a></h2>
                                     </div>
                                     <div class="post-footer">
                                         <ul class="post-meta">
-                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>7
-                                                    Jan 2022</span></li>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>15 Dec 2024</span></li>
                                             <li class="post-comments"><a href="#"><i
-                                                        class="uil uil-file-alt fs-15"></i>Business Tips</a></li>
+                                                        class="uil uil-file-alt fs-15"></i>Madime</a></li>
                                         </ul>
-                                        <!-- /.post-meta -->
                                     </div>
-                                    <!-- /.post-footer -->
                                 </article>
-                                <!-- /article -->
                             </div>
-                            <!--/.swiper-slide -->
                         </div>
-                        <!--/.swiper-wrapper -->
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
-                    <!-- /.swiper -->
                     <div class="swiper-controls">
                         <div
                             class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
@@ -398,10 +290,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- /.swiper-container -->
                 <hr class="my-14 my-md-16" />
-                <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
-                    <div class="col-md-8 col-lg-6 order-lg-2">
+<div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+    <div class="col-md-8 col-lg-6 order-lg-2">
                         <figure class="rounded"><img src="assets/img/photos/about24.jpg"
                                 srcset="./assets/img/photos/about24@2x.jpg 2x" alt=""></figure>
                     </div>
@@ -504,30 +395,22 @@
                 <div class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
                     data-image-src="./assets/img/map.png"
                     style="background-image: url(&quot;./assets/img/map.png&quot;);">
-                    <div class="container py-md-16 py-lg-18">
-                        <div class="row">
-                            <div class="col-xl-11 col-xxl-9 mx-auto">
-                                <h3 class="display-4 mb-8 px-lg-8">We are trusted by over 5000+ clients. Join them
-                                    now and grow your business.</h3>
-                            </div>
-                            <!-- /column -->
-                        </div>
-                        <!-- /.row -->
-                        <div class="d-flex justify-content-center">
-                            <span><a class="btn btn-primary rounded-pill">Get Started</a></span>
-                        </div>
-                    </div>
-                    <!-- /.container -->
-                </div>
-                <!-- /.wrapper -->
+    <div class="container py-md-16 py-lg-18">
+        <div class="row">
+            <div class="col-xl-11 col-xxl-9 mx-auto">
+                <h3 class="display-4 mb-8 px-lg-8">Join over 500+ student developers at AJIET Mangalore. Be part of DevNation and shape the future of technology.</h3>
             </div>
-            <!--/.card-body -->
+            <!-- /column -->
         </div>
-        <!--/.card -->
+        <!-- /.row -->
+        <div class="d-flex justify-content-center">
+            <span><a href="#" class="btn btn-primary rounded-pill">Join DevNation</a></span>
+        </div>
     </div>
     <!-- /.container -->
-</section>
-<!-- /section -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /.wrapper -->
+        </div>
+    </div>
+</section>
 @endsection
