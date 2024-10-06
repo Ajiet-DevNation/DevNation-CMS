@@ -144,14 +144,14 @@
                     <!-- /.navbar-nav -->
                     <div class="offcanvas-footer d-lg-none">
                         <div>
-                            <a href="cdn-cgi/l/email-protection.html#d3b5baa1a0a7fdbfb2a0a793b6beb2babffdb0bcbe"
-                                class="link-inverse"><span class="__cf_email__"
-                                    data-cfemail="a6cfc8c0c9e6c3cbc7cfca88c5c9cb">[email&#160;protected]</span></a>
-                            <br /> 00 (123) 456 78 90 <br />
+                            <a href="/"
+                                class="link-inverse"><span class="__cf_email__">drshnbhandary@gmail.com</span></a>
+                            <br /> +91 90 1900 3490 <br />
                             <nav class="nav social social-white mt-4">
                                 <a href="#"><i class="uil uil-linkedin"></i></a>
                                 <a href="#"><i class="uil uil-youtube"></i></a>
                                 <a href="#"><i class="uil uil-instagram"></i></a>
+                                <a href="#"><i class="uil uil-github"></i></a>
                             </nav>
                             <!-- /.social -->
                         </div>
@@ -166,8 +166,8 @@
                     <li class="nav-item">
                         <nav class="nav social social-muted justify-content-end text-end">
                             <a href="#"><i class="uil uil-linkedin"></i></a>
-                            <a href="#"><i class="uil uil-youtube"></i></a>
                             <a href="#"><i class="uil uil-instagram"></i></a>
+                            <a href="#"><i class="uil uil-github"></i></a>
                         </nav>
                         <!-- /.social -->
                     </li>
