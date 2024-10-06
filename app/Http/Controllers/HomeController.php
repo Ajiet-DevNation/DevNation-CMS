@@ -10,7 +10,9 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view('home.index');
+        $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
+        // dd($upcomingEvents);
+        return view('home.index', ['upcomingEvents' => $upcomingEvents]);
     }
 
     public function about()
