@@ -1,0 +1,15 @@
+body {
+    background: #d3d3d3;
+}
+.row {
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin-inline: auto !important;
+    padding-inline: 2rem;
+}
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem 1rem;
+    justify-items: center;
+}

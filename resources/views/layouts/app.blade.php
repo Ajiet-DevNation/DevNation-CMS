@@ -17,7 +17,7 @@
     @if (Request::is('event-details/*'))
         <link rel="stylesheet" href={{ asset('/assets/css/event-details.css') }}>
     @endif
-    @if (Request::is('gallery'))
+    @if (Request::is('gallery') || Request::is('gallery/*'))
         <link rel="stylesheet" href={{ asset('/assets/css/gallery.css') }}>
     @endif
     <link rel="stylesheet" href={{ asset('/assets/css/plugins.css') }}>
