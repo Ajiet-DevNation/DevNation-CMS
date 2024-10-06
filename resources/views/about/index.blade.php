@@ -144,37 +144,47 @@
       <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex position-relative">
         <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1"
           style="top: 7rem; left: 1rem"></div>
-        <figure><img src="assets/img/photos/co1.png" srcset="./assets/img/photos/co1@2x.png 2x"
+        <figure><img src="assets/draft/about.draft.png" srcset="./assets/img/photos/co1@2x.png 2x"
             alt="DevNation Community"></figure>
       </div>
       <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
-        <div class="basic-slider owl-carousel dots-start gap-small mt-6" data-margin="30">
-          <div class="item">
-            <blockquote class="icon fs-lg">
-              <p>"DevNation has been an incredible platform for me to explore new technologies and connect with
-                like-minded individuals. The workshops and hackathons have significantly boosted my skills and
-                confidence."</p>
-              <div class="blockquote-details">
-                <div class="info ps-0">
-                  <h5 class="mb-1">Sarah Johnson</h5>
-                  <p class="mb-0">Computer Science Student</p>
-                </div>
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="text-center">
+                          <div class="quote-icon mb-3">
+                              <img src='/images/quote.png' height='36' width='36' alt="Quote icon">
+                          </div>
+                          <blockquote class="fs-5">
+                              <p class="mb-2">"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
+                              <div class="d-flex flex-column align-items-center">
+                                  <h5 class="mb-1">Darshan Bhandary</h5>
+                                  <p class="mb-0">Computer Science Student</p>
+                              </div>
+                          </blockquote>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="text-center">
+                          <div class="quote-icon mb-3">
+                              <img src='/images/quote.png' height='36' width='36' alt="Quote icon">
+                          </div>
+                          <blockquote class="fs-5">
+                              <p class="mb-2">"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
+                              <div class="d-flex flex-column align-items-center">
+                                  <h5 class="mb-1">Harshit Poojary</h5>
+                                  <p class="mb-0">Software Engineering Graduate</p>
+                              </div>
+                          </blockquote>
+                      </div>
+                  </div>
               </div>
-            </blockquote>
+
+            <div class="carousel-indicators mt-4">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active rounded-circle mx-1" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="rounded-circle mx-1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+            </div>
           </div>
-          <div class="item">
-            <blockquote class="icon fs-lg">
-              <p>"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and
-                industry connections have been invaluable in shaping my career path in tech."</p>
-              <div class="blockquote-details">
-                <div class="info ps-0">
-                  <h5 class="mb-1">Michael Chen</h5>
-                  <p class="mb-0">Software Engineering Graduate</p>
-                </div>
-              </div>
-            </blockquote>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -193,77 +203,83 @@
         style="bottom: 0.5rem; right: -1.7rem;"></div>
       <div class="shape rounded-circle bg-line red rellax w-16 h-16" data-rellax-speed="1"
         style="top: 0.5rem; left: -1.7rem;"></div>
-      <div class="carousel owl-carousel gap-small" data-margin="0" data-dots="true" data-autoplay="false"
-        data-autoplay-timeout="5000"
-        data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}, "1400":{"items": "4"}}'>
-        <div class="item">
-          <div class="item-inner">
-            <div class="card">
-              <div class="card-body">
-                <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te1.jpg"
-                  srcset="./assets/img/avatars/te1@2x.jpg 2x" alt="Member 1" />
-                <h4 class="mb-1">Member-1</h4>
-                <div class="meta mb-2">President</div>
-                <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
-                <nav class="nav social mb-0">
-                  <a href="#"><i class="uil uil-twitter"></i></a>
-                  <a href="#"><i class="uil uil-linkedin"></i></a>
-                  <a href="#"><i class="uil uil-github"></i></a>
-                </nav>
+
+      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/draft/about.draft.png"
+                      srcset="./assets/draft/about.draft@2x.png 2x" alt="Member 1" />
+                    <h4 class="mb-1">Member-1</h4>
+                    <div class="meta mb-2">President</div>
+                    <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-github"></i></a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te2.jpg"
+                      srcset="./assets/img/avatars/te2@2x.jpg 2x" alt="Member 2" />
+                    <h4 class="mb-1">Member-2</h4>
+                    <div class="meta mb-2">Vice President</div>
+                    <p class="mb-2">Coordinating events and managing partnerships with tech companies.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-github"></i></a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te3.jpg"
+                      srcset="./assets/img/avatars/te3@2x.jpg 2x" alt="Member 3" />
+                    <h4 class="mb-1">Member-3</h4>
+                    <div class="meta mb-2">Technical Lead</div>
+                    <p class="mb-2">Overseeing technical workshops and hackathon projects.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-github"></i></a>
+                    </nav>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="item">
-          <div class="item-inner">
-            <div class="card">
-              <div class="card-body">
-                <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te2.jpg"
-                  srcset="./assets/img/avatars/te2@2x.jpg 2x" alt="Member 2" />
-                <h4 class="mb-1">Member-2</h4>
-                <div class="meta mb-2">Vice President</div>
-                <p class="mb-2">Coordinating events and managing partnerships with tech companies.</p>
-                <nav class="nav social mb-0">
-                  <a href="#"><i class="uil uil-twitter"></i></a>
-                  <a href="#"><i class="uil uil-linkedin"></i></a>
-                  <a href="#"><i class="uil uil-github"></i></a>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-inner">
-            <div class="card">
-              <div class="card-body">
-                <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te3.jpg"
-                  srcset="./assets/img/avatars/te3@2x.jpg 2x" alt="Member 3" />
-                <h4 class="mb-1">Member-3</h4>
-                <div class="meta mb-2">Technical Lead</div>
-                <p class="mb-2">Overseeing technical workshops and hackathon projects.</p>
-                <nav class="nav social mb-0">
-                  <a href="#"><i class="uil uil-twitter"></i></a>
-                  <a href="#"><i class="uil uil-linkedin"></i></a>
-                  <a href="#"><i class="uil uil-github"></i></a>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-inner">
-            <div class="card">
-              <div class="card-body">
-                <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te4.jpg"
-                  srcset="./assets/img/avatars/te4@2x.jpg 2x" alt="Member 4" />
-                <h4 class="mb-1">Member-4</h4>
-                <div class="meta mb-2">Marketing Coordinator</div>
-                <p class="mb-2">Managing DevNation's online presence and community outreach.</p>
-                <nav class="nav social mb-0">
-                  <a href="#"><i class="uil uil-twitter"></i></a>
-                  <a href="#"><i class="uil uil-linkedin"></i></a>
-                  <a href="#"><i class="uil uil-instagram"></i></a>
-                </nav>
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te4.jpg"
+                      srcset="./assets/img/avatars/te4@2x.jpg 2x" alt="Member 4" />
+                    <h4 class="mb-1">Member-4</h4>
+                    <div class="meta mb-2">Marketing Coordinator</div>
+                    <p class="mb-2">Managing DevNation's online presence and community outreach.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-instagram"></i></a>
+                    </nav>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -272,6 +288,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="wrapper bg-soft-primary">
   <div class="container py-14 py-md-16">
