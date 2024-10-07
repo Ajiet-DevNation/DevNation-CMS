@@ -18,17 +18,17 @@
     <div class="row">
       <div class="col-xl-6 mx-auto">
         <h1 class="display-1 mb-4">Welcome to DevNation</h1>
-        <p class="lead fs-lg mb-0">Empowering students to innovate, collaborate, and grow in the ever-evolving world
-          of technology.</p>
+        <p class="lead fs-lg mb-0 text-decoration-none">Empowering students to innovate, collaborate, and grow in the ever-evolving world of technology.</p>
       </div>
-      <!-- /column -->
+      <!-- /.col-xl-6 -->
     </div>
     <!-- /.row -->
   </div>
   <!-- /.container -->
-  <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;"><img src="{{ asset('assets/img/photos/bg12.jpg') }}"
+  <figure class="position-relative" style="bottom: 0; left: 0; z-index: 2;"><img src="{{ asset('assets/img/photos/bg12.jpg') }}"
       alt="" /></figure>
 </section>
+
 <!-- /section -->
 <section class="wrapper bg-light angled upper-end lower-end">
   <div class="container py-14 py-md-16">
@@ -97,7 +97,7 @@
               </div>
               <div>
                 <h4 class="mb-1">Practical Learning</h4>
-                <p class="mb-0">Hands-on workshops and real-world projects to apply theoretical knowledge.</p>
+                <p class="mb-0 text-decoration-none">Hands-on workshops and real-world projects to apply theoretical knowledge.</p>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
               </div>
               <div>
                 <h4 class="mb-1">Collaborative Innovation</h4>
-                <p class="mb-0">Hackathons and team projects to foster creativity and problem-solving skills.</p>
+                <p class="mb-0 text-decoration-none">Hackathons and team projects to foster creativity and problem-solving skills.</p>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
               </div>
               <div>
                 <h4 class="mb-1">Industry Connections</h4>
-                <p class="mb-0">Networking events and mentorship programs to bridge academia and industry.</p>
+                <p class="mb-0 text-decoration-none">Networking events and mentorship programs to bridge academia and industry.</p>
               </div>
             </div>
           </div>
@@ -133,12 +133,12 @@
       </div>
       <div class="col-lg-6">
         <h2 class="display-6 mb-3">How We Empower Students</h2>
-        <p class="lead fs-lg pe-lg-5">DevNation creates a dynamic ecosystem where students can learn, innovate, and
+        <p class="lead fs-lg pe-lg-5 text-decoration-none">DevNation creates a dynamic ecosystem where students can learn, innovate, and
           grow their tech skills.</p>
-        <p>Our approach combines practical workshops, collaborative projects, and industry insights to prepare
+        <p class="text-decoration-none">Our approach combines practical workshops, collaborative projects, and industry insights to prepare
           students for the challenges of the tech world. We believe in learning by doing, fostering creativity, and
           building a strong community of tech enthusiasts.</p>
-        <p class="mb-6">Through our events and initiatives, we aim to bridge the gap between academic learning and
+        <p class="mb-6 text-decoration-none">Through our events and initiatives, we aim to bridge the gap between academic learning and
           industry requirements, ensuring our members are well-equipped for their future careers in technology.</p>
         <a href="#" class="btn btn-primary rounded-pill mb-0">Join DevNation</a>
       </div>
@@ -167,11 +167,11 @@
                         <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
-                        <p>"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
+                        <p class="text-decoration-none">"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
                       </blockquote>
                       <div class="d-flex flex-column align-items-center">
                         <h5 class="mb-1">Darshan Bhandary</h5>
-                        <p class="mb-0 text-muted">Computer Science Student</p>
+                        <p class="mb-0 text-muted text-decoration-none">Computer Science Student</p>
                       </div>
                     </div>
                   </div>
@@ -181,7 +181,7 @@
                         <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
-                        <p>"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
+                        <p class="text-decoration-none">"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
                       </blockquote>
                       <div class="d-flex flex-column align-items-center">
                         <h5 class="mb-1">Harshit Poojary</h5>
@@ -208,7 +208,7 @@
     <div class="row mb-3">
       <div class="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
         <img src="{{ asset('assets/img/icons/lineal/team.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
-        <h2 class="display-4 mb-3 px-lg-14">Our Community Core Members</h2>
+        <h2 class="display-4 mb-3 px-lg-14">Our Core Community Members</h2>
       </div>
     </div>
     <div class="position-relative">
@@ -341,26 +341,26 @@
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/check.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
-            <h3 class="counter">50+</h3>
-            <p>Events Organized</p>
+            <h4 class="counter text-decoration-none">50+</h4>
+            <p class="text-decoration-none">Events Organized</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/user.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
-            <h3 class="counter">1000+</h3>
-            <p>Active Members</p>
+            <h4 class="counter">1000+</h4>
+            <p class="text-decoration-none">Active Members</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
-            <h3 class="counter">20+</h3>
-            <p>Industry Partners</p>
+            <h4 class="counter">20+</h4>
+            <p class="text-decoration-none">Industry Partners</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/award-2.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
-            <h3 class="counter">15+</h3>
-            <p>Hackathons Hosted</p>
+            <h4 class="counter">15+</h4>
+            <p class="text-decoration-none">Hackathons Hosted</p>
           </div>
         </div>
       </div>
@@ -395,7 +395,7 @@
           </div>
           <div>
             <h5 class="mb-1">Phone</h5>
-            <p>+91 98765 43210</p>
+            <p class=" text-decoration-none">+91 98765 43210</p>
           </div>
         </div>
         <div class="d-flex flex-row">
@@ -404,7 +404,7 @@
           </div>
           <div>
             <h5 class="mb-1">E-mail</h5>
-            <p class="mb-0"><a href="mailto:drshnbhandary@gmail.com" class="link-body">drshnbhandary@gmail.com</a></p>
+            <p class="mb-0 text-decoration-none"><a href="mailto:drshnbhandary@gmail.com" class="link-body">drshnbhandary@gmail.com</a></p>
           </div>
         </div>
       </div>
