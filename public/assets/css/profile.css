@@ -4,7 +4,7 @@
     background: red;
   } */
   
-  @media (max-width: 984px) {
+  @media (max-width: 969px) {
     .certificate{
     grid-template-columns:none !important;
     justify-items: center !important;
@@ -24,6 +24,7 @@
     }
     .tab_btn{
       padding: 0px !important;
+      font-size: medium !important;
       padding-bottom: 1rem !important;
     }
     .certiCard{
@@ -40,10 +41,10 @@
     padding-inline : 0px;
     padding-block: 30px;
     border-radius: 29px;
-    transform: translate(0px, -101px) !important;
+    transform: translate(0px, -88px) !important;
   }
   .rect{
-    height: 50vh !important;
+    height: 432px !important;
   }
 .circle{
     margin-top: calc(-2rem + -263px) !important;
@@ -68,7 +69,7 @@ button{
     color: green;
 }
 .rect{
-    height: 40vh;
+    height: 314px;
     /* background: linear-gradient(45deg, #1a1a48, #076b7feb,#1a1a48); */
     background: #152d5a;
   }
@@ -87,7 +88,7 @@ button{
     
 }
 .circle{
-    margin-top: calc(-2rem + -100px);
+    margin-top: calc(-2rem + -67px);
     margin-bottom: 2rem;
     width: 47%;
    
@@ -111,7 +112,13 @@ button{
   }
   .di{
     border: none;
-    border:solid 2px grey;
+   border-bottom: 2px solid grey;
+
+  }
+  .di:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
   }
   .details>div *{
     margin:0%;
@@ -162,7 +169,6 @@ button{
   justify-content: space-around;
   margin-bottom: 2rem;
   align-items: center;
-  border-bottom: 2px solid rgba(229, 229, 229);
    position:relative;
   }
   
@@ -207,7 +213,6 @@ button{
   left: 72px;
   width: 90px;
   height: 5px;
-  background:#ffffff00;
     border-radius:10px;
     transition: all .3s ease-in-out;
   }
