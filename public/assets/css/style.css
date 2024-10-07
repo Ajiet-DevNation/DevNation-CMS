@@ -7697,7 +7697,7 @@ fieldset:disabled .btn {
     justify-content: center;
     padding: 0;
     margin-right: 15%;
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
     margin-left: 15%;
 }
 .carousel-indicators [data-bs-target] {

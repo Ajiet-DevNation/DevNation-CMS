@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="Get in touch with DevNation for inquiries, support, or collaboration opportunities. Reach us via our contact form, email, or phone. We are here to help you with your queries.">
+<meta name="keywords"
+    content="DevNation contact, collaboration with DevNation, contact DevNation, DevNation help, DevNation phone, DevNation email, DevNation form">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Contact-Us')
+
 @section('content')
 @include('layouts.inlcudes.nav')
 <section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-400 text-white"
@@ -32,7 +42,7 @@ data-image-src="./assets/img/photos/bg3.jpg" style="background-image: url('./ass
         <div class="row">
           <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
               <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>
-              <p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you
+              <p class="lead text-center mb-10 text-decoration-none">Reach out to us from our contact form and we will get back to you
                   shortly.</p>
               <form class="contact-form needs-validation" method="post" action="./assets/php/contact.php"
                   novalidate="">
@@ -186,17 +196,17 @@ data-image-src="./assets/img/map.png" style="background-image: url(&quot;./asset
             <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
                 <div class="col-md-4 text-center">
                     <h3 class="counter counter-lg text-primary" style="visibility: visible;">7518</h3>
-                    <p>Completed Projects</p>
+                    <p class="text-decoration-none">Completed Projects</p>
                 </div>
                 <!--/column -->
                 <div class="col-md-4 text-center">
                     <h3 class="counter counter-lg text-primary" style="visibility: visible;">5472</h3>
-                    <p>Satisfied Customers</p>
+                    <p class="text-decoration-none">Satisfied Customers</p>
                 </div>
                 <!--/column -->
                 <div class="col-md-4 text-center">
                     <h3 class="counter counter-lg text-primary" style="visibility: visible;">2184</h3>
-                    <p>Expert Employees</p>
+                    <p class="text-decoration-none">Expert Employees</p>
                 </div>
                 <!--/column -->
             </div>
