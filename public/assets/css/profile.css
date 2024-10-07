@@ -16,8 +16,15 @@
     .cardInfo>h3{
       font-size: large !important;
     }
+    .details{
+      padding-left:1rem !important ;
+    }
     .cardInfo>.button{
       font-size: medium !important;
+    }
+    .tab_btn{
+      padding: 0px !important;
+      padding-bottom: 1rem !important;
     }
     .certiCard{
       width: 75%  !important;
@@ -26,31 +33,30 @@
       grid-template-columns: 1fr !important;
         grid-template-rows: auto 1fr;
         justify-items: center;
+        padding-left: 0px !important;
   }
   .containerB{
     width: 100%;
-    padding: 30px;
+    padding-inline : 0px;
+    padding-block: 30px;
     border-radius: 29px;
+    transform: translate(0px, -101px) !important;
   }
   .rect{
     height: 50vh !important;
   }
 .circle{
-    margin-top: calc(-2rem + -278px) !important;
+    margin-top: calc(-2rem + -263px) !important;
     margin-bottom: 3rem !important;
     width: 105px !important;
     height: 103px !important;
   
 }
 .circleCover>h2{
-  margin-left: -59px;
   color: white;
   margin-top: -45px;
 }
-.circleCover>button{
-  margin-right: 83px;
-        padding-left: 18px;
-}
+
 }
   .circleCover{
     text-align: center;
@@ -69,12 +75,12 @@ button{
   
   .cover{
     display: grid;
-    grid-template-columns: auto 1fr;
-    padding:2rem;
-    padding-right:0px ;
+    grid-template-columns: 33vw 1fr;
+    padding: 1rem;
     margin-inline: auto;
-    column-gap: 4rem;
     max-width: 1250px;
+    place-items: center;
+    justify-items: center;
 }
 .circleCover h2{
     text-align: center;
@@ -83,8 +89,8 @@ button{
 .circle{
     margin-top: calc(-2rem + -100px);
     margin-bottom: 2rem;
-    width: 250px;
-    height: 250px;
+    width: 47%;
+   
     background: #d5d5d5;
     border-radius: 999px;
     overflow: hidden;
@@ -145,10 +151,9 @@ button{
   
   
   .containerB{
-  width: 100%;
-  padding: 30px;
-  transform: translate(-40px, -137px);
-  border-radius: 29px;
+    width: 100%;
+    transform: translate(0px, -87px);
+    border-radius: 29px;
   }
   
   .tab_box{
@@ -243,6 +248,17 @@ button{
     width: 100%;
     height: auto;
   }
-
+.circleCover{
+  display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-block: 0;
+    align-self: center;
+    justify-content: flex-start;
+    align-content: center;  
+}
   
  

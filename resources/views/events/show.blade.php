@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="Join us at {{ $event->name }} happening on {{ date('d M, Y', strtotime($event->start_date)) }} at {{ $event->location }}. Learn more about the event, the speaker, and related opportunities. Don't miss out on this exciting event in the DevNation community.">
+<meta name="keywords"
+    content="{{ $event->name }}, {{ $event->location }}, {{ $event->event_type }}, DevNation events, developer events, tech conferences, {{ $event->speaker }}, register for {{ $event->name }}">
+<meta name="author" content="DevNation">
+@endsection
+
+@section('title', '{{ $event->name }} | DevNation')
+
 @section('content')
     <header class="header" style="background-image: url('{{ Storage::url($event->banner) }}');">
 
