@@ -9,11 +9,11 @@
 @endsection
 
 @section('title', 'About')
+
 @section('content')
 
-@include('layouts.inlcudes.nav')
-
 <section class="wrapper bg-gray">
+  @include('layouts.inlcudes.nav')
   <div class="container pt-10 pt-md-14 text-center">
     <div class="row">
       <div class="col-xl-6 mx-auto">
@@ -26,7 +26,7 @@
     <!-- /.row -->
   </div>
   <!-- /.container -->
-  <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;"><img src="assets/img/photos/bg12.jpg"
+  <figure class="position-absoute" style="bottom: 0; left: 0; z-index: 2;"><img src="{{ asset('assets/img/photos/bg12.jpg') }}"
       alt="" /></figure>
 </section>
 <!-- /section -->
@@ -38,17 +38,17 @@
         </div>
         <div class="overlap-grid overlap-grid-2">
           <div class="item">
-            <figure class="rounded shadow"><img src="assets/img/photos/about2.jpg"
-                srcset="./assets/img/photos/about2@2x.jpg 2x" alt="DevNation Event"></figure>
+            <figure class="rounded shadow"><img src="{{ asset('assets/img/photos/about2.jpg') }}"
+                srcset="{{ asset('./assets/img/photos/about2@2x.jpg') }} 2x" alt="DevNation Event"></figure>
           </div>
           <div class="item">
-            <figure class="rounded shadow"><img src="assets/img/photos/about3.jpg"
-                srcset="./assets/img/photos/about3@2x.jpg 2x" alt="DevNation Workshop"></figure>
+            <figure class="rounded shadow"><img src="{{ asset('assets/img/photos/about3.jpg') }}"
+                srcset="{{ asset('./assets/img/photos/about3@2x.jpg') }} 2x" alt="DevNation Workshop"></figure>
           </div>
         </div>
       </div>
       <div class="col-lg-6">
-        <img src="assets/img/icons/lineal/megaphone.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <img src="{{ asset('assets/img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
         <h2 class="display-4 mb-3">Who Are We?</h2>
         <p class="lead fs-lg">We are a dynamic student-led association dedicated to fostering innovation,
           collaboration, and growth in the world of technology.</p>
@@ -81,7 +81,7 @@
     <!--/.row -->
     <div class="row mb-5">
       <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
-        <img src="assets/img/icons/lineal/list.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <img src="{{ asset('assets/img/icons/lineal/list.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
         <h2 class="display-4 mb-4 px-lg-14">Our Approach to Empowering Tech Enthusiasts</h2>
       </div>
     </div>
@@ -155,7 +155,7 @@
             <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex position-relative">
               <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1"
                 style="top: 7rem; left: 1rem"></div>
-              <figure><img src="assets/draft/about.draft.png" srcset="./assets/img/photos/co1@2x.png 2x"
+              <figure><img src="{{ asset('assets/draft/about.draft.png') }}" srcset="{{ asset('./assets/img/photos/co1@2x.png') }} 2x"
                   alt="DevNation Community"></figure>
             </div>
             <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
@@ -164,7 +164,7 @@
                   <div class="carousel-item active">
                     <div class="text-center">
                       <div class="quote-icon mb-4">
-                        <img src='/images/quote.png' height='48' width='48' alt="Quote icon">
+                        <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
                         <p>"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
@@ -178,7 +178,7 @@
                   <div class="carousel-item">
                     <div class="text-center">
                       <div class="quote-icon mb-4">
-                        <img src='/images/quote.png' height='48' width='48' alt="Quote icon">
+                        <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
                         <p>"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
@@ -207,7 +207,7 @@
   <div class="container py-14 py-md-16">
     <div class="row mb-3">
       <div class="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
-        <img src="assets/img/icons/lineal/team.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <img src="{{ asset('assets/img/icons/lineal/team.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
         <h2 class="display-4 mb-3 px-lg-14">Our Community Core Members</h2>
       </div>
     </div>
@@ -224,8 +224,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/draft/about.draft.png"
-                      srcset="./assets/draft/about.draft@2x.png 2x" alt="Member 1" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/draft/about.draft.png') }}"
+                      srcset="{{ asset('./assets/draft/about.draft@2x.png') }} 2x" alt="Member 1" />
                     <h4 class="mb-1">Member-1</h4>
                     <div class="meta mb-2">President</div>
                     <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
@@ -240,8 +240,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te2.jpg"
-                      srcset="./assets/img/avatars/te2@2x.jpg 2x" alt="Member 2" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te2.jpg') }}"
+                      srcset="{{ asset('./assets/img/avatars/te2@2x.jpg') }} 2x" alt="Member 2" />
                     <h4 class="mb-1">Member-2</h4>
                     <div class="meta mb-2">Vice President</div>
                     <p class="mb-2">Coordinating events and managing partnerships with tech companies.</p>
@@ -256,8 +256,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te3.jpg"
-                      srcset="./assets/img/avatars/te3@2x.jpg 2x" alt="Member 3" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te3.jpg') }}"
+                      srcset="{{ asset('./assets/img/avatars/te3@2x.jpg') }} 2x" alt="Member 3" />
                     <h4 class="mb-1">Member-3</h4>
                     <div class="meta mb-2">Technical Lead</div>
                     <p class="mb-2">Overseeing technical workshops and hackathon projects.</p>
@@ -276,8 +276,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te4.jpg"
-                      srcset="./assets/img/avatars/te4@2x.jpg 2x" alt="Member 4" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te4.jpg') }}"
+                      srcset="{{ asset('/assets/img/avatars/te4@2x.jpg') }} 2x" alt="Member 4" />
                     <h4 class="mb-1">Member-4</h4>
                     <div class="meta mb-2">Marketing Coordinator</div>
                     <p class="mb-2">Managing DevNation's online presence and community outreach.</p>
@@ -292,8 +292,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te5.jpg"
-                      srcset="./assets/img/avatars/te5@2x.jpg 2x" alt="Member 5" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te5.jpg') }}"
+                      srcset="{{ asset('./assets/img/avatars/te5@2x.jpg') }} 2x" alt="Member 5" />
                     <h4 class="mb-1">Member-5</h4>
                     <div class="meta mb-2">Design Lead</div>
                     <p class="mb-2">Crafting and managing all design aspects for DevNation's projects.</p>
@@ -308,8 +308,8 @@
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te6.jpg"
-                      srcset="./assets/img/avatars/te6@2x.jpg 2x" alt="Member 6" />
+                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te6.jpg') }}"
+                      srcset="{{ asset('./assets/img/avatars/te6@2x.jpg') }} 2x" alt="Member 6" />
                     <h4 class="mb-1">Member-6</h4>
                     <div class="meta mb-2">Community Manager</div>
                     <p class="mb-2">Building a strong and supportive community for developers worldwide.</p>
@@ -339,25 +339,25 @@
       <div class="col-xl-10 mx-auto">
         <div class="row align-items-center counter-wrapper gy-6 text-center">
           <div class="col-md-3">
-            <img src="assets/img/icons/lineal/check.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
+            <img src="{{ asset('assets/img/icons/lineal/check.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
             <h3 class="counter">50+</h3>
             <p>Events Organized</p>
           </div>
           <div class="col-md-3">
-            <img src="assets/img/icons/lineal/user.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
+            <img src="{{ asset('assets/img/icons/lineal/user.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
             <h3 class="counter">1000+</h3>
             <p>Active Members</p>
           </div>
           <div class="col-md-3">
-            <img src="assets/img/icons/lineal/briefcase-2.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
+            <img src="{{ asset('assets/img/icons/lineal/briefcase-2.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
             <h3 class="counter">20+</h3>
             <p>Industry Partners</p>
           </div>
           <div class="col-md-3">
-            <img src="assets/img/icons/lineal/award-2.svg" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
+            <img src="{{ asset('assets/img/icons/lineal/award-2.svg') }}" class="svg-inject icon-svg icon-svg-lg text-primary mb-3"
               alt="" />
             <h3 class="counter">15+</h3>
             <p>Hackathons Hosted</p>
@@ -374,11 +374,11 @@
       <div class="col-md-8 col-lg-6 offset-lg-0 col-xl-5 offset-xl-1 position-relative">
         <div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2rem; left: -1.4rem;">
         </div>
-        <figure class="rounded"><img src="assets/img/photos/about4.jpg" srcset="./assets/img/photos/about4@2x.jpg 2x"
+        <figure class="rounded"><img src="{{ asset('assets/img/photos/about4.jpg') }}" srcset="{{ asset('./assets/img/photos/about4@2x.jpg') }} 2x"
             alt="DevNation Event"></figure>
       </div>
       <div class="col-lg-6">
-        <img src="assets/img/icons/lineal/telemarketer.svg" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
+        <img src="{{ asset('assets/img/icons/lineal/telemarketer.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
         <h2 class="display-4 mb-8">Ready to join the DevNation community?</h2>
         <div class="d-flex flex-row">
           <div>
@@ -404,7 +404,7 @@
           </div>
           <div>
             <h5 class="mb-1">E-mail</h5>
-            <p class="mb-0"><a href="mailto:info@devnation.org" class="link-body">info@devnation.org</a></p>
+            <p class="mb-0"><a href="mailto:drshnbhandary@gmail.com" class="link-body">drshnbhandary@gmail.com</a></p>
           </div>
         </div>
       </div>
