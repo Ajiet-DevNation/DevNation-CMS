@@ -2,10 +2,10 @@
 
 @section('meta')
 <meta name="description"
-    content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website.">
+    content="DevNation is a leading tech learning platform offering DevOps tutorials, software engineering resources, and a thriving developer community. Explore our mission, vision, and learn how we help developers enhance their skills and grow their careers in the tech industry.">
 <meta name="keywords"
-    content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
-<meta name="author" content="elemis">
+    content="DevNation, tech learning platform, DevOps tutorials, software engineering resources, developer community, DevNation mission, DevNation vision, DevNation team, developer education, tech career growth">
+<meta name="author" content="DevNation">
 @endsection
 
 @section('title', 'Home')

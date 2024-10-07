@@ -2,10 +2,10 @@
 
 @section('meta')
 <meta name="description"
-    content="Learn more about DevNation, a community-driven platform designed to empower aspiring and seasoned developers alike. We create supportive network for the developers to enhance coding skills, foster collaboration, and boost career growth in the tech industry.">
+    content="Explore DevNation, a community-driven tech learning platform empowering developers with resources, tutorials, and collaboration opportunities. Enhance your coding skills and accelerate your career growth in the tech industry through our DevOps tutorials, software engineering resources, and dynamic developer community.">
 <meta name="keywords"
-    content="About DevNation, DevNation mission, DevNation vision, DevNation team, DevOps tutorials, software engineering resources, developer community, tech learning platform" >
-<meta name="author" content="elemis">
+    content="DevNation, DevNation mission, DevNation vision, DevNation team, DevOps tutorials, software engineering resources, developer community, tech learning platform">
+<meta name="author" content="DevNation">
 @endsection
 
 @section('title', 'About')
