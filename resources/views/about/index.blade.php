@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="Learn more about DevNation, a community-driven platform designed to empower aspiring and seasoned developers alike. We create supportive network for the developers to enhance coding skills, foster collaboration, and boost career growth in the tech industry.">
+<meta name="keywords"
+    content="About DevNation, DevNation mission, DevNation vision, DevNation team, DevOps tutorials, software engineering resources, developer community, tech learning platform" >
+<meta name="author" content="elemis">
+@endsection
 
+@section('title', 'About')
 @section('content')
 
 @include('layouts.inlcudes.nav')

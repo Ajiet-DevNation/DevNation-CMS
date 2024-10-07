@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+
+@section('meta')
+<meta name="description"
+    content="Explore the DevNation gallery to see highlights from our past events, workshops, and conferences. Discover moments captured from our developer community's journey in DevOps, software engineering, and tech innovation.">
+<meta name="keywords"
+    content="DevNation gallery, event highlights, developer community photos, DevOps workshops photos, tech conference images, software engineering events gallery, DevNation events, tech community gallery">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Gallery')
 @section('content')
     @include('layouts.inlcudes.nav')
     {{-- <main class="row"> --}}

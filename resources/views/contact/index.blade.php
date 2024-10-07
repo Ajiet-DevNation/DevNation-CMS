@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="Get in touch with DevNation for inquiries, support, or collaboration opportunities. Reach us via our contact form, email, or phone. We are here to help you with your queries.">
+<meta name="keywords"
+    content="DevNation contact, collaboration with DevNation, contact DevNation, DevNation help, DevNation phone, DevNation email, DevNation form">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Contact-Us')
+
 @section('content')
 @include('layouts.inlcudes.nav')
 <section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-400 text-white"
