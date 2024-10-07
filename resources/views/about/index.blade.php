@@ -141,51 +141,56 @@
 <section class="wrapper bg-soft-primary">
   <div class="container pt-16 pb-14 pb-md-0">
     <div class="row gx-lg-8 gx-xl-0 align-items-center">
-      <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex position-relative">
-        <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1"
-          style="top: 7rem; left: 1rem"></div>
-        <figure><img src="assets/draft/about.draft.png" srcset="./assets/img/photos/co1@2x.png 2x"
-            alt="DevNation Community"></figure>
-      </div>
-      <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
-          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
+      <section class="wrapper bg-soft-primary">
+        <div class="container pt-16 pb-14 pb-md-16">
+          <div class="row gx-lg-8 gx-xl-0 align-items-center">
+            <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex position-relative">
+              <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1"
+                style="top: 7rem; left: 1rem"></div>
+              <figure><img src="assets/draft/about.draft.png" srcset="./assets/img/photos/co1@2x.png 2x"
+                  alt="DevNation Community"></figure>
+            </div>
+            <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
+              <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
                   <div class="carousel-item active">
-                      <div class="text-center">
-                          <div class="quote-icon mb-3">
-                              <img src='/images/quote.png' height='36' width='36' alt="Quote icon">
-                          </div>
-                          <blockquote class="fs-5">
-                              <p class="mb-2">"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
-                              <div class="d-flex flex-column align-items-center">
-                                  <h5 class="mb-1">Darshan Bhandary</h5>
-                                  <p class="mb-0">Computer Science Student</p>
-                              </div>
-                          </blockquote>
+                    <div class="text-center">
+                      <div class="quote-icon mb-4">
+                        <img src='/images/quote.png' height='48' width='48' alt="Quote icon">
                       </div>
+                      <blockquote class="fs-lg mb-4">
+                        <p>"DevNation has been an incredible platform for me to explore new technologies and connect with like-minded individuals. The workshops and hackathons have significantly boosted my skills and confidence."</p>
+                      </blockquote>
+                      <div class="d-flex flex-column align-items-center">
+                        <h5 class="mb-1">Darshan Bhandary</h5>
+                        <p class="mb-0 text-muted">Computer Science Student</p>
+                      </div>
+                    </div>
                   </div>
                   <div class="carousel-item">
-                      <div class="text-center">
-                          <div class="quote-icon mb-3">
-                              <img src='/images/quote.png' height='36' width='36' alt="Quote icon">
-                          </div>
-                          <blockquote class="fs-5">
-                              <p class="mb-2">"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
-                              <div class="d-flex flex-column align-items-center">
-                                  <h5 class="mb-1">Harshit Poojary</h5>
-                                  <p class="mb-0">Software Engineering Graduate</p>
-                              </div>
-                          </blockquote>
+                    <div class="text-center">
+                      <div class="quote-icon mb-4">
+                        <img src='/images/quote.png' height='48' width='48' alt="Quote icon">
                       </div>
+                      <blockquote class="fs-lg mb-4">
+                        <p>"Being part of DevNation has opened up numerous opportunities for me. The mentorship program and industry connections have been invaluable in shaping my career path in tech."</p>
+                      </blockquote>
+                      <div class="d-flex flex-column align-items-center">
+                        <h5 class="mb-1">Harshit Poojary</h5>
+                        <p class="mb-0 text-muted">Software Engineering Graduate</p>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="carousel-indicators mt-4" style='margin-top:10vh;'>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active rounded-circle mx-1" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="rounded-circle mx-1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+                </div>
               </div>
-
-            <div class="carousel-indicators mt-4">
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active rounded-circle mx-1" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
-                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" class="rounded-circle mx-1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
             </div>
           </div>
-      </div>
+        </div>
+      </section>
     </div>
   </div>
 </section>
@@ -205,15 +210,10 @@
         style="top: 0.5rem; left: -1.7rem;"></div>
 
       <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
-        </div>
-
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="row g-4">
-              <div class="col-md-4">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
                     <img class="rounded-circle w-15 mb-4" src="assets/draft/about.draft.png"
@@ -229,7 +229,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
                     <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te2.jpg"
@@ -245,7 +245,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
                     <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te3.jpg"
@@ -264,8 +264,8 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row g-4">
-              <div class="col-md-4">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
                     <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te4.jpg"
@@ -281,14 +281,49 @@
                   </div>
                 </div>
               </div>
+              <div class="col-12 col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te5.jpg"
+                      srcset="./assets/img/avatars/te5@2x.jpg 2x" alt="Member 5" />
+                    <h4 class="mb-1">Member-5</h4>
+                    <div class="meta mb-2">Design Lead</div>
+                    <p class="mb-2">Crafting and managing all design aspects for DevNation's projects.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <img class="rounded-circle w-15 mb-4" src="assets/img/avatars/te6.jpg"
+                      srcset="./assets/img/avatars/te6@2x.jpg 2x" alt="Member 6" />
+                    <h4 class="mb-1">Member-6</h4>
+                    <div class="meta mb-2">Community Manager</div>
+                    <p class="mb-2">Building a strong and supportive community for developers worldwide.</p>
+                    <nav class="nav social mb-0">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-linkedin"></i></a>
+                      <a href="#"><i class="uil uil-github"></i></a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="carousel-indicators mt-4">
+          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active rounded-circle mx-1" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
+          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" class="rounded-circle mx-1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="wrapper bg-soft-primary">
   <div class="container py-14 py-md-16">
