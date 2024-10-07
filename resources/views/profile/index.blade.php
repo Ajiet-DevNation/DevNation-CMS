@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
-
 @section('meta')
 <meta name="description"
-    content="Manage your DevNation profile to keep your developer information, preferences, and progress up to date. Customize your profile to showcase your skills, interests, and achievements.">
+    content="Manage your DevNation profile to keep your developer information, preferences, and progress up to date. Customize your profile to highlight your DevOps skills, software engineering expertise, and personal achievements.">
 <meta name="keywords"
-    content="DevNation profile, developer profile, DevOps skills, software engineering profile, developer achievements, manage profile, DevNation account, developer interests">
-<meta name="author" content="elemis">
+    content="DevNation profile, manage developer profile, DevOps skills, software engineering profile, developer achievements, DevNation account, developer preferences, showcase skills, developer interests">
+<meta name="author" content="DevNation">
 @endsection
 
 @section('title', 'Profile')
