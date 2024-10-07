@@ -64,7 +64,7 @@
                     </div>
                     <div>
                       <h5 class="mb-1">Phone</h5>
-                      <p>00 (123) 456 78 90 <br />00 (987) 654 32 10</p>
+                      <p>+91 90 1900 3490</p>
                     </div>
                   </div>
                   <!--/div -->
@@ -74,8 +74,7 @@
                     </div>
                     <div>
                       <h5 class="mb-1">E-mail</h5>
-                      <p class="mb-0"><a href="cdn-cgi/l/email-protection.html#0c7f6d62686e63744c69616d6560226f6361" class="link-body"><span class="__cf_email__" data-cfemail="8bf8eae5efe9e4f3cbeee6eae2e7a5e8e4e6">[email&#160;protected]</span></a></p>
-                      <p class="mb-0"><a href="cdn-cgi/l/email-protection.html#aac2cfc6daead9cbc4cec8c5d284c9c5c7" class="link-body"><span class="__cf_email__" data-cfemail="6b030e071b2b180a050f09041345080406">[email&#160;protected]</span></a></p>
+                      <p class="mb-0"><a href="/  " class="link-body"><span class="__cf_email__">drshnbhandary@gmail.com</span></a></p>
                     </div>
                   </div>
                   <!--/div -->
@@ -95,7 +94,7 @@
         <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
           <h2 class="display-4 mb-3 text-center">Drop Us a Line</h2>
           <p class="lead text-center mb-10">Reach out to us from our contact form and we will get back to you shortly.</p>
-          <form class="contact-form needs-validation" method="post" action="https://sandbox.elemisthemes.com/assets/php/contact.php" novalidate>
+          <form class="contact-form needs-validation" method="post" action="/" novalidate>
             <div class="messages"></div>
             <div class="row gx-4">
               <div class="col-md-6">
@@ -168,7 +167,7 @@
     <div class="container pt-0 pb-14 pt-md-16 pb-md-18">
       <div class="row">
         <div class="col-lg-9 col-xxl-8 mx-auto">
-          <h3 class="display-4 mb-8 px-xl-12">We are trusted by over 5000+ clients. Join them now and grow your business.</h3>
+          <h3 class="display-4 mb-8 px-xl-12">We are community over 500+ students. Join us now and grow your career.</h3>
         </div>
         <!-- /.row -->
       </div>
@@ -177,18 +176,18 @@
         <div class="col-md-10 col-lg-9 col-xl-7 mx-auto">
           <div class="row align-items-center counter-wrapper gy-4 gy-md-0">
             <div class="col-md-4 text-center">
-              <h3 class="counter counter-lg text-primary">7518</h3>
-              <p>Completed Projects</p>
+              <h3 class="counter counter-lg text-primary">100 +</h3>
+              <p>Events Completed </p>
             </div>
             <!--/column -->
             <div class="col-md-4 text-center">
-              <h3 class="counter counter-lg text-primary">5472</h3>
-              <p>Satisfied Customers</p>
+              <h3 class="counter counter-lg text-primary">50 +</h3>
+              <p>Workshops Done</p>
             </div>
             <!--/column -->
             <div class="col-md-4 text-center">
-              <h3 class="counter counter-lg text-primary">2184</h3>
-              <p>Expert Employees</p>
+              <h3 class="counter counter-lg text-primary">400 +</h3>
+              <p>Active Members</p>
             </div>
             <!--/column -->
           </div>
