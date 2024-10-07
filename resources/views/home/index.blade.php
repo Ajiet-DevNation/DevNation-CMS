@@ -58,7 +58,7 @@
                         <div class="icon btn btn-block btn-lg btn-soft-purple pe-none mb-5"> <i
                                 class="uil uil-users-alt"></i> </div>
                         <h4>Community Building</h4>
-                        <p class="mb-3">Creating a supportive network for developers to connect, collaborate, and grow
+                        <p class="mb-3 text-decoration-none">Creating a supportive network for developers to connect, collaborate, and grow
                             together.</p>
                         <a href="#" class="more hover link-purple">Learn More</a>
                     </div>
@@ -66,7 +66,7 @@
                         <div class="icon btn btn-block btn-lg btn-soft-green pe-none mb-5"> <i
                                 class="uil uil-book-open"></i> </div>
                         <h4>Skill Development</h4>
-                        <p class="mb-3">Organizing workshops, seminars, and coding sessions to enhance technical skills.
+                        <p class="mb-3 text-decoration-none">Organizing workshops, seminars, and coding sessions to enhance technical skills.
                         </p>
                         <a href="#" class="more hover link-green">Learn More</a>
                     </div>
@@ -74,7 +74,7 @@
                         <div class="icon btn btn-block btn-lg btn-soft-orange pe-none mb-5"> <i
                                 class="uil uil-lightbulb-alt"></i> </div>
                         <h4>Innovation Hub</h4>
-                        <p class="mb-3">Encouraging creative problem-solving and fostering innovative projects among
+                        <p class="mb-3 text-decoration-none">Encouraging creative problem-solving and fostering innovative projects among
                             members.</p>
                         <a href="#" class="more hover link-orange">Learn More</a>
                     </div>
@@ -83,10 +83,10 @@
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Approach</h2>
                         <h3 class="display-4 mb-5">3 key steps to empower our developer community.</h3>
-                        <p>At DevNation, we believe in fostering a supportive environment where developers can thrive
+                        <p class="text-decoration-none">At DevNation, we believe in fostering a supportive environment where developers can thrive
                             and grow. Our approach is designed to nurture talent, encourage collaboration, and drive
                             innovation.</p>
-                        <p class="mb-6">We focus on practical learning, peer-to-peer knowledge sharing, and real-world
+                        <p class="mb-6 text-decoration-none">We focus on practical learning, peer-to-peer knowledge sharing, and real-world
                             project experiences to help our members excel in their careers.</p>
                         <a href="#" class="btn btn-primary rounded-pill mb-0">Join DevNation</a>
                     </div>
@@ -98,7 +98,7 @@
                             </div>
                             <div>
                                 <h4 class="mb-1">Learn</h4>
-                                <p class="mb-0">Participate in workshops, coding sessions, and tech talks to enhance
+                                <p class="mb-0 text-decoration-none">Participate in workshops, coding sessions, and tech talks to enhance
                                     your skills.</p>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             </div>
                             <div>
                                 <h4 class="mb-1">Collaborate</h4>
-                                <p class="mb-0">Work on team projects, hackathons, and open-source contributions.</p>
+                                <p class="mb-0 text-decoration-none">Work on team projects, hackathons, and open-source contributions.</p>
                             </div>
                         </div>
                         <div class="d-flex flex-row mt-8">
@@ -119,7 +119,7 @@
                             </div>
                             <div>
                                 <h4 class="mb-1">Innovate</h4>
-                                <p class="mb-0">Develop cutting-edge solutions and showcase your creativity in our
+                                <p class="mb-0 text-decoration-none">Develop cutting-edge solutions and showcase your creativity in our
                                     innovation challenges.</p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                                     </div>
                                     <div>
                                         <h4 class="mb-1">Tech Talks</h4>
-                                        <p class="mb-0">Regular sessions featuring industry experts and alumni sharing
+                                        <p class="mb-0 text-decoration-none">Regular sessions featuring industry experts and alumni sharing
                                             insights.</p>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                                     </div>
                                     <div>
                                         <h4 class="mb-1">Code Sprints</h4>
-                                        <p class="mb-0">Intensive coding sessions to build practical projects and
+                                        <p class="mb-0 text-decoration-none">Intensive coding sessions to build practical projects and
                                             enhance skills.</p>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                                     </div>
                                     <div>
                                         <h4 class="mb-1">Hackathons</h4>
-                                        <p class="mb-0">Exciting competitions to solve real-world problems and showcase
+                                        <p class="mb-0 text-decoration-none">Exciting competitions to solve real-world problems and showcase
                                             innovation.</p>
                                     </div>
                                 </div>
@@ -177,7 +177,7 @@
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Upcoming Events</h2>
                         <h3 class="display-4 mb-5">Join our exciting developer events and activities.</h3>
-                        <p class="mb-6">Stay tuned for our upcoming events designed to challenge, inspire, and grow your
+                        <p class="mb-6 text-decoration-none">Stay tuned for our upcoming events designed to challenge, inspire, and grow your
                             skills as a developer. From workshops to competitions, there's something for everyone at
                             DevNation.</p>
                         <a href="#" class="btn btn-primary rounded-pill mb-0">View All Events</a>
@@ -247,7 +247,7 @@
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community</h2>
                         <h3 class="display-4 mb-5">Join a vibrant community of passionate developers at AJIET Mangalore.
                         </h3>
-                        <p class="mb-6">At DevNation, we believe in the power of collaboration and continuous learning.
+                        <p class="mb-6 text-decoration-none">At DevNation, we believe in the power of collaboration and continuous learning.
                             Our community is built on the principles of knowledge sharing, innovation, and mutual
                             growth. Whether you're a beginner or an experienced developer, there's always something new
                             to learn and exciting projects to work on.</p>
@@ -297,7 +297,7 @@
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="card-body">
-                                        <p>Boost your technical skills through hands-on workshops, coding sessions, and
+                                        <p class="text-decoration-none">Boost your technical skills through hands-on workshops, coding sessions, and
                                             project collaborations. Learn from experienced developers and stay updated
                                             with the latest industry trends and technologies.</p>
                                     </div>

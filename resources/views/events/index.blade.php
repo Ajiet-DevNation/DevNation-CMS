@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('meta')
 <meta name="description"
     content="Stay up to date with the latest DevNation events, webinars, workshops, and conferences focused on DevOps, software engineering, and technology trends. Join us to enhance your skills and network ">
@@ -17,7 +16,7 @@
 
 <main class="mx-auto bg-gray">
     <section class="m-8">
-            <h1>Upcoming Events</h1>
+            <h2>Upcoming Events</h2>
             <div class="cards-wrapper">
                 @foreach ($upcomingEvents as $event)
                     <article>
@@ -32,7 +31,7 @@
                             </figure>
                         </a>
                         <div class="post-header">
-                            <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
+                            <h3 class="post-title h3 mb-3 text-center">{{ $event->name }}</h3>
                         </div>
                         <div class="post-footer">
                             <ul class="post-meta text-center">
@@ -52,7 +51,7 @@
     </main>
     <main class="mx-auto bg-gray">
         <section class="m-8">
-            <h1>Past Events</h1>
+            <h2>Past Events</h2>
             <div class="cards-wrapper">
                 @foreach ($pastEvents as $event)
                     <article>
@@ -67,7 +66,7 @@
                             </figure>
                         </a>
                         <div class="post-header">
-                            <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
+                            <h3 class="post-title h3 mb-3 text-center">{{ $event->name }}</h3>
                         </div>
                         <div class="post-footer">
                             <ul class="post-meta text-center">
