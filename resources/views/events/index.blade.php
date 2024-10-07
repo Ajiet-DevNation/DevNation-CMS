@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+
+@section('meta')
+<meta name="description"
+    content="Stay up to date with the latest DevNation events, webinars, workshops, and conferences focused on DevOps, software engineering, and technology trends. Join us to enhance your skills and network ">
+<meta name="keywords"
+    content="DevNation events,  webinars, developer workshops, tech conferences, software engineering events, DevNation workshops, DevNation webinars, technology events">
+<meta name="author" content="elemis">
+@endsection
+
+@section('title', 'Events')
+
 @section('content')
 
 @include('layouts.inlcudes.nav')
