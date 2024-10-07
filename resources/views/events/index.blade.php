@@ -2,10 +2,10 @@
 
 @section('meta')
 <meta name="description"
-    content="Stay up to date with the latest DevNation events, webinars, workshops, and conferences focused on DevOps, software engineering, and technology trends. Join us to enhance your skills and network ">
+    content="Stay updated on the latest DevNation events, including webinars, workshops, and conferences focused on DevOps, software engineering, and emerging technology trends. Join us to enhance your skills and grow your network.">
 <meta name="keywords"
-    content="DevNation events,  webinars, developer workshops, tech conferences, software engineering events, DevNation workshops, DevNation webinars, technology events">
-<meta name="author" content="elemis">
+    content="DevNation events, DevNation webinars, developer workshops, tech conferences, software engineering events, DevOps workshops, technology events, DevNation conferences">
+<meta name="author" content="DevNation">
 @endsection
 
 @section('title', 'Events')

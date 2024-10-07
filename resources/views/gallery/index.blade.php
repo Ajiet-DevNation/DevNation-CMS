@@ -3,10 +3,10 @@
 
 @section('meta')
 <meta name="description"
-    content="Explore the DevNation gallery to see highlights from our past events, workshops, and conferences. Discover moments captured from our developer community's journey in DevOps, software engineering, and tech innovation.">
+    content="Discover DevNation – a leading tech learning platform offering DevOps tutorials, software engineering resources, and a vibrant developer community. Learn about DevNation's mission, vision, and team.">
 <meta name="keywords"
-    content="DevNation gallery, event highlights, developer community photos, DevOps workshops photos, tech conference images, software engineering events gallery, DevNation events, tech community gallery">
-<meta name="author" content="elemis">
+    content="DevNation, DevNation mission, DevNation vision, DevNation team, DevOps tutorials, software engineering resources, developer community, tech learning platform">
+<meta name="author" content="DevNation">
 @endsection
 
 @section('title', 'Gallery')
