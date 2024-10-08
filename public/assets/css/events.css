@@ -46,14 +46,9 @@ section h1 {
     font-family: Unicons;
 }
 
-@media screen and (max-width: 1100px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 @media screen and (max-width: 700px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr;
+    main section.m-8 {
+        margin: 0 !important;
     }
 }
