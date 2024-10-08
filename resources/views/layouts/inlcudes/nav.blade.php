@@ -93,7 +93,7 @@
                                         </div> --}}
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ route('contact') }}">Team</a>
+                            <a class="nav-link" href="{{ route('team') }}">Team</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link " href="{{ route('gallery.index') }}">Gallery</a>

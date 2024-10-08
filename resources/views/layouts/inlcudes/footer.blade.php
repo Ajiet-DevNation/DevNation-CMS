@@ -33,6 +33,7 @@
                         <li><a href="{{ route('event.index') }}">Events</a></li>
                         <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
+                        <li><a href="{{ route('team') }}">Our Team</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->
