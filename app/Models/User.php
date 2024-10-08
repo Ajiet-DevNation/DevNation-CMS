@@ -99,4 +99,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Branch::class);
     }
+
+    public function ambassador()
+    {
+        return $this->hasOne(Ambassadors::class);
+    }
 }

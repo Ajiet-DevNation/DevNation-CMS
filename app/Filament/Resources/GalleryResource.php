@@ -39,6 +39,11 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
