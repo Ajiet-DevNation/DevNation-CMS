@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\UserResource\Pages;
 
 use App\Filament\Resources\UserResource;
+use App\Notifications\UserNotification;
 use Filament\Actions;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
@@ -56,5 +57,11 @@ class CreateUser extends CreateRecord
                 Toggle::make('is_verified')->default(false),
             ])->columns(2),
         ];
+    }
+
+    protected function afterCreate(): void
+    {
+        // dd('User created');
+        $this->record->notify(new UserNotification($this->record));
     }
 }
