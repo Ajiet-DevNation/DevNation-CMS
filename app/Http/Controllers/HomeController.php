@@ -20,6 +20,11 @@ class HomeController extends Controller
         return view('about.index');
     }
 
+    public function team()
+    {
+        return view('team.index');
+    }
+
     public function contact()
     {
         return view('contact.index');
