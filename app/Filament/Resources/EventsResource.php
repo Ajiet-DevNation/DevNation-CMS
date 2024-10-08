@@ -17,9 +17,13 @@ use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -96,24 +100,26 @@ class EventsResource extends Resource
                 TextColumn::make('event_type')->label('Event Type')->searchable()->sortable(),
                 TextColumn::make('location')->label('Location')->searchable()->sortable(),
                 TextColumn::make('status')->label('Status')->searchable()->sortable(),
-                TextColumn::make('max_attendees')->label('Max Attendees')->searchable()->sortable(),
-                TextColumn::make('start_date')->label('Start Date')->searchable()->sortable(),
-                TextColumn::make('end_date')->label('End Date')->searchable()->sortable(),
+                TextColumn::make('max_attendees')->label('Max Attendees')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('start_date')->label('Start Date')->searchable()->sortable()->date('d-m-Y'),
+                TextColumn::make('end_date')->label('End Date')->searchable()->sortable()->date('d-m-Y'),
                 TextColumn::make('speaker')->label('Speaker')->searchable()->sortable(),
-                TextColumn::make('speaker_mail')->label('Speaker Email')->searchable()->sortable(),
-                TextColumn::make('is_featured')->label('Featured')->searchable()->sortable(),
-                TextColumn::make('requires_registration')->label('Requires Registration')->searchable()->sortable(),
-                TextColumn::make('has_certificate')->label('Has Certificate')->searchable()->sortable(),
-                TextColumn::make('notify_attendees')->label('Notify Attendees')->searchable()->sortable(),
-                TextColumn::make('notify_attendance')->label('Notify Attendance')->searchable()->sortable(),
-                TextColumn::make('created_at')->label('Created At')->searchable()->sortable(),
-                TextColumn::make('updated_at')->label('Updated At')->searchable()->sortable(),
+                TextColumn::make('speaker_mail')->label('Speaker Email')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make('is_featured')->boolean()->label('Featured')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make('requires_registration')->boolean()->label('Requires Registration')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make('has_certificate')->boolean()->label('Has Certificate')->searchable()->sortable(),
+                IconColumn::make('notify_attendees')->boolean()->label('Notify Attendees')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make('notify_attendance')->boolean()->label('Notify Attendance')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                EditAction::make(),
+                ActionGroup::make([
+                    ViewAction::make(),
+                    EditAction::make(),
+                    DeleteAction::make(),
+                ]),
             ])
             ->bulkActions([
                 BulkActionGroup::make([
