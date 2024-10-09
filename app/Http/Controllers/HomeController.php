@@ -55,11 +55,6 @@ class HomeController extends Controller
         return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents]);
     }
 
-    public function team()
-    {
-        return view('team.index');
-    }
-
     public function eventDetails($id)
     {
         $event = Events::find($id);
