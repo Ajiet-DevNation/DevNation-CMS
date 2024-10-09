@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\EventNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,5 +27,13 @@ class EventRegisteraion extends Model
     protected $casts = [
         'attended' => 'boolean',
     ];
+
+    protected static function booted()
+    {
+        // dd('booted');
+        static::created(function ($eventRegistration) {
+            $eventRegistration->user->notify(new EventNotification($eventRegistration->event));
+        });
+    }
 
 }
