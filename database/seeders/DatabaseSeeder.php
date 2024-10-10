@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+       
 
         College::factory()->create([
             'name' => 'College of Engineering, Pune',
@@ -51,5 +51,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Events::factory(10)->create();
+        User::factory(10)->create();
     }
 }

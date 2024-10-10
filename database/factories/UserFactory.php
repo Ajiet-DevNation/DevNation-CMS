@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Branch;
+use App\Models\College;
+use App\Models\Role;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -29,6 +32,17 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'usn' => '4JK' . rand(10, 99) . 'CS' . str_pad(rand(1, 999), 3, '0', STR_PAD_LEFT),
+            'semester' => (string) rand(1, 8),
+            'phone' => fake()->unique()->phoneNumber(),
+            'is_alumini' => false,
+            'is_admin' => false,
+            'is_verified' => true,
+            'image' => null,
+            'created_at' => fake()->dateTimeBetween('-1 year', 'now'),
+            'college_id' => College::first()->id,
+            'branch_id' => Branch::first()->id,
+            'role_id' => Role::first()->id,
         ];
     }
 
