@@ -34,7 +34,6 @@ class DatabaseSeeder extends Seeder
         Role::factory()->create([
             'name' => 'coordianator',
         ]);
-
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@admin.com',
