@@ -64,8 +64,8 @@
             Event Registration Confirmation
         </div>
         <div class="content">
-            <h1>Hello, Test User</h1>
-            <p>Thank you for registering for the event: <strong>Test Event</strong>.</p>
+            <h1>Hello, {{ $userName }}</h1>
+            <p>Thank you for registering for the event: <strong>{{ $eventName }}</strong>.</p>
             <p>We are excited to have you join us and look forward to seeing you there!</p>
             <a href="#" class="button">View Event Details</a>
             <p>Best regards,<br>Your Event Team</p>           
