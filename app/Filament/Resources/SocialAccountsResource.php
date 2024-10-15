@@ -28,10 +28,7 @@ class SocialAccountsResource extends Resource
         return $form
             ->schema([
                 Select::make('user_id')->relationship('user', 'name')->required(),
-                TextInput::make('github')
-                ->required()
-                ->url()
-                ->rule('regex:/^https:\/\/github\.com\/[A-Za-z0-9]+$/'),            
+                TextInput::make('github')->required()->url()->rule('regex:/^https:\/\/github\.com\/[A-Za-z0-9]+$/'),            
                 TextInput::make('linkedIn')->required(),
                 TextInput::make('twitter')->required(),
                 TextInput::make('facebook')->required(),
