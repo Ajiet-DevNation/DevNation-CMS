@@ -200,11 +200,19 @@
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6"><a
                                             href="{{ route('event.show', $event->id) }}">
-                                            <img src="{{ Storage::url($event->banner) }}" alt=""><span
-                                                class="bg"></span></a>
-                                        <figcaption>
-                                            <h5 class="from-top mb-0">Read More</h5>
-                                        </figcaption>
+                                            @if ($event->banner == null)
+                                <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @else
+                                    <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @endif
                                     </figure>
                                     <div class="post-header">
                                         <h2 class="post-title h3 mb-3"><a class="link-dark"

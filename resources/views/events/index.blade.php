@@ -23,11 +23,19 @@
                         <a href="{{ route('event.show', $event->id) }}">
                             <figure class="overlay overlay-1 hover-scale rounded mb-6"
                                 style="width: 320px;height: 220px;">
+                                @if ($event->banner == null)
                                 <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @else
+                                    <img style="object-fit:cover; width:100%; height:100% !important;"
                                     src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
-                                <figcaption>
-                                    <h5 class="from-top mb-0">Read More</h5>
-                                </figcaption>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @endif
                             </figure>
                         </a>
                         <div class="post-header">
@@ -58,11 +66,19 @@
                         <a href="{{ route('event.show', $event->id) }}">
                             <figure class="overlay overlay-1 hover-scale rounded mb-6"
                                 style="width: 320px;height: 220px;">
+                                @if ($event->banner == null)
                                 <img style="object-fit:cover; width:100%; height:100% !important;"
-                                src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
-                                <figcaption>
-                                    <h5 class="from-top mb-0">Read More</h5>
-                                </figcaption>
+                                    src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @else
+                                    <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
+                                    <figcaption>
+                                        <h5 class="from-top mb-0">Read More</h5>
+                                    </figcaption>
+                                @endif
                             </figure>
                         </a>
                         <div class="post-header">

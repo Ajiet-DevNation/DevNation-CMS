@@ -21,7 +21,7 @@ class EventsFactory extends Factory
             'description' => $this->faker->sentence(),
             'event_type' => $this->faker->randomElement(['webinar', 'workshop', 'seminar']),
             'location' => $this->faker->city(),
-            'banner' => $this->faker->imageUrl(),
+            // 'banner' => 'https://placehold.co/300x300',
             'speaker' => $this->faker->name(),
             'speaker_mail' => $this->faker->email(),
             'status' => $this->faker->randomElement(['draft', 'published']),
