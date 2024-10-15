@@ -11,7 +11,11 @@
 @section('title', '{{ $event->name }} | DevNation')
 
 @section('content')
+    @if ($event->banner == null)
+        <header class="header" style="background-image: url('https://placehold.co/300x300');">
+    @else
     <header class="header" style="background-image: url('{{ Storage::url($event->banner) }}');">
+    @endif
 
         @include('layouts.inlcudes.nav')
 

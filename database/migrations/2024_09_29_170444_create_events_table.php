@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('end_date');
             $table->enum('event_type', ['workshop', 'webinar', 'seminar', 'conference', 'expo', 'meetup', 'hackathon']);
             $table->string('location');
-            $table->string('banner');
+            $table->string('banner')->nullable();
             $table->string('speaker');
             $table->string('speaker_mail');
             $table->enum('status', ['draft', 'published', 'cancelled']);
