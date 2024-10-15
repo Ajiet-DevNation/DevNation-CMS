@@ -74,6 +74,11 @@ class User extends Authenticatable
         return $this->hasOne(Ambassadors::class);
     }
 
+    public function socialAccounts()
+    {
+        return $this->hasOne(SocialAccounts::class);
+    }
+
     protected static function boot()
     {
         parent::boot();
