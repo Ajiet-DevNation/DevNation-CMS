@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class EventRegistrationsRelationManager extends RelationManager
 {
     protected static string $relationship = 'eventRegistrations';
+    protected static ?string $modelLabel = 'Registeration';
 
     public function form(Form $form): Form
     {
