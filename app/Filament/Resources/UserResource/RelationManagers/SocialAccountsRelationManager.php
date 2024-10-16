@@ -3,6 +3,9 @@
 namespace App\Filament\Resources\UserResource\RelationManagers;
 
 use Filament\Forms;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
@@ -20,9 +23,21 @@ class SocialAccountsRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('user_id')
-                    ->required()
-                    ->maxLength(255),
+                Select::make('user_id')->relationship('user', 'name')->required()->columnSpanFull(),
+                TextInput::make('github')->required()->url()->rule('regex:/^https:\/\/github\.com\/[A-Za-z0-9]+$/'),            
+                TextInput::make('linkedIn')->url()->rule('regex:/^https:\/\/(www\.)?linkedin\.com\/in\/[A-Za-z0-9-]+$/')
+                ->label('LinkedIn')->required(),
+                TextInput::make('twitter')->url()->label('Twitter (X)')->required()
+                ->rule('regex:/^https:\/\/(x\.com|twitter\.com)\/[A-Za-z0-9_]+$/'),
+                TextInput::make('facebook')->url()
+                ->rule('regex:/^https:\/\/(www\.)?facebook\.com\/(profile\.php\?id=[0-9]+|[A-Za-z0-9.]+)$/')
+                ->label('Facebook')->required(),
+                TextInput::make('instagram')->url()
+                ->rule('regex:/^https:\/\/(www\.)?instagram\.com\/[A-Za-z0-9_.]+\/$/')
+                ->label('Instagram')->required(),
+                TextInput::make('website')->required(),
+                TextInput::make('others'),
+                ToggleButtons::make('is_verified')->label('is Verfied')->boolean()->grouped()->default(false),
             ]);
     }
 
