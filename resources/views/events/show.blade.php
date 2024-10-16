@@ -8,22 +8,22 @@
 <meta name="author" content="DevNation">
 @endsection
 
-@section('title', '{{ $event->name }} | DevNation')
+@section('title', 'Events')
 
 @section('content')
-    @if ($event->banner == null)
-        <header class="header" style="background-image: url('https://placehold.co/300x300');">
+@if ($event->banner == null)
+<header class="header" style="background-image: url('https://placehold.co/300x300');">
     @else
     <header class="header" style="background-image: url('{{ Storage::url($event->banner) }}');">
-    @endif
+        @endif
 
         @include('layouts.inlcudes.nav')
 
         <div class="h">
             <h1>{{ $event->name }}</h1>
             <ul class="post-meta text-center">
-                <li class="post-date"><i
-                        class="uil uil-calendar-alt"></i><span>{{ $event->start_date >= now() ? $event->start_date : date('d M, Y', strtotime($event->start_date)) }}</span>
+                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ $event->start_date >= now() ?
+                        $event->start_date : date('d M, Y', strtotime($event->start_date)) }}</span>
                 </li>
                 <li class="post-comments"><i class="uil uil-map-marker fs-15"></i>{{ $event->location }}
                 </li>
@@ -43,53 +43,60 @@
             </div>
             <div style="grid-column: 1 / -1">
                 @if ($event->has_certificate)
-                    <h5><i class="uil uil-award uil-fw"></i>Certificate available!</h5>
+                <h5><i class="uil uil-award uil-fw"></i>Certificate available!</h5>
                 @endif
                 {{-- need to reverify --}}
                 @if ($event->start_date >= now())
-                    <button><span>Register Now</span></button>
+                <button><span>Register Now</span></button>
                 @endif
-                @if ($event->start_date < now())
-                    <button disabled><span>Register Closed</span></button>
-                @endif
+                @if ($event->start_date < now()) <button disabled><span>Registeration Closed</span></button>
+                    @endif
             </div>
             <div style="grid-column: 1 / -1;">
                 <h1>Related Events</h1>
                 <div class="cards-wrapper">
                     @if (count($relatedEvents) == 0)
-                        <p>No related events</p>
+                    <p>No related events</p>
                     @endif
                     @foreach ($relatedEvents as $event)
-                        <article>
-                            <a href="{{ route('event.show', $event->id) }}">
-                                <figure class="overlay overlay-1 hover-scale rounded mb-6"
-                                    style="width: 320px;height: 220px;">
-                                    <img style="object-fit:cover; width:100%; height:100% !important;"
-                                        src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
-                                    <figcaption>
-                                        <h5 class="from-top mb-0">Read More</h5>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <div class="post-header">
-                                <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
-                            </div>
-                            <div class="post-footer">
-                                <ul class="post-meta text-center">
-                                    <li class="post-date"><i
-                                            class="uil uil-calendar-alt"></i><span>{{ $event->start_date }}</span>
-                                    </li>
-                                    <li class="post-comments"><a href="#"><i
-                                                class="uil uil-map-marker fs-15"></i>{{ $event->location }}</a>
-                                    </li>
-                                </ul>
-                                <button><span>Register Now</span></button>
-                            </div>
-                        </article>
+                    <article>
+                        <a href="{{ route('event.show', $event->id) }}">
+                            <figure class="overlay overlay-1 hover-scale rounded mb-6"
+                                style="width: 320px;height: 220px;">
+                                @if ($event->banner == null)
+                                <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                <figcaption>
+                                    <h5 class="from-top mb-0">Read More</h5>
+                                </figcaption>
+                                @else
+                                <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
+                                <figcaption>
+                                    <h5 class="from-top mb-0">Read More</h5>
+                                </figcaption>
+                                @endif
+                            </figure>
+                        </a>
+                        <div class="post-header">
+                            <h2 class="post-title h3 mb-3 text-center">{{ $event->name }}</h2>
+                        </div>
+                        <div class="post-footer">
+                            <ul class="post-meta text-center">
+                                <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ $event->start_date
+                                        }}</span>
+                                </li>
+                                <li class="post-comments"><a href="#"><i class="uil uil-map-marker fs-15"></i>{{
+                                        $event->location }}</a>
+                                </li>
+                            </ul>
+                            <button><span>Register Now</span></button>
+                        </div>
+                    </article>
                     @endforeach
                 </div>
             </div>
 
         </div>
     </main>
-@endsection
+    @endsection

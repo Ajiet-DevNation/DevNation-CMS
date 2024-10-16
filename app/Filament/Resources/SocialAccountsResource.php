@@ -31,6 +31,15 @@ class SocialAccountsResource extends Resource
     protected static ?string $model = SocialAccounts::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-device-phone-mobile';
+    protected static ?string $navigationGroup = 'User Management';
+    protected static ?string $navigationLabel = 'Members Social Accounts'; 
+
+    protected static ?string $navigationBadgeTooltip = 'The number of member social accounts';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
@@ -82,7 +91,7 @@ class SocialAccountsResource extends Resource
                 IconColumn::make('is_verified')->label('Is Verified')->boolean(),  
             ])
             ->filters([
-                //9880078166
+                //
             ])
             ->actions([
                 ActionGroup::make([
