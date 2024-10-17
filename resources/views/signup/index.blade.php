@@ -9,6 +9,8 @@
 @section('title', 'Sign up - DevNation')
 
 @section('content')
+<div class="hello">
+@include('layouts.inlcudes.nav')
 
 <div class="signup-container">
     <div class="signup-card">
@@ -44,5 +46,6 @@
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
+</div>
 </div>
 @endsection
