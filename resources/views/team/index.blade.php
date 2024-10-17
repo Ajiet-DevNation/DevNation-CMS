@@ -27,12 +27,13 @@
 
     <div class="row g-4 justify-content-center">
       <!-- First Row -->
+      @foreach ($team as $item)
       <div class="col-12 col-md-4">
         <div class="card">
           <div class="card-body">
-            <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/draft/about.draft.png') }}" alt="Member 1" />
-            <h4 class="mb-1">Darshan Bhandary</h4>
-            <div class="meta mb-2">President</div>
+            <img class="rounded-circle w-15 mb-4" src="{{ $item->image }}" alt="Member 1" />
+            <h4 class="mb-1">{{ $item->name }}</h4>
+            <div class="meta mb-2">{{ $item->role->name }}</div>
             <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
             <nav class="nav social mb-0">
               <a href="#"><i class="uil uil-twitter"></i></a>
@@ -42,6 +43,7 @@
           </div>
         </div>
       </div>
+      @endforeach
 
     </div>
   </div>
