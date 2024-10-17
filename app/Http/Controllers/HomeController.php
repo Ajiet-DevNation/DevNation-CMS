@@ -28,7 +28,11 @@ class HomeController extends Controller
     {
         return view('signup.index');
     }
-
+    
+    public function login()
+    {
+        return view('login.index');
+    }
     public function gallery()
     {
         $galleries = Gallery::all();

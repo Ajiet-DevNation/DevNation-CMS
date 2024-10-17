@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="signup-footer">
-            <p>Already have an account? <a href="#">Log in</a></p>
+            <p>Already have an account? <a href="{{ route('login') }}">Log in</a></p>
         </div>
     </div>
 </div>
