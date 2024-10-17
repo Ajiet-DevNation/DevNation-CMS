@@ -53,6 +53,31 @@ class User extends Authenticatable
     {
         return $this->hasMany(EventRegisteraion::class);
     }
+    
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function college()
+    {
+        return $this->belongsTo(College::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
+    }
+
+    public function ambassador()
+    {
+        return $this->hasOne(Ambassadors::class);
+    }
+
+    public function socialAccounts()
+    {
+        return $this->hasOne(SocialAccounts::class);
+    }
 
     protected static function boot()
     {
@@ -78,25 +103,5 @@ class User extends Authenticatable
                 Storage::disk('public')->delete($user->image);
             }
         });
-    }
-
-    protected function afterCreate(): void
-    {
-        $this->record->notify(new UserNotification($this->record));
-    }
-    
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
-
-    public function college()
-    {
-        return $this->belongsTo(College::class);
-    }
-
-    public function branch()
-    {
-        return $this->belongsTo(Branch::class);
     }
 }

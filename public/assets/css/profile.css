@@ -4,7 +4,7 @@
     background: red;
   } */
   
-  @media (max-width: 984px) {
+  @media (max-width: 969px) {
     .certificate{
     grid-template-columns:none !important;
     justify-items: center !important;
@@ -16,8 +16,16 @@
     .cardInfo>h3{
       font-size: large !important;
     }
+    .details{
+      padding-left:1rem !important ;
+    }
     .cardInfo>.button{
       font-size: medium !important;
+    }
+    .tab_btn{
+      padding: 0px !important;
+      font-size: medium !important;
+      padding-bottom: 1rem !important;
     }
     .certiCard{
       width: 75%  !important;
@@ -26,31 +34,30 @@
       grid-template-columns: 1fr !important;
         grid-template-rows: auto 1fr;
         justify-items: center;
+        padding-left: 0px !important;
   }
   .containerB{
     width: 100%;
-    padding: 30px;
+    padding-inline : 0px;
+    padding-block: 30px;
     border-radius: 29px;
+    transform: translate(0px, -88px) !important;
   }
   .rect{
-    height: 50vh !important;
+    height: 432px !important;
   }
 .circle{
-    margin-top: calc(-2rem + -278px) !important;
+    margin-top: calc(-2rem + -263px) !important;
     margin-bottom: 3rem !important;
     width: 105px !important;
     height: 103px !important;
   
 }
 .circleCover>h2{
-  margin-left: -59px;
   color: white;
   margin-top: -45px;
 }
-.circleCover>button{
-  margin-right: 83px;
-        padding-left: 18px;
-}
+
 }
   .circleCover{
     text-align: center;
@@ -62,29 +69,29 @@ button{
     color: green;
 }
 .rect{
-    height: 40vh;
+    height: 314px;
     /* background: linear-gradient(45deg, #1a1a48, #076b7feb,#1a1a48); */
     background: #152d5a;
   }
   
   .cover{
     display: grid;
-    grid-template-columns: auto 1fr;
-    padding:2rem;
-    padding-right:0px ;
+    grid-template-columns: 33vw 1fr;
+    padding: 1rem;
     margin-inline: auto;
-    column-gap: 4rem;
     max-width: 1250px;
+    place-items: center;
+    justify-items: center;
 }
 .circleCover h2{
     text-align: center;
     
 }
 .circle{
-    margin-top: calc(-2rem + -100px);
+    margin-top: calc(-2rem + -67px);
     margin-bottom: 2rem;
-    width: 250px;
-    height: 250px;
+    width: 47%;
+   
     background: #d5d5d5;
     border-radius: 999px;
     overflow: hidden;
@@ -105,7 +112,13 @@ button{
   }
   .di{
     border: none;
-    border:solid 2px grey;
+   border-bottom: 2px solid grey;
+
+  }
+  .di:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
   }
   .details>div *{
     margin:0%;
@@ -145,10 +158,9 @@ button{
   
   
   .containerB{
-  width: 100%;
-  padding: 30px;
-  transform: translate(-40px, -137px);
-  border-radius: 29px;
+    width: 100%;
+    transform: translate(0px, -87px);
+    border-radius: 29px;
   }
   
   .tab_box{
@@ -157,7 +169,6 @@ button{
   justify-content: space-around;
   margin-bottom: 2rem;
   align-items: center;
-  border-bottom: 2px solid rgba(229, 229, 229);
    position:relative;
   }
   
@@ -202,7 +213,6 @@ button{
   left: 72px;
   width: 90px;
   height: 5px;
-  background:#ffffff00;
     border-radius:10px;
     transition: all .3s ease-in-out;
   }
@@ -243,6 +253,17 @@ button{
     width: 100%;
     height: auto;
   }
-
+.circleCover{
+  display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-block: 0;
+    align-self: center;
+    justify-content: flex-start;
+    align-content: center;  
+}
   
  

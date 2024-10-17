@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('meta')
+<meta name="description"
+    content="View details of the selected image in the DevNation gallery. Explore highlights from past events, workshops, and conferences, showcasing our developer community's achievements in DevOps and software engineering.">
+<meta name="keywords"
+    content="DevNation gallery, individual image view, developer community highlights, event photos, DevOps workshops, software engineering events, gallery display">
+<meta name="author" content="DevNation">
+@endsection
+
+@section('title', 'DevNation Gallery | Image Details')
+
 @section('content')
     @include('layouts.inlcudes.nav')
 

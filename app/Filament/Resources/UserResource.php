@@ -4,7 +4,9 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Filament\Resources\UserResource\RelationManagers\AmbassadorRelationManager;
 use App\Filament\Resources\UserResource\RelationManagers\EventRegistrationsRelationManager;
+use App\Filament\Resources\UserResource\RelationManagers\SocialAccountsRelationManager;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
@@ -154,6 +156,8 @@ class UserResource extends Resource
     {
         return [
             EventRegistrationsRelationManager::class,
+            AmbassadorRelationManager::class,
+            SocialAccountsRelationManager::class,
         ];
     }
 

@@ -93,6 +93,9 @@
                                         </div> --}}
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link" href="{{ route('team') }}">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link " href="{{ route('gallery.index') }}">Gallery</a>
                             {{-- data-bs-toggle="dropdown">Blog</a> --}}
                             {{-- <ul class="dropdown-menu">
