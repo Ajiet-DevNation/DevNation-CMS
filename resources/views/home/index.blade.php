@@ -371,7 +371,7 @@
                         </div>
                         <!-- /.row -->
                         <div class="d-flex justify-content-center">
-                            <span><a href="{{ route('signup') }} class="btn btn-primary rounded-pill">Join DevNation</a></span>
+                            <span><a href="{{ route('signup') }}" class="btn btn-primary rounded-pill">Join DevNation</a></span>
                         </div>
                     </div>
                     <!-- /.container -->
