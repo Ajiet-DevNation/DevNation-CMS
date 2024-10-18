@@ -40,6 +40,7 @@ class RoleResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required(),
+                TextInput::make('description')->required(),
             ]);
     }
 

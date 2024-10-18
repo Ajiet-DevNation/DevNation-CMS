@@ -34,7 +34,7 @@
             <img class="rounded-circle w-15 mb-4 img-fluid" src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}" alt="{{ $member->name }}" />
             <h4 class="mb-1">{{ $member->name }}</h4>
             <div class="meta mb-2">{{ $member->role->name }}</div>
-            <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
+            <p class="mb-2">{{ $member->role->description }}</p>
             <nav class="nav social mb-0">
               <a href="#"><i class="uil uil-twitter"></i></a>
               <a href="#"><i class="uil uil-linkedin"></i></a>
