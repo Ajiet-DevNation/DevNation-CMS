@@ -287,19 +287,16 @@
                                             </figure>
                                             <div class="post-header">
                                                 <h2 class="post-title h3 mb-3">
-                                                    <center>
-                                                        {{ $member->name }}
-                                                    </center>
+                                                   <center>
+                                                    {{ $member->name}}
+                                                </center>
                                                 </h2>
                                             </div>
                                             <div class="post-footer">
-                                                <ul class="post-meta">
-                                                    <center>
-                                                        <li>
-                                                            <p>{{ $member->role->name }}</p>
-                                                        </li>
-
-                                                    </center>
+                                                <ul class="post-meta"> <center>
+                                                    <li><p>{{ $member->role->name}}</p></li>
+                                                    
+                                                </center>
                                                 </ul>
                                             </div>
                                         </article>
