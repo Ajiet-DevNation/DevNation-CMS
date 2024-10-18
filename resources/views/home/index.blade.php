@@ -250,6 +250,55 @@
                         <figure class="rounded"><img src="assets/img/photos/about24.jpg"
                                 srcset="./assets/img/photos/about24@2x.jpg 2x" alt=""></figure>
                     </div>
+                    <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
+                    data-items-xl="3" data-items-md="2" data-items-xs="1">
+                    <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                        <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
+                            style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
+                            @foreach ($teamMember as $member)
+                            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
+                                style="width: 290px; margin-right: 30px;">
+                                <article>
+                                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
+            
+                                <img style="object-fit:cover; width:100%; height:100% !important;"
+                                    src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}" alt=""><span class="bg"></span>
+                                    
+                                
+                                    </figure>
+                                    <div class="post-header">
+                                        <h2 class="post-title h3 mb-3">
+                                            {{ $member->name }}
+                                            </h2>
+                                    </div>
+                                    <div class="post-footer">
+                                        <ul class="post-meta">
+                                            
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            @endforeach
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="swiper-controls">
+                        <div
+                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                role="button" aria-label="Go to slide 1" aria-current="true"></span><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button"
+                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                role="button" aria-label="Go to slide 3"></span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-14 my-md-16" />
+                <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+                    <div class="col-md-8 col-lg-6 order-lg-2">
+                        <figure class="rounded"><img src="assets/img/photos/about24.jpg"
+                                srcset="./assets/img/photos/about24@2x.jpg 2x" alt=""></figure>
+                    </div>
                     <!--/column -->
                     <div class="col-lg-6">
                         <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community</h2>
