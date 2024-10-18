@@ -27,13 +27,13 @@
 
     <div class="row g-4 justify-content-center">
       <!-- First Row -->
-      @foreach ($team as $item)
+      @foreach ($teamMember as $member)
       <div class="col-12 col-md-4">
         <div class="card">
           <div class="card-body">
-            <img class="rounded-circle w-15 mb-4" src="{{ $item->image }}" alt="Member 1" />
-            <h4 class="mb-1">{{ $item->name }}</h4>
-            <div class="meta mb-2">{{ $item->role->name }}</div>
+            <img class="rounded-circle w-15 mb-4" src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}" alt="{{ $member->name }}" />
+            <h4 class="mb-1">{{ $member->name }}</h4>
+            <div class="meta mb-2">{{ $member->role->name }}</div>
             <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
             <nav class="nav social mb-0">
               <a href="#"><i class="uil uil-twitter"></i></a>
