@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
 
         Role::factory()->create([
             'name' => 'coordianator',
+            'description' => 'Coordinator of the community',
         ]);
         User::factory()->create([
             'name' => 'admin',
