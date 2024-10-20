@@ -18,6 +18,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use SebastianBergmann\CodeUnit\FileUnit;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 
 class CertificateTemplateResource extends Resource
 {
@@ -25,6 +30,14 @@ class CertificateTemplateResource extends Resource
     protected static ?string $modelLabel = 'Template';
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
     protected static ?string $navigationLabel = 'Certificate Template';
+    protected static ?string $navigationGroup = 'Certificate Settings';
+    protected static ?string $navigationBadgeTooltip = 'The number of templates';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
@@ -48,13 +61,20 @@ class CertificateTemplateResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('template_name')->searchable()->sortable(),
+                ImageColumn::make('template_image')->circular()->searchable()->sortable(),
+
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ActionGroup::make([
+                    ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    DeleteAction::make(),
+                ]),
+               
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
