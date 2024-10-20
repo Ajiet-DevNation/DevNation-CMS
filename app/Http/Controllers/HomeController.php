@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,9 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         // dd($upcomingEvents);
-        return view('home.index', ['upcomingEvents' => $upcomingEvents]);
+        $teamMember = User::get();
+        // dd($teamMember);
+        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember]);
     }
 
     public function about()
@@ -24,15 +27,7 @@ class HomeController extends Controller
     {
         return view('contact.index');
     }
-    public function signup()
-    {
-        return view('signup.index');
-    }
-    
-    public function login()
-    {
-        return view('login.index');
-    }
+
     public function gallery()
     {
         $galleries = Gallery::all();

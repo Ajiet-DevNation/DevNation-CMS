@@ -38,11 +38,11 @@ class EventNotification extends Notification
     {
         return (new MailMessage)
         ->subject('Event Registration Successful')
-        ->greeting('Hello ' . $notifiable->name)
-        ->line('You have successfully registered for the event: ' . $this->event->name)
-        ->line('We look forward to seeing you at the event!')
+        ->greeting('Greetings! ' . $notifiable->name)
+        ->line('Your registration for the event has been successfully completed.' . $this->event->name)
+        ->line('We look forward to your esteemed presence at the event.')
         ->action('View Event', url('/events/' . $this->event->id))
-        ->line('Thank you for registering!');
+        ->line('Thank you for completing your registration!');
     }
 
     /**

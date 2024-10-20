@@ -9,8 +9,8 @@ class TeamController extends Controller
 {
     public function team()
     {
-        $team = User::get();
-        // dd($team);
-        return view('team.index', ['team' => $team]);
+        $teamMember = User::get();
+        // dd($teamMember);
+        return view('team.index', ['teamMember' => $teamMember]);
     }
 }
