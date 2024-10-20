@@ -17,21 +17,30 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use SebastianBergmann\CodeUnit\FileUnit;
+use Filament\Forms\Components\Section;
 
 class CertificateTemplateResource extends Resource
 {
     protected static ?string $model = CertificateTemplate::class;
-
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    protected static ?string $modelLabel = 'Template';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
+    protected static ?string $navigationLabel = 'Certificate Template';
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('template_name')->required(),
-                FileUpload::make('template_image'),
-                Textarea::make('description'),
-                
+                Section::make('Template Details')->schema([
+                    TextInput::make('template_name')->required()->columnSpanFull(),
+                    Textarea::make('description'),
+                    FileUpload::make('template_image'), 
+                ])->columns(2)->collapsible(),
+                Section::make('Settings')->schema([
+                    TextInput::make('description_font_size')->numeric()->default(20),
+                    TextInput::make('description_x_axis')->numeric()->default(360),
+                    TextInput::make('description_y_axis')->numeric()->default(360),
+                    TextInput::make('description_angle')->numeric()->default(0),
+                    TextInput::make('unique_id_font_size')->numeric()->default(20),
+                ])->columns(3)->collapsible(),
             ]);
     }
 
