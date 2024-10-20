@@ -18,7 +18,7 @@
     <section class="m-8">
             <h2>Upcoming Events</h2>
             <div class="cards-wrapper">
-                @if (!$upcomingEvents->isNotEmpty() )
+                @if ($upcomingEvents->isNotEmpty() )
                 @foreach ($upcomingEvents as $event)
                 <article>
                     <a href="{{ route('event.show', $event->id) }}">
