@@ -192,7 +192,7 @@
                             inspire, and grow your
                             skills as a developer. From workshops to competitions, there's something for everyone at
                             DevNation.</p>
-                        <a href="#" class="btn btn-primary rounded-pill mb-0">View All Events</a>
+                        <a href="{{ route('event.index') }}" class="btn btn-primary rounded-pill mb-0">View All Events</a>
                     </div>
                 </div>
                 <div class="row text-center">
