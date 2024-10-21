@@ -214,7 +214,7 @@
                                             href="{{ route('event.show', $event->id) }}">
                                             @if ($event->banner == null)
                                             <img style="object-fit:cover; width:100%; height:100% !important;"
-                                                src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                                src="https://placehold.co/300x425" alt=""><span class="bg"></span>
                                             <figcaption>
                                                 <h5 class="from-top mb-0">Read More</h5>
                                             </figcaption>
