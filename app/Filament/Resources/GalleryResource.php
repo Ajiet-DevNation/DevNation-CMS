@@ -52,7 +52,8 @@ class GalleryResource extends Resource
                     TextInput::make('name')->label('Name')->columnSpanFull()->required(),
                     FileUpload::make('image')->image()->acceptedFileTypes(['image/*'])->required()
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                        ->directory('galleries')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
+                        ->directory('galleries')->uploadingMessage('Uploading...')->downloadable()
+                        ->resize(50)->preserveFilenames()->openable(),
                     Textarea::make('description')->label('Description')->required()->rows(3),
                 ])->columns(2)->collapsible(),
                 Section::make('Meta Data')->schema([
@@ -63,7 +64,8 @@ class GalleryResource extends Resource
                 Section::make('Gallery Images and Control')->schema([
                     FileUpload::make('gallery_images')->image()->acceptedFileTypes(['image/*'])->multiple()
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                        ->directory('gallery_images')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
+                        ->directory('gallery_images')->uploadingMessage('Uploading...')
+                        ->resize(50)->downloadable()->preserveFilenames()->openable(),
                     Toggle::make('is_published')->label('Published')->default(false),
                 ])->columns(2)->collapsible(),
             ]);

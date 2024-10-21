@@ -20,7 +20,7 @@
                 <h1 class="display-1 mb-3">Sign In</h1>
                 <nav class="d-inline-block" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Sign In</li>
                     </ol>
                 </nav>
@@ -54,7 +54,7 @@
                         </form>
                         <!-- /form -->
                         <p class="mb-1"><a href="#" class="hover">Forgot Password?</a></p>
-                        <p class="mb-0">Don't have an account? <a href="signup.html" class="hover">Sign up</a></p>
+                        <p class="mb-0">Don't have an account? <a href="{{ route('user.signup') }}" class="hover">Sign up</a></p>
                         <div class="divider-icon my-4">or</div>
                         <nav class="nav social justify-content-center text-center">
                             <a href="#" class="btn btn-circle btn-sm btn-google"><i class="uil uil-google"></i></a>
