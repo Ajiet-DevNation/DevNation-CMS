@@ -18,7 +18,8 @@ Route::get('/login', [AuthController::class, 'login'])->name('user.login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authenticate');
 
 Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
-Route::get('/register', [AuthController::class, 'register'])->name('user.register');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('user.showRegister');
+Route::post('/register', [AuthController::class, 'register'])->name('user.register');
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index')->middleware('auth');
 
