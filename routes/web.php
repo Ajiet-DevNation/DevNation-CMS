@@ -15,7 +15,8 @@ Route::get('/about',[HomeController::class, 'about'])->name('about');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
 
 Route::get('/login', [AuthController::class, 'login'])->name('user.login');
-Route::get('/register', [AuthController::class, 'register'])->name('user.register');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('user.showRegister');
+Route::post('/register', [AuthController::class, 'register'])->name('user.register');
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index');
 
