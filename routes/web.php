@@ -16,9 +16,11 @@ Route::get('/team', [TeamController::class, 'team'])->name('team');
 
 Route::get('/login', [AuthController::class, 'login'])->name('user.login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authenticate');
+
+Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
 Route::get('/register', [AuthController::class, 'register'])->name('user.register');
 
-Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index');
+Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index')->middleware('auth');
 
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery.index');
 Route::get('/gallery/{id}', [HomeController::class, 'galleryDetails'])->name('gallery.show');

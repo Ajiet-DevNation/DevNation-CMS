@@ -31,10 +31,15 @@ class AuthController extends Controller
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // dd("jai");
-            return redirect()->route('home')->with('success','Logged In successfully');
+            return redirect()->route('profile.index')->with('success','Logged In successfully');
         } else {
             // dd("shantaramag bedi");
             return redirect()->route('user.login')->with('error', 'Either email/password is incorrect');
         }
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('logout')->with('success', "Logged Out Sucessfully!");
     }
 }
