@@ -28,16 +28,6 @@ class HomeController extends Controller
         return view('contact.index');
     }
 
-    public function login()
-    {
-        return view('login.index');
-    }
-
-    public function signup()
-    {
-        return view('signup.index');
-    }
-
     public function gallery()
     {
         $galleries = Gallery::all();

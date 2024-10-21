@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -11,8 +13,9 @@ Route::get('/events', [HomeController::class, 'events'])->name('event.index');
 Route::get('/event-details/{id}', [HomeController::class, 'eventDetails'])->name('event.show');
 Route::get('/about',[HomeController::class, 'about'])->name('about');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
-Route::get('/login', [HomeController::class, 'login'])->name('user.login');
-Route::get('/signup', [HomeController::class, 'signup'])->name('user.signup');
+
+Route::get('/login', [AuthController::class, 'login'])->name('user.login');
+Route::get('/register', [AuthController::class, 'register'])->name('user.register');
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index');
 
