@@ -31,7 +31,7 @@
                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a
-                            href="#" class="btn btn-lg btn-primary rounded-pill me-2">Join Us</a></span>
+                            href="{{ route('user.signup') }}" class="btn btn-lg btn-primary rounded-pill me-2">Join Us</a></span>
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
                             href="{{ route('contact') }}" class="btn btn-lg btn-outline-primary rounded-pill">Contact
@@ -512,7 +512,7 @@
                             </div>
                             <!-- /.row -->
                             <div class="d-flex justify-content-center">
-                                <span><a href="#" class="btn btn-primary rounded-pill">Join DevNation</a></span>
+                                <span><a href="{{ route('user.signup') }}" class="btn btn-primary rounded-pill">Join DevNation</a></span>
                             </div>
                         </div>
                         <!-- /.container -->

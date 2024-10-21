@@ -19,7 +19,7 @@
             <h1 class="display-1 mb-3">Sign Up</h1>
             <nav class="d-inline-block" aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
               </ol>
             </nav>
@@ -62,7 +62,7 @@
                   <a class="btn btn-primary rounded-pill btn-login w-100 mb-2">Sign Up</a>
                 </form>
                 <!-- /form -->
-                <p class="mb-0">Already have an account? <a href="signin.html" class="hover">Sign in</a></p>
+                <p class="mb-0">Already have an account? <a href="{{ route('user.login') }}" class="hover">Log in</a></p>
                 <div class="divider-icon my-4">or</div>
                 <nav class="nav social justify-content-center text-center">
                   <a href="#" class="btn btn-circle btn-sm btn-google"><i class="uil uil-google"></i></a>
