@@ -6,7 +6,7 @@
                     <h3 class="h2 mb-3 text-white">Join the Community</h3>
                     <p class="lead mb-5 text-justify" style="text-decoration: none">Let's make something great together. We are a community by over 500+
                         students. Join us by signing up to DevNation and grow together.</p>
-                    <a href="{{ route('user.signup') }}" class="btn btn-white  rounded-pill">Join Us</a>
+                    <a href="{{ route('user.register') }}" class="btn btn-white  rounded-pill">Join Us</a>
                 </div>
                 <!-- /.widget -->
             </div>
