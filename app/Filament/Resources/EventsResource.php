@@ -65,7 +65,7 @@ class EventsResource extends Resource
                     RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
                     FileUpload::make('banner')->required()->label('Event Banner')->image()->acceptedFileTypes(['image/*'])
                     ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                    ->directory('events')->downloadable()->preserveFilenames()->openable(),
+                    ->directory('events')->downloadable()->preserveFilenames()->openable()->resize(50),
                     TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
                     Select::make('status')->options([
                         'draft' => 'Draft',
