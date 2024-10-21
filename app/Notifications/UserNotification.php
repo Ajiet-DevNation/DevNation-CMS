@@ -36,8 +36,8 @@ class UserNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->greeting('Hello ' . $this->user->name)
-            ->line('Your account has been created successfully!')
+            ->greeting('Greetings! ' . $this->user->name)
+            ->line('Your account has been successfully created and is now active.')
             ->action('Login', url('/login'))
             ->line('Thank you for joining us!');
     }

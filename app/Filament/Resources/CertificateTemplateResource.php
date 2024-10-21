@@ -17,21 +17,43 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use SebastianBergmann\CodeUnit\FileUnit;
+use Filament\Forms\Components\Section;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 
 class CertificateTemplateResource extends Resource
 {
     protected static ?string $model = CertificateTemplate::class;
+    protected static ?string $modelLabel = 'Template';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
+    protected static ?string $navigationLabel = 'Certificate Template';
+    protected static ?string $navigationGroup = 'Certificate Settings';
+    protected static ?string $navigationBadgeTooltip = 'The number of templates';
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('template_name')->required(),
-                FileUpload::make('template_image'),
-                Textarea::make('description'),
-                
+                Section::make('Template Details')->schema([
+                    TextInput::make('template_name')->required()->columnSpanFull(),
+                    Textarea::make('description'),
+                    FileUpload::make('template_image'), 
+                ])->columns(2)->collapsible(),
+                Section::make('Settings')->schema([
+                    TextInput::make('description_font_size')->numeric()->default(20),
+                    TextInput::make('description_x_axis')->numeric()->default(360),
+                    TextInput::make('description_y_axis')->numeric()->default(360),
+                    TextInput::make('description_angle')->numeric()->default(0),
+                    TextInput::make('unique_id_font_size')->numeric()->default(20),
+                ])->columns(3)->collapsible(),
             ]);
     }
 
@@ -39,13 +61,20 @@ class CertificateTemplateResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('template_name')->searchable()->sortable(),
+                ImageColumn::make('template_image')->circular()->searchable()->sortable(),
+
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ActionGroup::make([
+                    ViewAction::make(),
+                    Tables\Actions\EditAction::make(),
+                    DeleteAction::make(),
+                ]),
+               
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
