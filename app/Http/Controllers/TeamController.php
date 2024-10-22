@@ -9,7 +9,7 @@ class TeamController extends Controller
 {
     public function team()
     {
-        $teamMember = User::get();
+        $teamMember = User::with('socialAccounts')->get();
         // dd($teamMember);
         return view('team.index', ['teamMember' => $teamMember]);
     }

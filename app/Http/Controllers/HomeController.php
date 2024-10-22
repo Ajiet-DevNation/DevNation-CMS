@@ -20,7 +20,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        $coreMembers = User::where('is_core_member', true)->get();
+        $coreMembers = User::where('is_core_member', true)->with('socialAccounts')->get();
         return view('about.index', ['coreMembers' => $coreMembers]);
     }
 
