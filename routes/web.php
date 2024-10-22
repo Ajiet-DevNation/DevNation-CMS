@@ -14,10 +14,11 @@ Route::get('/event-details/{id}', [HomeController::class, 'eventDetails'])->name
 Route::get('/about',[HomeController::class, 'about'])->name('about');
 Route::get('/team', [TeamController::class, 'team'])->name('team');
 
-Route::get('/login', [AuthController::class, 'login'])->name('user.login');
+Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authenticate');
 
-Route::post('/logout',[AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::get('/register', [AuthController::class, 'showRegister'])->name('user.showRegister');
 Route::post('/register', [AuthController::class, 'register'])->name('user.register');
 
