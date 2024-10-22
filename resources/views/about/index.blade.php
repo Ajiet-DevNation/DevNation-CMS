@@ -217,18 +217,19 @@
       <div class="shape rounded-circle bg-line red rellax w-16 h-16" data-rellax-speed="1"
         style="top: 0.5rem; left: -1.7rem;"></div>
 
-      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" style="z-index: 1">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row g-4 justify-content-center">
+              @foreach ($coreMembers as $member)    
               <div class="col-12 col-md-4">
                 <div class="card">
                   <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/draft/about.draft.png') }}"
-                      srcset="{{ asset('./assets/draft/about.draft@2x.png') }} 2x" alt="Member 1" />
-                    <h4 class="mb-1">Member-1</h4>
-                    <div class="meta mb-2">President</div>
-                    <p class="mb-2">Leading DevNation's initiatives and fostering community growth.</p>
+                    <img class="rounded-circle w-15 mb-4" src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}"
+                    alt="{{ $member->name }}" />
+                    <h4 class="mb-1">{{ $member->name }}</h4>
+                    <div class="meta mb-2">{{ $member->role->name }}</div>
+                    <p class="mb-2">{{ $member->role->description }}</p>
                     <nav class="nav social mb-0">
                       <a href="#"><i class="uil uil-twitter"></i></a>
                       <a href="#"><i class="uil uil-linkedin"></i></a>
@@ -237,96 +238,9 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te2.jpg') }}"
-                      srcset="{{ asset('./assets/img/avatars/te2@2x.jpg') }} 2x" alt="Member 2" />
-                    <h4 class="mb-1">Member-2</h4>
-                    <div class="meta mb-2">Vice President</div>
-                    <p class="mb-2">Coordinating events and managing partnerships with tech companies.</p>
-                    <nav class="nav social mb-0">
-                      <a href="#"><i class="uil uil-twitter"></i></a>
-                      <a href="#"><i class="uil uil-linkedin"></i></a>
-                      <a href="#"><i class="uil uil-github"></i></a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te3.jpg') }}"
-                      srcset="{{ asset('./assets/img/avatars/te3@2x.jpg') }} 2x" alt="Member 3" />
-                    <h4 class="mb-1">Member-3</h4>
-                    <div class="meta mb-2">Technical Lead</div>
-                    <p class="mb-2">Overseeing technical workshops and hackathon projects.</p>
-                    <nav class="nav social mb-0">
-                      <a href="#"><i class="uil uil-twitter"></i></a>
-                      <a href="#"><i class="uil uil-linkedin"></i></a>
-                      <a href="#"><i class="uil uil-github"></i></a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="row g-4 justify-content-center">
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te4.jpg') }}"
-                      srcset="{{ asset('/assets/img/avatars/te4@2x.jpg') }} 2x" alt="Member 4" />
-                    <h4 class="mb-1">Member-4</h4>
-                    <div class="meta mb-2">Marketing Coordinator</div>
-                    <p class="mb-2">Managing DevNation's online presence and community outreach.</p>
-                    <nav class="nav social mb-0">
-                      <a href="#"><i class="uil uil-twitter"></i></a>
-                      <a href="#"><i class="uil uil-linkedin"></i></a>
-                      <a href="#"><i class="uil uil-instagram"></i></a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te5.jpg') }}"
-                      srcset="{{ asset('./assets/img/avatars/te5@2x.jpg') }} 2x" alt="Member 5" />
-                    <h4 class="mb-1">Member-5</h4>
-                    <div class="meta mb-2">Design Lead</div>
-                    <p class="mb-2">Crafting and managing all design aspects for DevNation's projects.</p>
-                    <nav class="nav social mb-0">
-                      <a href="#"><i class="uil uil-twitter"></i></a>
-                      <a href="#"><i class="uil uil-linkedin"></i></a>
-                      <a href="#"><i class="uil uil-dribbble"></i></a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <img class="rounded-circle w-15 mb-4" src="{{ asset('assets/img/avatars/te6.jpg') }}"
-                      srcset="{{ asset('./assets/img/avatars/te6@2x.jpg') }} 2x" alt="Member 6" />
-                    <h4 class="mb-1">Member-6</h4>
-                    <div class="meta mb-2">Community Manager</div>
-                    <p class="mb-2">Building a strong and supportive community for developers worldwide.</p>
-                    <nav class="nav social mb-0">
-                      <a href="#"><i class="uil uil-twitter"></i></a>
-                      <a href="#"><i class="uil uil-linkedin"></i></a>
-                      <a href="#"><i class="uil uil-github"></i></a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-indicators mt-4">
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active rounded-circle mx-1" aria-current="true" aria-label="Slide 1" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
-          <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" class="rounded-circle mx-1" aria-label="Slide 2" style="width: 10px; height: 10px; background-color: grey; border: none;"></button>
         </div>
       </div>
     </div>

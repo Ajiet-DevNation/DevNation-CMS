@@ -83,7 +83,7 @@
                                     Up</button>
                             </form>
                             <!-- /form -->
-                            <p class="mb-0">Already have an account? <a href="{{ route('user.login') }}"
+                            <p class="mb-0">Already have an account? <a href="{{ route('login') }}"
                                     class="hover">Log in</a></p>
                             {{-- <div class="divider-icon my-4">or</div>
                 <nav class="nav social justify-content-center text-center">
