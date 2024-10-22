@@ -20,7 +20,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('about.index');
+        $coreMembers = User::where('is_core_member', true)->get();
+        return view('about.index', ['coreMembers' => $coreMembers]);
     }
 
     public function contact()

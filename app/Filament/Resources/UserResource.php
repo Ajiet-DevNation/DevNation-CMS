@@ -11,6 +11,7 @@ use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -85,8 +86,11 @@ class UserResource extends Resource
                     TextInput::make('password')->required()->required(fn(Page $livewire): bool => $livewire instanceof CreateRecord)
                         ->password()->placeholder('********')->dehydrated(fn($state) => filled($state)),
                     Toggle::make('is_alumini')->default(false),
-                    Toggle::make('is_admin')->default(false),
-                    Toggle::make('is_verified')->default(false),
+                    Grid::make()->schema([
+                        Toggle::make('is_admin')->default(false),
+                        Toggle::make('is_verified')->default(false),
+                        Toggle::make('is_core_member')->default(false),
+                    ])->columns(3),
                 ])->columns(2)->collapsible(),
             ]);
     }
