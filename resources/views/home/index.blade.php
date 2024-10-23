@@ -223,7 +223,7 @@
                                                         </figcaption>
                                                     @else
                                                         <img style="object-fit:cover; width:100%; height:100% !important;"
-                                                            src="{{ Storage::url($event->banner) }}" alt=""><span
+                                                            src="{{ Storage::url($event->poster) }}" alt="{{ $event->name }}"><span
                                                             class="bg"></span>
                                                         <figcaption>
                                                             <h5 class="from-top mb-0">Read More</h5>
