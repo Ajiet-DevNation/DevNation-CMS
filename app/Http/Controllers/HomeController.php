@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DeveloperGroup;
 use App\Models\Events;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
@@ -15,7 +16,9 @@ class HomeController extends Controller
         // dd($upcomingEvents);
         $teamMember = User::get();
         // dd($teamMember);
-        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember]);
+        $developerGroups = DeveloperGroup::all();
+        // dd($developerGroups);
+        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember, 'developerGroups' => $developerGroups]);
     }
 
     public function about()
