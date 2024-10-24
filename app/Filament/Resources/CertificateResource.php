@@ -6,13 +6,17 @@ use App\Filament\Resources\CertificateResource\Pages;
 use App\Filament\Resources\CertificateResource\RelationManagers;
 use App\Models\Certificate;
 use Filament\Forms;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -39,6 +43,7 @@ class CertificateResource extends Resource
                 Select::make('user_id')->relationship('user', 'name')->required()->searchable()->preload(),
                 Select::make('event_id')->relationship('event', 'name')->required()->searchable()->preload(),
                 Select::make('certificate_template_id')->required()->relationship('certificateTemplate', 'template_name')->searchable()->preload(),
+                DatePicker::make('issued_at')->required()->default(now( )),
             ]);
     }
 
@@ -46,13 +51,18 @@ class CertificateResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('user.name')->searchable()->sortable(),
+                TextColumn::make('event.name')->searchable()->sortable(),
+                TextColumn::make('certificateTemplate.template_name')->searchable()->sortable(),
+                TextColumn::make('issued_at')->searchable()->sortable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                ViewAction::make(),
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
                 BulkActionGroup::make([
