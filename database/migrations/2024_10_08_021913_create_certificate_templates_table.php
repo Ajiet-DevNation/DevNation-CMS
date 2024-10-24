@@ -21,6 +21,9 @@ return new class extends Migration
             $table->float('description_y_axis')->default(360);
             $table->float('description_angle')->default(0);
             $table->float('unique_id_font_size')->default(20);
+            $table->float('unique_id_x_axis')->default(360);
+            $table->float('unique_id_y_axis')->default(360);
+            $table->float('unique_id_angle')->default(0);
             $table->timestamps();
         });
     }

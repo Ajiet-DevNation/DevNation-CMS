@@ -53,7 +53,10 @@ class CertificateTemplateResource extends Resource
                     TextInput::make('description_y_axis')->numeric()->default(360),
                     TextInput::make('description_angle')->numeric()->default(0),
                     TextInput::make('unique_id_font_size')->numeric()->default(20),
-                ])->columns(3)->collapsible(),
+                    TextInput::make('unique_id_x_axis')->numeric()->default(360),
+                    TextInput::make('unique_id_y_axis')->numeric()->default(360),
+                    TextInput::make('unique_id_angle')->numeric()->default(0),
+                ])->columns(2)->collapsible(),
             ]);
     }
 
