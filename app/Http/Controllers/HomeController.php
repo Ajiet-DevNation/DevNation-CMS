@@ -7,6 +7,8 @@ use App\Models\Events;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\EventRegisteraion;
+
 
 class HomeController extends Controller
 {
@@ -53,8 +55,12 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         $pastEvents = Events::where('start_date', '<', date('Y-m-d'))->get();
-        
-        return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents]);
+        if (!auth()->check()) {
+            return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => []]);
+        }
+        $user = auth()->user();
+        $registeredEvents = EventRegisteraion::where('user_id', $user->id)->get()->pluck('event_id')->toArray();
+        return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => $registeredEvents]);
     }
 
     public function eventDetails($id)
