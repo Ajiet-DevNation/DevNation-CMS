@@ -22,9 +22,7 @@ class HomeController extends Controller
         $developerGroups = DeveloperGroup::all();
         // dd($developerGroups);
 
-        $ambassadors = Ambassadors::all();
-
-        // dd($ambassadors);
+        $ambassadors = Ambassadors::with('user')->with('developerGroup')->get();
 
         return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember, 'developerGroups' => $developerGroups, 'ambassadors' => $ambassadors]);
     }

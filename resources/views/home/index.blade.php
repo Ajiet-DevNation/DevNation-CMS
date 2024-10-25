@@ -330,7 +330,7 @@
                 <div class="row text-center">
                     <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
                         {{-- <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community Members</h2> --}}
-                        <h3 class="display-4 mb-9">Ambassadors of different Industries</h3>
+                        <h3 class="display-4 mb-9">Ambassadors and Campus Leads of different Industries</h3>
                     </div>
                 </div>
                 <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
@@ -338,29 +338,27 @@
                     <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                         <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
                             style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
-                            @foreach ($teamMember as $member)
+                            @foreach ($ambassadors as $ambassador)
                             <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6">
                                         <img style="object-fit:cover; width:100%; height:100% !important;"
-                                            src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}"
-                                            alt="{{ $member->name }}">
+                                            src="{{ str_contains($ambassador->user->image, 'ui-avatars.com') ? $ambassador->user->image : Storage::url($ambassador->user->image) }}"
+                                            alt="{{ $ambassador->user->name }}">
                                     </figure>
                                     <div class="post-header">
-                                        <h2 class="post-title h3 mb-3">
-                                            <center>{{ $member->name }}</center>
+                                        <h2 class="post-title h3 mb-2">
+                                            <center>{{ $ambassador->user->name }}</center>
                                         </h2>
                                     </div>
                                     <div class="post-footer">
                                         <ul class="post-meta">
                                             <center>
-                                                <li class="post-date">
-                                                    <span>{{ $member->role->name }}
-                                                        <br />
-                                                        {{ $member->role->description }}
-                                                    </span>
-                                                </li>
+                                                <h3 class="post-title h6">
+                                                    <center>{{ $ambassador->developerGroup->name }}</center>
+                                                </h3>
+                                                <p class="post-body h5">{{ $ambassador->name }}</p>
                                             </center>
                                         </ul>
                                     </div>
