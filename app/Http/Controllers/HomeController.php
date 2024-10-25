@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambassadors;
 use App\Models\DeveloperGroup;
 use App\Models\Events;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\EventRegisteraion;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -20,7 +21,12 @@ class HomeController extends Controller
         // dd($teamMember);
         $developerGroups = DeveloperGroup::all();
         // dd($developerGroups);
-        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember, 'developerGroups' => $developerGroups]);
+
+        $ambassadors = Ambassadors::all();
+
+        // dd($ambassadors);
+
+        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember, 'developerGroups' => $developerGroups, 'ambassadors' => $ambassadors]);
     }
 
     public function about()
@@ -55,10 +61,10 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         $pastEvents = Events::where('start_date', '<', date('Y-m-d'))->get();
-        if (!auth()->check()) {
+        if (!Auth::check()) {
             return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => []]);
         }
-        $user = auth()->user();
+        $user = Auth::user();
         $registeredEvents = EventRegisteraion::where('user_id', $user->id)->get()->pluck('event_id')->toArray();
         return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => $registeredEvents]);
     }
