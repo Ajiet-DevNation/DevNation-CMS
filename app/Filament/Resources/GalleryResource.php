@@ -26,6 +26,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+
 
 class GalleryResource extends Resource
 {
@@ -50,7 +52,7 @@ class GalleryResource extends Resource
             ->schema([
                 Section::make('Gallery Information')->schema([
                     TextInput::make('name')->label('Name')->columnSpanFull()->required(),
-                    FileUpload::make('image')->image()->acceptedFileTypes(['image/*'])->required()
+                    FileUpload::make('image')->image()->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp'])->required()
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
                         ->directory('galleries')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
                     Textarea::make('description')->label('Description')->required()->rows(3),
