@@ -5,12 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
-
+use Illuminate\Support\Facades\Log; // na logovanie chýb
 
 class Gallery extends Model
 {
-    /** @use HasFactory<\Database\Factories\GalleryFactory> */
     use HasFactory;
 
     protected $fillable = [
@@ -24,30 +22,68 @@ class Gallery extends Model
         'is_published',
     ];
 
-    public function event()
-    {
-        return $this->belongsTo(Events::class);
-    }
-
-    protected $casts = [
-        'gallery_images' => 'array',
-        'is_published' => 'boolean',
-    ];
     protected static function booted()
     {
         static::saved(function ($gallery) {
-            // Skontrolujeme, či existuje nahratý obrázok
-            if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
-                // Načíta sa obrázok a zmení sa jeho veľkosť
-                $imagePath = Storage::disk('public')->path($gallery->image);
-                $resizedImage = Image::make($imagePath)->resize(800, 800, function ($constraint) {
-                    $constraint->aspectRatio();
-                    $constraint->upsize();
-                })->encode();
+            try {
+                if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
+                    $imagePath = Storage::disk('public')->path($gallery->image);
+                    $resizedImagePath = Storage::disk('public')->path('resized_' . $gallery->image);
 
-                // Prepisujeme obrázok zmenšenou verziou
-                Storage::disk('public')->put($gallery->image, (string) $resizedImage);
+                    // Otvorenie pôvodného obrázka pomocou GD
+                    $sourceImage = imagecreatefromstring(file_get_contents($imagePath));
+                    if ($sourceImage === false) {
+                        Log::error("Nepodarilo sa otvoriť obrázok: {$imagePath}");
+                        return; // Ukončí sa, ak nie je možné načítať obrázok
+                    }
+
+                    // Získanie pôvodných rozmerov
+                    $width = imagesx($sourceImage);
+                    $height = imagesy($sourceImage);
+
+                    // Výpočet nových rozmerov
+                    $newWidth = 800;
+                    $newHeight = 800;
+                    if ($width > $height) {
+                        $newHeight = (int)(($height / $width) * $newWidth);
+                    } else {
+                        $newWidth = (int)(($width / $height) * $newHeight);
+                    }
+
+                    // Vytvorenie nového obrázka s novými rozmermi
+                    $resizedImage = imagecreatetruecolor($newWidth, $newHeight);
+                    imagecopyresampled($resizedImage, $sourceImage, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+                    // Uloženie zmenšeného obrázka vo formáte JPEG s kvalitou 90
+                    imagejpeg($resizedImage, $resizedImagePath, 90);
+
+                    // Nahradenie pôvodného obrázka novou verziou
+                    Storage::disk('public')->put($gallery->image, file_get_contents($resizedImagePath));
+
+                    // Uvoľnenie pamäte
+                    imagedestroy($sourceImage);
+                    imagedestroy($resizedImage);
+
+                    // Odstránenie dočasného súboru, ak existuje
+                    if (file_exists($resizedImagePath)) {
+                        unlink($resizedImagePath);
+                    }
+                }
+            } catch (\Exception $e) {
+                Log::error("Zlyhalo zmenšenie obrázka: " . $e->getMessage());
             }
         });
+    }
+
+    // Serializuje pole na JSON pred uložením do databázy
+    public function setGalleryImagesAttribute($value)
+    {
+        $this->attributes['gallery_images'] = json_encode($value);
+    }
+
+    // Deserializuje JSON na pole pri načítaní z databázy
+    public function getGalleryImagesAttribute($value)
+    {
+        return json_decode($value, true);
     }
 }
