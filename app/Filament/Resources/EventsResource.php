@@ -9,6 +9,7 @@ use App\Models\Events;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
@@ -65,14 +66,19 @@ class EventsResource extends Resource
                     RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
                     FileUpload::make('banner')->required()->label('Event Banner')->image()->acceptedFileTypes(['image/*'])
                     ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                    ->directory('events')->downloadable()->preserveFilenames()->openable(),
-                    TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
-                    Select::make('status')->options([
-                        'draft' => 'Draft',
-                        'published' => 'Published',
-                        'cancelled' => 'Cancelled',
-                    ])->required()->default('draft'),
-                    TextInput::make('max_attendees')->required()->label('Max Attendees')->placeholder('Enter the maximum number of attendees'),
+                    ->directory('events/banner')->downloadable()->preserveFilenames()->openable()->resize(50),
+                    FileUpload::make('poster')->required()->label('Event Poster')->image()->acceptedFileTypes(['image/*'])
+                    ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
+                    ->directory('events/poster')->downloadable()->preserveFilenames()->openable()->resize(50),
+                    Grid::make()->schema([
+                        TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
+                        Select::make('status')->options([
+                            'draft' => 'Draft',
+                            'published' => 'Published',
+                            'cancelled' => 'Cancelled',
+                        ])->required()->default('draft'),
+                        TextInput::make('max_attendees')->required()->label('Max Attendees')->placeholder('Enter the maximum number of attendees'),
+                    ])->columns(3),
                 ])->columns(2)->collapsible(),
                 Section::make('Speaker Information')->schema([
                     TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),

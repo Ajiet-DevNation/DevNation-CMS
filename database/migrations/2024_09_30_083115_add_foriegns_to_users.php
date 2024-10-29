@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('college_id')->constrained('colleges')->onDeleteCascade();
-            $table->foreignId('role_id')->constrained('roles')->onDeleteCascade();
+            $table->foreignId('college_id')->default(1)->constrained('colleges')->onDeleteCascade();
+            $table->foreignId('role_id')->default(1)->constrained('roles')->onDeleteCascade();
+            $table->boolean('is_core_member')->default(false);
         });
     }
 

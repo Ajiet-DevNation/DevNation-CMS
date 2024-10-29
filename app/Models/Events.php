@@ -17,6 +17,7 @@ class Events extends Model
         'event_type',
         'location',
         'banner',
+        'poster',
         'speaker',
         'speaker_mail',
         'status',
