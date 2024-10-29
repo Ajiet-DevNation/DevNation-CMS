@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Log;
 
 class Gallery extends Model
 {
@@ -24,80 +23,68 @@ class Gallery extends Model
 
     protected static function booted()
     {
-        static::saved(function ($gallery) {
-            try {
-                // Spracovanie náhľadového obrázka
-                if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
-                    self::resizeImage($gallery->image);
-                }
+        static::saving(function ($gallery) {
+            // Resize the main image if it exists
+            if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
+                $gallery->image = self::resizeImage($gallery->image);
+            }
 
-                // Spracovanie obrázkov v galérii (v poli gallery_images)
-                if ($gallery->gallery_images) {
-                    $galleryImages = $gallery->gallery_images; // priame priradenie bez json_decode
-                    foreach ($galleryImages as $image) {
-                        if (Storage::disk('public')->exists($image)) {
-                            self::resizeImage($image);
-                        }
+            // Resize each image in the gallery_images array if they exist
+            if ($gallery->gallery_images) {
+                $galleryImages = $gallery->gallery_images;
+                foreach ($galleryImages as &$image) {
+                    if (Storage::disk('public')->exists($image)) {
+                        $image = self::resizeImage($image); // Resize and update the image path
                     }
                 }
-
-            } catch (\Exception $e) {
-                Log::error("Zlyhalo zmenšenie obrázkov v galérii: " . $e->getMessage());
+                $gallery->gallery_images = $galleryImages;
             }
         });
     }
 
-    // Funkcia na úpravu veľkosti obrázka
+    // Resize an image to 300x300 without preserving the aspect ratio
     protected static function resizeImage($imagePath)
     {
         try {
-            // Cesta k obrázku
+            // Path to the image
             $fullImagePath = Storage::disk('public')->path($imagePath);
 
-            // Otvorenie pôvodného obrázka pomocou GD
+            // Open the original image using GD
             $sourceImage = imagecreatefromstring(file_get_contents($fullImagePath));
             if ($sourceImage === false) {
-                Log::error("Nepodarilo sa otvoriť obrázok: {$fullImagePath}");
-                return;
+                return $imagePath; // Return the original path if opening fails
             }
 
-            // Získanie pôvodných rozmerov
-            $width = imagesx($sourceImage);
-            $height = imagesy($sourceImage);
+            // Set fixed dimensions to 300x300 pixels
+            $newWidth = 300;
+            $newHeight = 300;
 
-            // Výpočet nových rozmerov so zachovaním pomeru strán
-            $newWidth = 800;
-            $newHeight = 800;
-            if ($width > $height) {
-                $newHeight = (int)(($height / $width) * $newWidth);
-            } else {
-                $newWidth = (int)(($width / $height) * $newHeight);
-            }
-
-            // Vytvorenie nového obrázka s novými rozmermi
+            // Create a new blank image with 300x300 dimensions
             $resizedImage = imagecreatetruecolor($newWidth, $newHeight);
-            imagecopyresampled($resizedImage, $sourceImage, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-            // Prepísanie pôvodného obrázka novou verziou so zmenšenými rozmermi
+            // Resize the original image to the new dimensions without preserving aspect ratio
+            imagecopyresampled($resizedImage, $sourceImage, 0, 0, 0, 0, $newWidth, $newHeight, imagesx($sourceImage), imagesy($sourceImage));
+
+            // Overwrite the original image with the resized version
             imagejpeg($resizedImage, $fullImagePath, 90);
 
-            // Uvoľnenie pamäte
+            // Free up memory
             imagedestroy($sourceImage);
             imagedestroy($resizedImage);
 
-            Log::info("Obrázok bol úspešne zmenšený a uložený na pôvodné miesto: {$fullImagePath}");
+            return $imagePath; // Return the updated image path
         } catch (\Exception $e) {
-            Log::error("Zlyhalo zmenšenie obrázka: " . $e->getMessage());
+            return $imagePath; // Return the original path if resizing fails
         }
     }
 
-    // Serializuje pole na JSON pred uložením do databázy
+    // Serialize gallery_images array to JSON before saving to the database
     public function setGalleryImagesAttribute($value)
     {
         $this->attributes['gallery_images'] = json_encode($value);
     }
 
-    // Deserializuje JSON na pole pri načítaní z databázy
+    // Deserialize gallery_images JSON to an array when retrieving from the database
     public function getGalleryImagesAttribute($value)
     {
         return json_decode($value, true);
