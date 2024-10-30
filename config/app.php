@@ -25,6 +25,8 @@ return [
     | services the application utilizes. Set this in your ".env" file.
     |
     */
+    
+
 
     'env' => env('APP_ENV', 'production'),
 
@@ -122,5 +124,8 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+    
+
 
 ];
