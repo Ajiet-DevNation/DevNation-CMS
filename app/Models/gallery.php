@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Gallery extends Model
+class gallery extends Model
 {
     use HasFactory;
 
@@ -21,26 +21,26 @@ class Gallery extends Model
         'is_published',
     ];
 
-    protected static function booted()
-    {
-        static::saving(function ($gallery) {
-            // Resize the main image if it exists
-            if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
-                $gallery->image = self::resizeImage($gallery->image);
-            }
+    // protected static function booted()
+    // {
+    //     static::saving(function ($gallery) {
+    //         // Resize the main image if it exists
+    //         if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
+    //             $gallery->image = self::resizeImage($gallery->image);
+    //         }
 
-            // Resize each image in the gallery_images array if they exist
-            if ($gallery->gallery_images) {
-                $galleryImages = $gallery->gallery_images;
-                foreach ($galleryImages as &$image) {
-                    if (Storage::disk('public')->exists($image)) {
-                        $image = self::resizeImage($image); // Resize and update the image path
-                    }
-                }
-                $gallery->gallery_images = $galleryImages;
-            }
-        });
-    }
+    //         // Resize each image in the gallery_images array if they exist
+    //         if ($gallery->gallery_images) {
+    //             $galleryImages = $gallery->gallery_images;
+    //             foreach ($galleryImages as &$image) {
+    //                 if (Storage::disk('public')->exists($image)) {
+    //                     $image = self::resizeImage($image); // Resize and update the image path
+    //                 }
+    //             }
+    //             $gallery->gallery_images = $galleryImages;
+    //         }
+    //     });
+    // }
 
     // Resize an image to 300x300 without preserving the aspect ratio
     protected static function resizeImage($imagePath)
