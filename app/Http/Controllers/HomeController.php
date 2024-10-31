@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambassadors;
+use App\Models\DeveloperGroup;
 use App\Models\Events;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\EventRegisteraion;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -15,12 +19,18 @@ class HomeController extends Controller
         // dd($upcomingEvents);
         $teamMember = User::get();
         // dd($teamMember);
-        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember]);
+        $developerGroups = DeveloperGroup::all();
+        // dd($developerGroups);
+
+        $ambassadors = Ambassadors::with('user')->with('developerGroup')->get();
+
+        return view('home.index', ['upcomingEvents' => $upcomingEvents,'teamMember'=> $teamMember, 'developerGroups' => $developerGroups, 'ambassadors' => $ambassadors]);
     }
 
     public function about()
     {
-        return view('about.index');
+        $coreMembers = User::where('is_core_member', true)->with('socialAccounts')->get();
+        return view('about.index', ['coreMembers' => $coreMembers]);
     }
 
     public function contact()
@@ -49,8 +59,12 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         $pastEvents = Events::where('start_date', '<', date('Y-m-d'))->get();
-        
-        return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents]);
+        if (!Auth::check()) {
+            return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => []]);
+        }
+        $user = Auth::user();
+        $registeredEvents = EventRegisteraion::where('user_id', $user->id)->get()->pluck('event_id')->toArray();
+        return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => $registeredEvents]);
     }
 
     public function eventDetails($id)

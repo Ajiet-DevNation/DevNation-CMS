@@ -50,7 +50,8 @@ class DeveloperGroupResource extends Resource
                     TextInput::make('name')->label('Name')->required()->columnSpan(2),
                     FileUpload::make('image')->label('Image')->acceptedFileTypes(['image/*'])
                     ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                    ->directory('users')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
+                    ->directory('developerGroups')->uploadingMessage('Uploading...')->downloadable()->imageEditor()
+                    ->resize(50)->preserveFilenames()->openable()->required(),
                     Textarea::make('description')->label('Description')->required()->rows(3),
                 ])->columns(2)->collapsible(),
                 Section::make('Provider Organisation')->schema([

@@ -31,7 +31,8 @@
                     style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;"><a
-                            href="#" class="btn btn-lg btn-primary rounded-pill me-2">Join Us</a></span>
+                            href="{{ route('user.showRegister') }}"
+                            class="btn btn-lg btn-primary rounded-pill me-2">Join Us</a></span>
                     <span data-cue="slideInDown" data-group="page-title-buttons" data-delay="900" data-show="true"
                         style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1500ms; animation-direction: normal; animation-fill-mode: both;"><a
                             href="{{ route('contact') }}" class="btn btn-lg btn-outline-primary rounded-pill">Contact
@@ -134,6 +135,70 @@
                     </div>
                 </div>
                 <hr class="my-14 my-md-16" />
+                <div class="row text-center">
+                    <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
+                        <h2 class="fs-15 text-uppercase text-muted mb-3">Developer Groups</h2>
+                        <h3 class="display-4 mb-9">Our developers groups and ambassador programs.</h3>
+                    </div>
+                </div>
+                <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
+                    data-items-xl="3" data-items-md="2" data-items-xs="1">
+                    <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                        <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
+                            style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
+                            @foreach ($developerGroups as $group)
+                            <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
+                                style="width: 290px; margin-right: 30px;">
+                                <article>
+                                    <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                        @if ($group->image == null)
+                                        <img style="object-fit:cover; width:100%; height:100% !important;"
+                                            src="https://placehold.co/300x300" alt="{{ $group->name }}">
+                                        {{-- <figcaption>
+                                            <h5 class="from-top mb-0">Read More</h5>
+                                        </figcaption> --}}
+                                        @else
+                                        <img style="object-fit:cover; width:100%; height:100% !important;"
+                                            src="{{ Storage::url($group->image) }}" alt="{{ $group->name }}"><span
+                                            class="bg"></span>
+                                        <figcaption>
+                                            <h5 class="from-top mb-0">Read More</h5>
+                                        </figcaption>
+                                        @endif
+                                    </figure>
+                                    <div class="post-header"><center>
+                                        <h2 class="post-title h3 mb-3">
+                                            {{ $group->name }}
+                                        </h2>
+                                    </center>
+                                    </div>
+                                    <div class="post-footer">
+                                        <ul class="post-meta"><center>
+                                            <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ \Carbon\Carbon::parse($group->start_date)->format('d-m-Y') }}</span>
+                                            </li>
+                                            <li class="post-comments"><a href="#"><i
+                                                class="uil uil-file-alt fs-15"></i>{{ $group->company }} </a>
+                                            </li>
+                                        </center>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            @endforeach
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="swiper-controls">
+                        <div
+                            class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                role="button" aria-label="Go to slide 1" aria-current="true"></span><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button"
+                                aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                role="button" aria-label="Go to slide 3"></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
                     <div class="col-lg-6 order-lg-2">
                         <div class="card me-lg-6">
@@ -192,7 +257,8 @@
                             inspire, and grow your
                             skills as a developer. From workshops to competitions, there's something for everyone at
                             DevNation.</p>
-                        <a href="{{ route('event.index') }}" class="btn btn-primary rounded-pill mb-0">View All Events</a>
+                        <a href="{{ route('event.index') }}" class="btn btn-primary rounded-pill mb-0">View All
+                            Events</a>
                     </div>
                 </div>
                 <div class="row text-center">
@@ -214,13 +280,14 @@
                                             href="{{ route('event.show', $event->id) }}">
                                             @if ($event->banner == null)
                                             <img style="object-fit:cover; width:100%; height:100% !important;"
-                                                src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                                src="https://placehold.co/300x425" alt=""><span class="bg"></span>
                                             <figcaption>
                                                 <h5 class="from-top mb-0">Read More</h5>
                                             </figcaption>
                                             @else
                                             <img style="object-fit:cover; width:100%; height:100% !important;"
-                                                src="{{ Storage::url($event->banner) }}" alt=""><span class="bg"></span>
+                                                src="{{ Storage::url($event->poster) }}" alt="{{ $event->name }}"><span
+                                                class="bg"></span>
                                             <figcaption>
                                                 <h5 class="from-top mb-0">Read More</h5>
                                             </figcaption>
@@ -260,11 +327,10 @@
                     </div>
                 </div>
 
-
                 <div class="row text-center">
                     <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
-                        <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community Members</h2>
-                        <h3 class="display-4 mb-9">Active members of DevNation.</h3>
+                        {{-- <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community Members</h2> --}}
+                        <h3 class="display-4 mb-9">Ambassadors and Campus Leads of different Industries</h3>
                     </div>
                 </div>
                 <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
@@ -272,29 +338,27 @@
                     <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
                         <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
                             style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
-                            @foreach ($teamMember as $member)
+                            @foreach ($ambassadors as $ambassador)
                             <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
                                 style="width: 290px; margin-right: 30px;">
                                 <article>
                                     <figure class="overlay overlay-1 hover-scale rounded mb-6">
                                         <img style="object-fit:cover; width:100%; height:100% !important;"
-                                            src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}"
-                                            alt="{{ $member->name }}">
+                                            src="{{ str_contains($ambassador->user->image, 'ui-avatars.com') ? $ambassador->user->image : Storage::url($ambassador->user->image) }}"
+                                            alt="{{ $ambassador->user->name }}">
                                     </figure>
                                     <div class="post-header">
-                                        <h2 class="post-title h3 mb-3">
-                                            <center>{{ $member->name }}</center>
+                                        <h2 class="post-title h3 mb-2">
+                                            <center>{{ $ambassador->user->name }}</center>
                                         </h2>
                                     </div>
                                     <div class="post-footer">
                                         <ul class="post-meta">
                                             <center>
-                                                <li class="post-date">
-                                                    <span>{{ $member->role->name }}
-                                                        <br />
-                                                        {{ $member->role->description }}
-                                                    </span>
-                                                </li>
+                                                <h3 class="post-title h6">
+                                                    <center>{{ $ambassador->developerGroup->name }}</center>
+                                                </h3>
+                                                <p class="post-body h5">{{ $ambassador->name }}</p>
                                             </center>
                                         </ul>
                                     </div>
@@ -498,6 +562,60 @@
                         <!--/column -->
                     </div>
                     <!--/.row -->
+                    <div class="row text-center">
+                        <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
+                            <h2 class="fs-15 text-uppercase text-muted mb-3">Our Community Members</h2>
+                            <h3 class="display-4 mb-9">Active members of DevNation.</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-container blog grid-view mb-18 swiper-container-1" data-margin="30" data-dots="true"
+                        data-items-xl="3" data-items-md="2" data-items-xs="1">
+                        <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                            <div class="swiper-wrapper" id="swiper-wrapper-20ba4710794d10de2e" aria-live="off"
+                                style="cursor: grab; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; transition-delay: 0ms;">
+                                @foreach ($teamMember as $member)
+                                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 4"
+                                    style="width: 290px; margin-right: 30px;">
+                                    <article>
+                                        <figure class="overlay overlay-1 hover-scale rounded mb-6">
+                                            <img style="object-fit:cover; width:100%; height:100% !important;"
+                                                src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}"
+                                                alt="{{ $member->name }}">
+                                        </figure>
+                                        <div class="post-header">
+                                            <h2 class="post-title h3 mb-3">
+                                                <center>{{ $member->name }}</center>
+                                            </h2>
+                                        </div>
+                                        <div class="post-footer">
+                                            <ul class="post-meta">
+                                                <center>
+                                                    <li class="post-date">
+                                                        <span>{{ $member->role->name }}
+                                                            <br />
+                                                            {{ $member->role->description }}
+                                                        </span>
+                                                    </li>
+                                                </center>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                                @endforeach
+                            </div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        </div>
+                        <div class="swiper-controls">
+                            <div
+                                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                    role="button" aria-label="Go to slide 1" aria-current="true"></span><span
+                                    class="swiper-pagination-bullet" tabindex="0" role="button"
+                                    aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                    role="button" aria-label="Go to slide 3"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
                         data-image-src="./assets/img/map.png"
                         style="background-image: url(&quot;./assets/img/map.png&quot;);">
@@ -512,7 +630,8 @@
                             </div>
                             <!-- /.row -->
                             <div class="d-flex justify-content-center">
-                                <span><a href="#" class="btn btn-primary rounded-pill">Join DevNation</a></span>
+                                <span><a href="{{ route('user.showRegister') }}"
+                                        class="btn btn-primary rounded-pill">Join DevNation</a></span>
                             </div>
                         </div>
                         <!-- /.container -->
