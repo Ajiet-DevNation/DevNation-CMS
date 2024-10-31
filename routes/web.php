@@ -19,7 +19,7 @@ Route::post('/login', [AuthController::class, 'authenticate'])->name('user.authe
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
-Route::get('/register', [AuthController::class, 'register'])->name('user.showRegister')->middleware('guest');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('user.showRegister')->middleware('guest');
 Route::post('/register', [AuthController::class, 'register'])->name('user.register')->middleware('guest');
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index')->middleware('auth');
