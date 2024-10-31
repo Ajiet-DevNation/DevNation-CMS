@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             'phone' => '1234567890',
         ]);
 
-        Events::factory(10)->create();
-        User::factory(10)->create();
+        Events::factory(100)->create();
+        User::factory(1000)->create();
     }
 }
