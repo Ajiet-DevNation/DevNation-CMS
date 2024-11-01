@@ -45,7 +45,7 @@ class CertificateTemplateResource extends Resource
                 Section::make('Template Details')->schema([
                     TextInput::make('template_name')->required()->columnSpanFull(),
                     Textarea::make('description'),
-                    FileUpload::make('template_image')->resize(50), 
+                    FileUpload::make('template_image')->required()->image()->acceptedFileTypes(['image/*']), 
                 ])->columns(2)->collapsible(),
                 Section::make('Settings')->schema([
                     TextInput::make('description_font_size')->numeric()->default(20),
