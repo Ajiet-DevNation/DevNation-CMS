@@ -29,6 +29,14 @@
             font-size: 24px;
             font-weight: bold;
         }
+        .logo {
+            text-align: center;
+            padding: 10px 0; 
+        }
+        .logo img {
+            max-width: 40%; 
+            height: auto; 
+        }
         .content {
             padding: 30px;
         }
@@ -49,6 +57,11 @@
             font-weight: bold;
             border-radius: 4px;
         }
+        .note {
+            margin-top: 20px;
+            font-size: 12px; 
+            color: #666; 
+        }
         .footer {
             background-color: #f4f4f4;
             text-align: center;
@@ -60,15 +73,20 @@
 </head>
 <body>
     <div class="container">
+    <div class="container">
+        <div class="logo">
+            <img src="{{ asset('assets/img/logo-dark.png') }}" alt="DevNation Logo"> 
+        </div>
         <div class="header">
-            Event Registration Confirmation
+            Event registration confirmation
         </div>
         <div class="content">
             <h1>Hello, {{ $userName }}</h1>
-            <p>Thank you for registering for the event: <strong>{{ $eventName }}</strong>.</p>
-            <p>We are excited to have you join us and look forward to seeing you there!</p>
-            <a href="#" class="button">View Event Details</a>
-            <p>Best regards,<br>Your Event Team</p>           
+            <p>You have successfully registered for the event: <strong>{{ $eventName }}</strong>.</p>
+            <p>We look forward to seeing you at the event!</p>
+            <a href="{{ $eventUrl }}" class="button">View Event Details</a>
+            <p>Regards,<br>DevNation</p>
+            <p class="note">If you're having trouble clicking the "View Event" button, copy and paste the URL below into your web browser: <a href="{{ $eventUrl }}">{{ $eventUrl }}</a></p> <!-- Klikateľná URL -->
         </div>
         <div class="footer">
             &copy; 2024 DevNations | All Rights Reserved

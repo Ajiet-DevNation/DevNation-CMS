@@ -42,7 +42,10 @@
                                     class="uil uil-map-marker fs-15"></i>{{ $event->location }}</a>
                                 </li>
                             </ul>
-                            <button><span>Register Now</span></button>
+                            <form action="{{ route('events.register', $event->id) }}" method="POST">
+                                    @csrf
+                                    <button type="submit"><span>Register Now</span></button>
+                            </form>          
                         </div>
                     </article>
                 @endforeach
