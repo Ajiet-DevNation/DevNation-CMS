@@ -66,7 +66,6 @@ class CertificateTemplateResource extends Resource
             ->columns([
                 TextColumn::make('template_name')->searchable()->sortable(),
                 ImageColumn::make('template_image')->circular()->searchable()->sortable(),
-
             ])
             ->filters([
                 //
