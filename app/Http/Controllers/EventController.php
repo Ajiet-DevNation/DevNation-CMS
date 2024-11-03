@@ -61,9 +61,9 @@ class EventController extends Controller
                 'attended' => false,
             ]);
 
-            // dd(EventRegisteraion::get());
+            // dd($registration->status);
             
-            $registration->user->notify(new EventNotification($event));
+            $registration->user->notify(new EventNotification($event, $registration));
 
             return redirect()->back()->with('success', 'You have successfully registered for the event.');
         }
