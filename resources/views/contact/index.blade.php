@@ -41,7 +41,7 @@
             <div class="row gx-0">
               <div class="col-lg-6 align-self-stretch">
                 <div class="map map-full rounded-top rounded-lg-start">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25387.23478654725!2d-122.06115399490332!3d37.309248660190086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4571bd377ab%3A0x394d3fe1a3e178b4!2sCupertino%2C%20CA%2C%20USA!5e0!3m2!1sen!2str!4v1645437305701!5m2!1sen!2str" style="width:100%; height: 100%; border:0" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62222.13891811075!2d74.75254834863279!3d12.915196799999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a7940000001%3A0x37b1d2f42900de85!2sAJ%20Institute%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1730636413012!5m2!1sen!2sin" style="width:100%; height: 100%; border:0" allowfullscreen></iframe>
                 </div>
                 <!-- /.map -->
               </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="align-self-start justify-content-start">
                       <h5 class="mb-1">Address</h5>
-                      <address>Moonshine St. 14/05 Light City, <br class="d-none d-md-block" />London, United Kingdom</address>
+                      <address>A J Institute of Engineering and Technology, Bangra Kuloor <br class="d-none d-md-block" />Mangalore, Karnataka, India</address>
                     </div>
                   </div>
                   <!--/div -->
@@ -125,7 +125,7 @@
               </div>
               <!-- /column -->
               <div class="col-md-6">
-                <div class="form-select-wrapper mb-4">
+                {{-- <div class="form-select-wrapper mb-4">
                   <select class="form-select" id="form-select" name="department" required>
                     <option selected disabled value="">Select a department</option>
                     <option value="Sales">Sales</option>
@@ -134,6 +134,12 @@
                   </select>
                   <div class="valid-feedback"> Looks good! </div>
                   <div class="invalid-feedback"> Please select a department. </div>
+                </div> --}}
+                <div class="form-floating mb-4">
+                  <input id="phone" type="tel" name="phone" class="form-control" placeholder="9019003490" required>
+                  <label for="phone">Phone *</label>
+                  <div class="valid-feedback"> Looks good! </div>
+                  <div class="invalid-feedback"> Please provide a valid phone number. </div>
                 </div>
               </div>
               <!-- /column -->
