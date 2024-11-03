@@ -28,12 +28,12 @@ class EventRegisteraion extends Model
         'attended' => 'boolean',
     ];
 
-    protected static function booted()
-    {
-        // dd('booted');
-        static::created(function ($eventRegistration) {
-            $eventRegistration->user->notify(new EventNotification($eventRegistration->event));
-        });
-    }
+    // protected static function booted()
+    // {
+    //     // dd('booted');
+    //     static::created(function ($eventRegistration) {
+    //         $eventRegistration->user->notify(new EventNotification($eventRegistration->event));
+    //     });
+    // }
 
 }

@@ -16,9 +16,11 @@ class EventNotification extends Notification
      */
 
     protected $event;
-    public function __construct( $event )
+    protected $registeration;
+    public function __construct( $event, $registeration )
     {
         $this->event = $event;
+        $this->registeration = $registeration;
     }
 
     /**
@@ -39,9 +41,10 @@ class EventNotification extends Notification
         return (new MailMessage)
         ->subject('Event Registration Successful')
         ->greeting('Greetings! ' . $notifiable->name)
-        ->line('Your registration for the event has been successfully completed.' . $this->event->name)
+        ->line('Your registration for the event'. $this->event->name .' has been successfully completed.')
+        ->line('status of your registeration for the '. $this->event->name .' is ' . $this->registeration->status .'')
         ->line('We look forward to your esteemed presence at the event.')
-        ->action('View Event', url('/events/' . $this->event->id))
+        ->action('View Event', url('/event-details/' . $this->event->id))
         ->line('Thank you for completing your registration!');
     }
 
