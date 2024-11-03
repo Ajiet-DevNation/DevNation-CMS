@@ -40,11 +40,13 @@
         <div class="overlap-grid overlap-grid-2">
           <div class="item">
             <figure class="rounded shadow"><img src="{{ asset('assets/img/photos/about2.jpg') }}"
-                srcset="{{ asset('./assets/img/photos/about2@2x.jpg') }} 2x" alt="DevNation Event"></figure>
+                {{-- srcset="{{ asset('./assets/img/photos/about2@2x.jpg') }} 2x" --}}
+                 alt="DevNation Event"></figure>
           </div>
           <div class="item">
             <figure class="rounded shadow"><img src="{{ asset('assets/img/photos/about3.jpg') }}"
-                srcset="{{ asset('./assets/img/photos/about3@2x.jpg') }} 2x" alt="DevNation Workshop"></figure>
+                {{-- srcset="{{ asset('./assets/img/photos/about3@2x.jpg') }} 2x"  --}}
+                alt="DevNation Workshop"></figure>
           </div>
         </div>
       </div>
@@ -165,7 +167,8 @@
               <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1"
                 style="top: 7rem; left: 1rem"></div>
               <figure><img src="{{ asset('assets/draft/about.draft.png') }}"
-                  srcset="{{ asset('./assets/img/photos/co1@2x.png') }} 2x" alt="DevNation Community"></figure>
+                  {{-- srcset="{{ asset('./assets/img/photos/co1@2x.png') }} 2x"  --}}
+                  alt="DevNation Community"></figure>
             </div>
             <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
               <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -173,7 +176,7 @@
                   <div class="carousel-item active">
                     <div class="text-center">
                       <div class="quote-icon mb-4">
-                        <img src='{{ asset(' /images/quote.png') }}' height='48' width='48' alt="Quote icon">
+                        <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
                         <p class="text-decoration-none">"DevNation has been an incredible platform for me to explore new
@@ -189,7 +192,7 @@
                   <div class="carousel-item">
                     <div class="text-center">
                       <div class="quote-icon mb-4">
-                        <img src='{{ asset(' /images/quote.png') }}' height='48' width='48' alt="Quote icon">
+                        <img src='{{ asset('/images/quote.png') }}' height='48' width='48' alt="Quote icon">
                       </div>
                       <blockquote class="fs-lg mb-4">
                         <p class="text-decoration-none">"Being part of DevNation has opened up numerous opportunities
@@ -320,7 +323,8 @@
         <div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2rem; left: -1.4rem;">
         </div>
         <figure class="rounded"><img src="{{ asset('assets/img/photos/about4.jpg') }}"
-            srcset="{{ asset('./assets/img/photos/about4@2x.jpg') }} 2x" alt="DevNation Event"></figure>
+            {{-- srcset="{{ asset('./assets/img/photos/about4@2x.jpg') }} 2x"  --}}
+            alt="DevNation Event"></figure>
       </div>
       <div class="col-lg-6">
         <img src="{{ asset('assets/img/icons/lineal/telemarketer.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"

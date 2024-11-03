@@ -51,9 +51,7 @@ class EventRegisteraionResource extends Resource
                     'pending' => 'Pending',
                     'success' => 'Success',
                     'rejected' => 'Rejected',
-                ])->default('pending')->afterStateUpdated(function ($state, $record) {
-                    $record->user->notify(new EventRegisterationStatusUpdateNotification($record->event, $record->status));
-                }),
+                ])->default('pending'),
                 Toggle::make('attended')->default(false),
             ]);
     }

@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Models\EventRegisteraion;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -38,7 +39,7 @@ class EventRegisterationStatusUpdateNotification extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
-        // dd($this->status);
+        // dd($this->event);
         $mailMessage = new MailMessage();
         if ($this->status === 'success') {
             // Success Email
@@ -47,7 +48,7 @@ class EventRegisterationStatusUpdateNotification extends Notification
                 ->line("We are pleased to inform you that your registration for the event \"{$this->event->name}\" has been successfully confirmed.")
                 ->line("We look forward to your participation. Please find the event details below:")
                 ->line("**Event:** {$this->event->name}")
-                ->line("**Date:** {$this->event->date}")
+                ->line("**Date:** " . $this->event->start_date->format('d-m-Y'))
                 ->line("**Location:** {$this->event->location}")
                 ->action('View Event Details', url("/events/{$this->event->id}"))
                 ->line("Thank you for registering, and we are excited to have you join us!");
