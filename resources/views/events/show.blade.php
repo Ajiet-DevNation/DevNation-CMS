@@ -8,6 +8,12 @@
 <meta name="author" content="DevNation">
 @endsection
 
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 @section('title', '{{ $event->name }} | DevNation')
 
 @section('content')

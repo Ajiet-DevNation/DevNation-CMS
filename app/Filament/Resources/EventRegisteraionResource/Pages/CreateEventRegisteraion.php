@@ -11,13 +11,4 @@ class CreateEventRegisteraion extends CreateRecord
 {
     protected static string $resource = EventRegisteraionResource::class;
 
-    protected function afterCreate(): void
-    {
-        $registration = $this->record;
-
-        if ($registration->user && $registration->event) {
-            // Send the notification
-            $registration->user->notify(new EventNotification($registration->event));
-        }
-    }
 }
