@@ -12,7 +12,7 @@ class EventController extends Controller
 {
     public function registerEvent(Request $request, $eventId)
     {
-       // dd($eventId);
+        // dd($eventId);
         $event = Events::find($eventId);
 
         if (!$event) {
@@ -35,10 +35,49 @@ class EventController extends Controller
             ]);
 
             // dd($registration->status);
-            
+
             $registration->user->notify(new EventNotification($event, $registration));
 
             return redirect()->back()->with('success', 'You have successfully registered for the event.');
+        }
+    }
+
+    public function markAttendance($eventID, $userID, Request $request)
+    {
+        dd('called baba');
+        $event = Events::find($eventID);
+
+        if (!$event) {
+            return redirect()->back()->with('error', 'Event not found.');
+        }
+
+        $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
+
+        if ($registration) {
+
+            $registration->attended = true;
+            $registration->status = 'success';
+            $registration->save();
+
+            return redirect()->back()->with('success', 'Attendance marked successfully.');
+        } else {
+            return redirect()->back()->with('error', 'You are not registered for this event.');
+        }
+
+    }
+
+    public function takeAttendance($eventID, $userID){
+        
+        $event = Events::find($eventID);
+        if (!$event) {
+            return redirect()->back()->with('error', 'Event not found.');
+        }
+        $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
+
+        if ($registration) {
+            return view('events.attendance.take-attendance', ['event' => $event, 'registration' => $registration]);
+        } else {
+            return redirect()->back()->with('error', 'You are not registered for this event.');
         }
     }
 }
