@@ -37,16 +37,16 @@ class NotifyAttendenceOfEventToUserNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         // Generate the attendance marking URL, using the event and user IDs
-        // $attendanceLink = route('attendance.mark', [
-        //     'event' => $this->event->id,
-        //     'user' => $notifiable->id,
-        // ]);
+        $attendanceLink = route('attendance.take', [
+            'event' => $this->event->id,
+            'user' => $notifiable->id,
+        ]);
 
         return (new MailMessage)
             ->subject('Mark Attendance for ' . $this->event->name)
             ->greeting('Hello ' . $notifiable->name . '!')
             ->line('You are invited to mark your attendance for ' . $this->event->name . '.')
-            // ->action('Mark Attendance', $attendanceLink)
+            ->action('Mark Attendance', $attendanceLink)
             ->line('Thank you for participating!');
     }
 
