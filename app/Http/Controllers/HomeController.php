@@ -59,17 +59,17 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         $pastEvents = Events::where('start_date', '<', date('Y-m-d'))->get();
-        if (!Auth::check()) {
-            return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => []]);
-        }
         $user = Auth::user();
-        $registeredEvents = EventRegisteraion::where('user_id', $user->id)->get()->pluck('event_id')->toArray();
+        $registeredEvents = !Auth::check() ? [] : EventRegisteraion::where('user_id', $user->id)->get()->pluck('event_id')->toArray();
         return view('events.index',['upcomingEvents' => $upcomingEvents, 'pastEvents' => $pastEvents, 'registeredEvents' => $registeredEvents]);
     }
 
     public function eventDetails($id)
     {
         $event = Events::find($id);
+        if (!$event) {
+            abort(404);
+        }
         $relatedEvents = Events::where('start_date', '>=', date('Y-m-d'))
         ->where('id', '!=', $id)  // Exclude the current event
         ->orWhere('name', 'like', "%{$event->name}%")  // Fetch events with similar name
@@ -77,10 +77,8 @@ class HomeController extends Controller
         ->inRandomOrder()  // Sort by random order
         ->get()
         ->take(3);
-
-        if (!$event) {
-            abort(404);
-        }
-        return view('events.show', ['event' => $event, 'relatedEvents' => $relatedEvents]);
+        $registered = Auth::check() ? EventRegisteraion::where('user_id', Auth::id())->where('event_id', $id)->exists() : false;
+        $registeredEvents = Auth::check() ? EventRegisteraion::where('user_id', Auth::id())->get()->pluck('event_id')->toArray() : [] ;
+        return view('events.show', ['event' => $event, 'relatedEvents' => $relatedEvents, 'registered' => $registered, 'registeredEvents' => $registeredEvents]);
     }
 }
