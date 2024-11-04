@@ -47,7 +47,7 @@ section h1 {
 }
 
 .post-footer button:not(:disabled) span::after {
-    content: "\e84f";
+    content: "\eb0e";
     font-family: Unicons;
 }
 

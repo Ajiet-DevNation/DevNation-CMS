@@ -1,9 +1,4 @@
-@charset "UTF-8"; /*!
-Theme Name: Sandbox - Modern & Multipurpose Bootstrap 5 Template
-Theme URI:	https://sandbox.elemisthemes.com/
-Version:	3.4.1
-Author:		elemis
-*/
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700);
 :root,
 [data-bs-theme="light"] {

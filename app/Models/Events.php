@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Notifications\NotifyAttendenceOfEventToUserNotification;
+use App\Notifications\NotifyEventToUserNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -42,5 +44,27 @@ class Events extends Model
     public function eventRegistrations()
     {
         return $this->hasMany(EventRegisteraion::class);
+    }
+    protected static function booted()
+    {
+        static::updated(function ($event) {
+            if ($event->isDirty('notify_attendees') && $event->notify_attendees) {
+                $registrations = EventRegisteraion::where('event_id', $event->id)->where('status', 'success')->get();
+
+                foreach ($registrations as $registration) {
+                    $registration->user->notify(new NotifyEventToUserNotification($event));
+                }
+            }
+
+            if ($event->isDirty('notify_attendance') && $event->notify_attendance) {
+                $registrations = EventRegisteraion::where('event_id', $event->id)
+                    ->where('status', 'success')
+                    ->get();
+    
+                foreach ($registrations as $registration) {
+                    $registration->user->notify(new NotifyAttendenceOfEventToUserNotification($event));
+                }
+            }
+        });
     }
 }

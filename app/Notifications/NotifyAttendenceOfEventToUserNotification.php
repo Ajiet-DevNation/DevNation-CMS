@@ -7,20 +7,18 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class EventNotification extends Notification
+class NotifyAttendenceOfEventToUserNotification extends Notification
 {
     use Queueable;
+
+    protected $event;
 
     /**
      * Create a new notification instance.
      */
-
-    protected $event;
-    protected $registeration;
-    public function __construct( $event, $registeration )
+    public function __construct($event)
     {
         $this->event = $event;
-        $this->registeration = $registeration;
     }
 
     /**
@@ -38,14 +36,18 @@ class EventNotification extends Notification
      */
     public function toMail(object $notifiable): MailMessage
     {
+        // Generate the attendance marking URL, using the event and user IDs
+        $attendanceLink = route('attendance.take', [
+            'event' => $this->event->id,
+            'user' => $notifiable->id,
+        ]);
+
         return (new MailMessage)
-        ->subject('Event Registration Successful')
-        ->greeting('Greetings! ' . $notifiable->name)
-        ->line('Your registration for the event'. $this->event->name .' has been successfully completed.')
-        ->line('status of your registeration for the '. $this->event->name .' is ' . $this->registeration->status .'')
-        ->line('We look forward to your esteemed presence at the event.')
-        ->action('View Event', url('/event-details/' . $this->event->id))
-        ->line('Thank you for completing your registration!');
+            ->subject('Mark Attendance for ' . $this->event->name)
+            ->greeting('Hello ' . $notifiable->name . '!')
+            ->line('You are invited to mark your attendance for ' . $this->event->name . '.')
+            ->action('Mark Attendance', $attendanceLink)
+            ->line('Thank you for participating!');
     }
 
     /**
@@ -56,7 +58,8 @@ class EventNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'event_id' => $this->event->id,
+            'event_name' => $this->event->name,
         ];
     }
 }

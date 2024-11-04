@@ -7,20 +7,17 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class EventNotification extends Notification
+class NotifyEventToUserNotification extends Notification
 {
     use Queueable;
 
     /**
      * Create a new notification instance.
      */
-
     protected $event;
-    protected $registeration;
-    public function __construct( $event, $registeration )
+    public function __construct($event)
     {
         $this->event = $event;
-        $this->registeration = $registeration;
     }
 
     /**
@@ -39,13 +36,15 @@ class EventNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-        ->subject('Event Registration Successful')
-        ->greeting('Greetings! ' . $notifiable->name)
-        ->line('Your registration for the event'. $this->event->name .' has been successfully completed.')
-        ->line('status of your registeration for the '. $this->event->name .' is ' . $this->registeration->status .'')
-        ->line('We look forward to your esteemed presence at the event.')
-        ->action('View Event', url('/event-details/' . $this->event->id))
-        ->line('Thank you for completing your registration!');
+            ->subject("Important Update for Your Upcoming Event")
+            ->greeting("Hello, {$notifiable->name}")
+            ->line("We have an important update regarding the event you registered for.")
+            ->line("Please review the event details below and let us know if you have any questions:")
+            ->line("**Event Name:** {$this->event->name}")
+            ->line("**Date:** {$this->event->start_date->format('d-m-Y')}")
+            ->line("**Location:** {$this->event->location}")
+            ->action('View Event Details', url("/event-details/{$this->event->id}"))
+            ->line("Thank you for your attention, and we look forward to seeing you at the event!");
     }
 
     /**
@@ -56,7 +55,8 @@ class EventNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'event_id' => $this->event->id,
+            'event_name' => $this->event->name,
         ];
     }
 }

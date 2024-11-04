@@ -45,7 +45,7 @@ class CertificateTemplateResource extends Resource
                 Section::make('Template Details')->schema([
                     TextInput::make('template_name')->required()->columnSpanFull(),
                     Textarea::make('description'),
-                    FileUpload::make('template_image')->resize(50), 
+                    FileUpload::make('template_image')->required()->image()->acceptedFileTypes(['image/*']), 
                 ])->columns(2)->collapsible(),
                 Section::make('Settings')->schema([
                     TextInput::make('description_font_size')->numeric()->default(20),
@@ -66,7 +66,6 @@ class CertificateTemplateResource extends Resource
             ->columns([
                 TextColumn::make('template_name')->searchable()->sortable(),
                 ImageColumn::make('template_image')->circular()->searchable()->sortable(),
-
             ])
             ->filters([
                 //

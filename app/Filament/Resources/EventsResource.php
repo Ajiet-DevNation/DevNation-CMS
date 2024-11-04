@@ -65,11 +65,11 @@ class EventsResource extends Resource
                     ])->required()->default('workshop'),
                     RichEditor::make('description')->columnSpanFull()->required()->label('Event Description')->placeholder('Enter the event description'),
                     FileUpload::make('banner')->required()->label('Event Banner')->image()->acceptedFileTypes(['image/*'])
-                    ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                    ->directory('events/banner')->downloadable()->preserveFilenames()->openable()->resize(50),
+                        ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
+                        ->directory('events/banner')->downloadable()->preserveFilenames()->openable(),
                     FileUpload::make('poster')->required()->label('Event Poster')->image()->acceptedFileTypes(['image/*'])
-                    ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                    ->directory('events/poster')->downloadable()->preserveFilenames()->openable()->resize(50),
+                        ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
+                        ->directory('events/poster')->downloadable()->preserveFilenames()->openable(),
                     Grid::make()->schema([
                         TextInput::make('location')->required()->label('Event Location')->placeholder('Enter the event location'),
                         Select::make('status')->options([
@@ -84,17 +84,21 @@ class EventsResource extends Resource
                     TextInput::make('speaker')->required()->label('Speaker Name')->placeholder('Enter the speaker name'),
                     TextInput::make('speaker_mail')->required()->label('Speaker Email')->placeholder('Enter the speaker email'),
                 ])->columns(2)->collapsible(),
+                Section::make('Event Dates')->schema([
+                    DatePicker::make('start_date')->required()->label('Start Date')->placeholder('Select the start date')->default(now()),
+                    DatePicker::make('end_date')->required()->label('End Date')->placeholder('Select the end date')->default(now()),
+                ])->columns(2)->collapsible(),
+                Section::make('Attendance Settings')->schema([
+                    ToggleButtons::make('notify_attendees')->label('Notify Attendees?')->boolean()->grouped()->default(false),
+                    TextInput::make('attendance_code')->label('Attendance Code')->placeholder('Enter the attendance code'),
+                    ToggleButtons::make('attendance_code_is_valid')->label('Attendace Code is Active?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('notify_attendance')->label('Take Attendance?')->boolean()->grouped()->default(false),
+                ])->columns(4)->collapsible(),
                 Section::make('Event Settings')->schema([
                     ToggleButtons::make('is_featured')->label('is Featured?')->boolean()->grouped()->default(false),
                     ToggleButtons::make('requires_registration')->label('Requires Registration?')->boolean()->grouped()->default(false),
                     ToggleButtons::make('has_certificate')->label('Has Certificate?')->boolean()->grouped()->default(false),
-                    ToggleButtons::make('notify_attendees')->label('Notify Attendees?')->boolean()->grouped()->default(false),
-                    ToggleButtons::make('notify_attendance')->label('Notify Attendance?')->boolean()->grouped()->default(false),
-                    ])->columns(5)->collapsible(),
-                Section::make('Event Dates')->schema([
-                DatePicker::make('start_date')->required()->label('Start Date')->placeholder('Select the start date')->default(now()),
-                DatePicker::make('end_date')->required()->label('End Date')->placeholder('Select the end date')->default(now()),
-                ])->columns(2)->collapsible(),
+                ])->columns(3)->collapsible(),
             ]);
     }
 
