@@ -188,7 +188,7 @@
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
-                    <div class="swiper-controls">
+                    {{-- <div class="swiper-controls">
                         <div
                             class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
@@ -197,7 +197,7 @@
                                 aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
                                 role="button" aria-label="Go to slide 3"></span>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-16 align-items-center">
                     <div class="col-lg-6 order-lg-2">
@@ -315,7 +315,7 @@
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
-                    <div class="swiper-controls">
+                    {{-- <div class="swiper-controls">
                         <div
                             class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
@@ -324,7 +324,7 @@
                                 aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
                                 role="button" aria-label="Go to slide 3"></span>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="row text-center">
@@ -368,7 +368,7 @@
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
-                    <div class="swiper-controls">
+                    {{-- <div class="swiper-controls">
                         <div
                             class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                             <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
@@ -377,7 +377,7 @@
                                 aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
                                 role="button" aria-label="Go to slide 3"></span>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 {{-- <div class="row text-center">
                     <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
@@ -605,7 +605,7 @@
                             </div>
                             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                         </div>
-                        <div class="swiper-controls">
+                        {{-- <div class="swiper-controls">
                             <div
                                 class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
                                 <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
@@ -614,7 +614,7 @@
                                     aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
                                     role="button" aria-label="Go to slide 3"></span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="wrapper image-wrapper bg-auto no-overlay bg-image text-center bg-map"
                         data-image-src="./assets/img/map.png"
