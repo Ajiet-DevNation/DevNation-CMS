@@ -17,7 +17,7 @@ class HomeController extends Controller
     {
         $upcomingEvents = Events::where('start_date', '>=', date('Y-m-d'))->get();
         // dd($upcomingEvents);
-        $teamMember = User::get();
+        $teamMember = User::limit(100)->get();
         // dd($teamMember);
         $developerGroups = DeveloperGroup::all();
         // dd($developerGroups);
