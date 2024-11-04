@@ -23,6 +23,7 @@ Route::get('/register', [AuthController::class, 'showRegister'])->name('user.sho
 Route::post('/register', [AuthController::class, 'register'])->name('user.register')->middleware('guest');
 
 Route::get('/profile', [ProfileController::class, 'index' ])->name('profile.index')->middleware('auth');
+Route::post('/profile', [ProfileController::class, 'update' ])->name('profile.update')->middleware('auth');
 
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery.index');
 Route::get('/gallery/{id}', [HomeController::class, 'galleryDetails'])->name('gallery.show');
