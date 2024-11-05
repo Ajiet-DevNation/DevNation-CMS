@@ -30,7 +30,6 @@ return new class extends Migration
             $table->boolean('has_certificate')->default(false);
             $table->boolean('notify_attendees')->default(false);
             $table->boolean('notify_attendance')->default(false);
-            $table->string('attendance_code')->nullable();
             $table->boolean('attendance_code_is_valid')->default(false);
             $table->timestamps();
         });

@@ -31,7 +31,8 @@ class EventsFactory extends Factory
             'start_date' => $this->faker->dateTimeBetween('-1 month', '+1 month'),
             'end_date' => $this->faker->dateTimeBetween('+1 month', '+2 month'),
             'has_certificate' => $this->faker->boolean(),
-
+            'attendence_code' => $this->faker->regexify('[A-Z]{3}[0-9]{3}'),
+            'attendance_code_is_valid' => $this->faker->boolean(),
         ];
     }
 }

@@ -90,7 +90,7 @@ class EventsResource extends Resource
                 ])->columns(2)->collapsible(),
                 Section::make('Attendance Settings')->schema([
                     ToggleButtons::make('notify_attendees')->label('Notify Attendees?')->boolean()->grouped()->default(false),
-                    TextInput::make('attendance_code')->label('Attendance Code')->placeholder('Enter the attendance code'),
+                    TextInput::make('attendence_code')->label('Attendance Code')->placeholder('Enter the attendance code'),
                     ToggleButtons::make('attendance_code_is_valid')->label('Attendace Code is Active?')->boolean()->grouped()->default(false),
                     ToggleButtons::make('notify_attendance')->label('Take Attendance?')->boolean()->grouped()->default(false),
                 ])->columns(4)->collapsible(),
