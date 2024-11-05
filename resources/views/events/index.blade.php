@@ -46,7 +46,7 @@
                             <div class="post-footer">
                                 <ul class="post-meta text-center">
                                     <li class="post-date"><i
-                                            class="uil uil-calendar-alt"></i><span>{{ $event->start_date }}</span>
+                                            class="uil uil-calendar-alt"></i><span>{{ $event->start_date->format('d-m-y') }}</span>
                                     </li>
                                     <li class="post-comments"><a href="#"><i
                                                 class="uil uil-map-marker fs-15"></i>{{ $event->location }}</a>
