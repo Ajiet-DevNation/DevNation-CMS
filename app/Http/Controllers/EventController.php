@@ -44,37 +44,51 @@ class EventController extends Controller
 
     public function markAttendance($eventID, $userID, Request $request)
     {
-        $event = Events::find($eventID);
-        if (!$event) {
-            return redirect()->back()->with('error', 'Event not found.');
-        }
-
-        $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
-
-        $attendanceCode = $event->attendence_code;
-        $userRequestAttendanceCode = $request->attendence_code;
-
-        // dd($registration);
-        // case 1: user has already attended
-        if ($registration->attended) {
-            dd('You have already marked your attendance.');
-            return redirect()->back()->with('error', 'You have already marked your attendance.');
-        }
-
-        // case 2: user has not attended and provided correct attendance code
-
-        // dd($attendanceCode, $userRequestAttendanceCode);
-
-        if ($attendanceCode == $userRequestAttendanceCode) {
-            // dd('Attendance marked successfully.');
-            // dd($registration->attended);
-            $registration->attended = true;
-            // $registration->user->notify(new EventNotification($event, $registration));
-            $registration->save();
-            return redirect()->back()->with('success', 'Attendance marked successfully.');
+        if (Auth::user()->id != $userID) {
+            dd('Unauthorized access.');
+            return redirect()->back()->with('error', 'Unauthorized access.');
         } else {
-            dd('Attendance code is incorrect.');
-            return redirect()->back()->with('error', 'You are not registered for this event.');
+            // dd('User is authorized to mark attendance for this event.');    
+            $event = Events::find($eventID);
+            if (!$event) {
+                return redirect()->back()->with('error', 'Event not found.');
+            }
+
+            $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
+            if ($registration) {
+                // dd('You are registered for this event.');
+                $attendanceCode = $event->attendence_code;
+                $userRequestAttendanceCode = $request->attendence_code;
+
+                // dd($registration);
+                // case 1: user has already attended
+                if ($registration->attended) {
+                    dd('You have already marked your attendance.');
+                    return redirect()->back()->with('error', 'You have already marked your attendance.');
+                }
+
+                // case 2: user has not attended and provided correct attendance code
+
+                // dd($attendanceCode, $userRequestAttendanceCode);
+
+                if($event->attendance_code_is_valid){
+                    if ($attendanceCode == $userRequestAttendanceCode) {
+                        // dd('Attendance marked successfully.');
+                        // dd($registration->attended);
+                        $registration->attended = true;
+                        // $registration->user->notify(new EventNotification($event, $registration));
+                        $registration->save();
+                        return redirect()->back()->with('success', 'Attendance marked successfully.');
+                    } else {
+                        dd('Attendance code is incorrect.');
+                        return redirect()->back()->with('error', 'You are not registered for this event.');
+                    }
+                }else{
+                    dd('Attendance code is not active.');
+                }
+            } else {
+                dd('You are not registered for this event.');
+            }
         }
     }
 

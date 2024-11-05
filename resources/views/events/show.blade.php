@@ -22,8 +22,8 @@
     <div class="h">
         <h1>{{ $event->name }}</h1>
         <ul class="post-meta text-center">
-            <li class="post-date"><i
-                    class="uil uil-calendar-alt"></i><span>{{ $event->start_date >= now() ? $event->start_date : date('d M, Y', strtotime($event->start_date)) }}</span>
+            <li class="post-date">
+                <i class="uil uil-calendar-alt"></i><span>{{ $event->start_date->format('d-m-y') >= now() ? $event->start_date : date('d M, Y', strtotime($event->start_date)) }}</span>
             </li>
             <li class="post-comments"><i class="uil uil-map-marker fs-15"></i>{{ $event->location }}
             </li>
