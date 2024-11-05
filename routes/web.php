@@ -29,3 +29,6 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery.index'
 Route::get('/gallery/{id}', [HomeController::class, 'galleryDetails'])->name('gallery.show');
 
 Route::post('/events/{id}/register', [EventController::class, 'registerEvent'])->name('events.register')->middleware('auth');
+
+Route::get('/events/{event}/attendance/{user}', [EventController::class, 'takeAttendance'])->name('attendance.take')->middleware('auth');
+Route::post('/events/{event}/attendance/{user}', [EventController::class, 'markAttendance'])->name('attendance.mark')->middleware('auth');
