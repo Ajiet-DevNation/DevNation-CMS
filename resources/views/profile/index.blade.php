@@ -18,9 +18,7 @@
         @csrf
         <div class="circleCover">
             <div class="circle">
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                    alt="Default Profile Image" style="width: 100%;hieght: 100% ;" />
-
+                <img src="{{ $profile->image }}" alt="Profile Image" style="width: 100%;height: 100%;" />
             </div>
             <h2 id="details2">{{ $profile->name }}</h2>
             <div id = 'form2' style="display:none">
@@ -77,7 +75,8 @@
                         </div>
                         <div>
                             <p>SEMESTER</p>
-                            <input name="semester" class='di' type="text" value="{{ $profile->semester }}" />
+                            <input name="semester" class='di' type="number" min=1 max=8
+                                value="{{ $profile->semester }}" />
                         </div>
                         <div>
                             <p>COLLEGE</p>
