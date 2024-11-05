@@ -44,38 +44,52 @@ class EventController extends Controller
 
     public function markAttendance($eventID, $userID, Request $request)
     {
-        dd('called baba');
         $event = Events::find($eventID);
-
         if (!$event) {
             return redirect()->back()->with('error', 'Event not found.');
         }
 
         $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
 
-        if ($registration) {
+        $attendanceCode = $event->attendence_code;
+        $userRequestAttendanceCode = $request->attendence_code;
 
+        // dd($registration);
+        // case 1: user has already attended
+        if ($registration->attended) {
+            dd('You have already marked your attendance.');
+            return redirect()->back()->with('error', 'You have already marked your attendance.');
+        }
+
+        // case 2: user has not attended and provided correct attendance code
+
+        // dd($attendanceCode, $userRequestAttendanceCode);
+
+        if ($attendanceCode == $userRequestAttendanceCode) {
+            // dd('Attendance marked successfully.');
+            // dd($registration->attended);
             $registration->attended = true;
-            $registration->status = 'success';
+            // $registration->user->notify(new EventNotification($event, $registration));
             $registration->save();
-
             return redirect()->back()->with('success', 'Attendance marked successfully.');
         } else {
+            dd('Attendance code is incorrect.');
             return redirect()->back()->with('error', 'You are not registered for this event.');
         }
-
     }
 
-    public function takeAttendance($eventID, $userID){
-        
+    public function takeAttendance($eventID, $userID)
+    {
+
         $event = Events::find($eventID);
         if (!$event) {
             return redirect()->back()->with('error', 'Event not found.');
         }
         $registration = EventRegisteraion::where('user_id', $userID)->where('event_id', $eventID)->first();
 
+        // dd($registration->user_id);
         if ($registration) {
-            return view('events.attendance.take-attendance', ['event' => $event, 'registration' => $registration]);
+            return view('events.attendance.take-attendance', ['event' => $event, 'registration' => $registration, 'user_id' => $registration->user_id]);
         } else {
             return redirect()->back()->with('error', 'You are not registered for this event.');
         }

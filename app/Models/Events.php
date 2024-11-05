@@ -30,6 +30,8 @@ class Events extends Model
         'has_certificate',
         'notify_attendees',
         'notify_attendance',
+        'attendence_code',
+        'attendance_code_is_valid',
     ];
 
     protected $casts = [
