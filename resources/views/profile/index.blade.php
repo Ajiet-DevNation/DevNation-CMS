@@ -149,7 +149,7 @@
                     <div class="details certificate">
                         <article class="particle">
                             <figure class="overlay overlay-1 hover-scale rounded mb-6"><a
-                                    href="http://localhost:8000/events/1"> <img src="/assets/img/photos/b6.jpg"
+                                    href="http://localhost:8000/events/1"> <img src="https://placehold.co/300x300"
                                         alt=""><span class="bg"></span><span class="bg"></span></a>
                                 <figcaption>
                                     <h5 class="from-top mb-0">Read More</h5>
