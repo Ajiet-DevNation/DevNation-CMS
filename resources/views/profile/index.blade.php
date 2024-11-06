@@ -17,8 +17,10 @@
     <form class="cover" action="{{ route('profile.update') }}" method="POST">
         @csrf
         <div class="circleCover">
-            <div class="circle">
+            <div class="circle ">
                 <img src="{{ $profile->image }}" alt="Profile Image" style="width: 100%;height: 100%;" />
+                <label  for="profile-image"><i class="uil uil-image-edit"></i></label>
+                <input name="profile-image" type="file" accept="image/*" style="display:none" id ="profile-image"/>
             </div>
             <h2 id="details2">{{ $profile->name }}</h2>
             <div id = 'form2' style="display:none">
@@ -34,9 +36,9 @@
         </div>
         <div class="containerB">
             <div class="tab_box">
-                <button class="tab_btn active" id ='p'>PROFILE</button>
-                <button class="tab_btn">CERTIFICATE</button>
-                <button class="tab_btn">EVENTS</button>
+                <button class="tab_btn active" id ='p' type="button">PROFILE</button>
+                <button class="tab_btn" type="button">CERTIFICATE</button>
+                <button class="tab_btn" type="button">EVENTS</button>
                 <div class="line"></div>
             </div>
             <div class="content_box">
@@ -94,7 +96,7 @@
                             <button id="submit" type="submit">
                                 SUBMIT
                             </button>
-                            <button id="cancel">
+                            <button id="cancel" type="button">
                                 CANCEL
                             </button>
                         </div>
