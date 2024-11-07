@@ -70,8 +70,7 @@ class EventController extends Controller
                 // case 2: user has not attended and provided correct attendance code
 
                 // dd($attendanceCode, $userRequestAttendanceCode);
-
-                if($event->attendance_code_is_valid){
+                if ($event->attendance_code_is_valid) {
                     if ($attendanceCode == $userRequestAttendanceCode) {
                         // dd('Attendance marked successfully.');
                         // dd($registration->attended);
@@ -83,7 +82,7 @@ class EventController extends Controller
                         dd('Attendance code is incorrect.');
                         return redirect()->back()->with('error', 'You are not registered for this event.');
                     }
-                }else{
+                } else {
                     dd('Attendance code is not active.');
                 }
             } else {

@@ -23,36 +23,36 @@ class gallery extends Model
 
     protected static function booted()
     {
-        static::saving(function ($gallery) {
-            if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
-                $gallery->image = self::resizeImage($gallery->image);
-            }
+        // static::saving(function ($gallery) {
+        //     if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
+        //         $gallery->image = self::resizeImage($gallery->image);
+        //     }
 
-            if ($gallery->gallery_images) {
-                $galleryImages = $gallery->gallery_images;
-                foreach ($galleryImages as &$image) {
-                    if (Storage::disk('public')->exists($image)) {
-                        $image = self::resizeImage($image);
-                    }
-                }
-                $gallery->gallery_images = $galleryImages;
-            }
-        });
+        //     if ($gallery->gallery_images) {
+        //         $galleryImages = $gallery->gallery_images;
+        //         foreach ($galleryImages as &$image) {
+        //             if (Storage::disk('public')->exists($image)) {
+        //                 $image = self::resizeImage($image);
+        //             }
+        //         }
+        //         $gallery->gallery_images = $galleryImages;
+        //     }
+        // });
 
-        // Pridajme metódu na mazanie súborov pri vymazaní galérie
-        static::deleting(function ($gallery) {
-            if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
-                Storage::disk('public')->delete($gallery->image);
-            }
+        // // Pridajme metódu na mazanie súborov pri vymazaní galérie
+        // static::deleting(function ($gallery) {
+        //     if ($gallery->image && Storage::disk('public')->exists($gallery->image)) {
+        //         Storage::disk('public')->delete($gallery->image);
+        //     }
 
-            if ($gallery->gallery_images) {
-                foreach ($gallery->gallery_images as $image) {
-                    if (Storage::disk('public')->exists($image)) {
-                        Storage::disk('public')->delete($image);
-                    }
-                }
-            }
-        });
+        //     if ($gallery->gallery_images) {
+        //         foreach ($gallery->gallery_images as $image) {
+        //             if (Storage::disk('public')->exists($image)) {
+        //                 Storage::disk('public')->delete($image);
+        //             }
+        //         }
+        //     }
+        // });
     }
 
     protected static function resizeImage($imagePath)
