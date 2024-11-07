@@ -39,7 +39,7 @@ class AuthController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
         //need to be fixed:
-        return redirect('/login');
+        return redirect('/login')->with('success','Registered successfully');
     }
 
     public function authenticate( Request $request){
