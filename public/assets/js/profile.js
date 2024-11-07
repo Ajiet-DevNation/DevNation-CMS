@@ -9,6 +9,7 @@ let submit = document.getElementById("submit");
 let cancel = document.getElementById("cancel");
 let form = document.getElementById("form");
 let form2 = document.getElementById("form2");
+let circleBefore = document.querySelector('.uil-image-edit');
 
 edit.addEventListener("click", () => {
     div.style.display = "none";
@@ -16,6 +17,8 @@ edit.addEventListener("click", () => {
     form.style.display = "grid";
     form2.style.display = "grid";
     edit.style.display = "none";
+    circleBefore.style.setProperty("--before-display", "block");
+
 });
 
 cancel.addEventListener("click", () => {
@@ -24,9 +27,13 @@ cancel.addEventListener("click", () => {
     form.style.display = "none";
     form2.style.display = "none";
     edit.style.display = "block";
+    circleBefore.style.setProperty("--before-display", "none");
+
 });
 
 submit.addEventListener("click", (e) => {
+    circleBefore.style.setProperty("--before-display", "none");
+
     let input = [];
     input = document.getElementsByClassName("di");
     let hElements = [];

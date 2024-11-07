@@ -35,8 +35,8 @@
 </head>
 
 <body>
+    @include('shared.success-message')
     <div class="content-wrapper">
-
         @yield('content')
 
         @include('layouts.inlcudes.footer')
@@ -46,5 +46,6 @@
     @if (Request::is('profile'))
         <script src="/assets/js/profile.js"></script>
     @endif
+    <script src="/assets/js/session-messages.js"></script>
 </body>
 </html>
