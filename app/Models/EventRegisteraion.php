@@ -34,12 +34,6 @@ class EventRegisteraion extends Model
 
     protected static function booted()
     {
-        static::created(function ($eventRegistration) {
-            // Notify the user when a new registration is created
-            if ($eventRegistration->status === 'success') {
-                $eventRegistration->user->notify(new EventNotification($eventRegistration->event, $eventRegistration));
-            }
-        });
         static::updated(function ($eventRegistration) {
             if ($eventRegistration->isDirty('status')) {
                 // Notify the user only if the status has changed
@@ -48,6 +42,12 @@ class EventRegisteraion extends Model
                     new EventRegisterationStatusUpdateNotification($eventRegistration->event, $eventRegistration->status)
                 );
             }
+        });
+        
+        static::created(function ($eventRegistration) {
+            $eventRegistration->user->notify(
+                new EventNotification($eventRegistration->event, $eventRegistration)
+            );
         });
     }
 
