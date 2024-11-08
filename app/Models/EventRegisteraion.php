@@ -43,6 +43,12 @@ class EventRegisteraion extends Model
                 );
             }
         });
+        
+        static::created(function ($eventRegistration) {
+            $eventRegistration->user->notify(
+                new EventNotification($eventRegistration->event, $eventRegistration)
+            );
+        });
     }
 
 }

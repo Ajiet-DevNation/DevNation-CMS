@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\EventNotification;
 use App\Notifications\NotifyAttendenceOfEventToUserNotification;
 use App\Notifications\NotifyEventToUserNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
