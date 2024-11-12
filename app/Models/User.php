@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = ['name', 'email', 'password', 'usn', 'semester', 'branch_id', 'college_id', 'phone', 'role_id', 'image', 'is_alumini',
-     'is_admin', 'is_verified',
+     'is_admin', 'is_verified', 'is_core_member',
     ];
 
     /**
@@ -72,6 +72,11 @@ class User extends Authenticatable
     public function ambassador()
     {
         return $this->hasOne(Ambassadors::class);
+    }
+
+    public function socialAccounts()
+    {
+        return $this->hasOne(SocialAccounts::class);
     }
 
     protected static function boot()

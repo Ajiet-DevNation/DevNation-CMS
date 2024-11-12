@@ -6,10 +6,12 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Filament\Resources\UserResource\RelationManagers\AmbassadorRelationManager;
 use App\Filament\Resources\UserResource\RelationManagers\EventRegistrationsRelationManager;
+use App\Filament\Resources\UserResource\RelationManagers\SocialAccountsRelationManager;
 use App\Models\User;
 use Filament\Actions\DeleteAction;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -57,7 +59,8 @@ class UserResource extends Resource
                 Section::make('User Information')->schema([
                     FileUpload::make('image')->image()->columnSpanFull()->acceptedFileTypes(['image/*'])
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                        ->directory('users')->uploadingMessage('Uploading attachment...')->downloadable()->preserveFilenames()->openable(),
+                        ->directory('users')->uploadingMessage('Uploading attachment...')->downloadable()
+                        ->preserveFilenames()->openable(),
                     TextInput::make('name')->required(),
                     TextInput::make('email')->email()->required()->maxLength(255)->unique(ignoreRecord: true),
                     TextInput::make('phone')->required()->maxLength(255)->unique(ignoreRecord: true),
@@ -83,8 +86,11 @@ class UserResource extends Resource
                     TextInput::make('password')->required()->required(fn(Page $livewire): bool => $livewire instanceof CreateRecord)
                         ->password()->placeholder('********')->dehydrated(fn($state) => filled($state)),
                     Toggle::make('is_alumini')->default(false),
-                    Toggle::make('is_admin')->default(false),
-                    Toggle::make('is_verified')->default(false),
+                    Grid::make()->schema([
+                        Toggle::make('is_admin')->default(false),
+                        Toggle::make('is_verified')->default(false),
+                        Toggle::make('is_core_member')->default(false),
+                    ])->columns(3),
                 ])->columns(2)->collapsible(),
             ]);
     }
@@ -156,6 +162,7 @@ class UserResource extends Resource
         return [
             EventRegistrationsRelationManager::class,
             AmbassadorRelationManager::class,
+            SocialAccountsRelationManager::class,
         ];
     }
 

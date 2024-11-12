@@ -19,7 +19,8 @@ return new class extends Migration
             $table->dateTime('end_date');
             $table->enum('event_type', ['workshop', 'webinar', 'seminar', 'conference', 'expo', 'meetup', 'hackathon']);
             $table->string('location');
-            $table->string('banner');
+            $table->string('banner')->nullable();
+            $table->string('poster')->nullable();
             $table->string('speaker');
             $table->string('speaker_mail');
             $table->enum('status', ['draft', 'published', 'cancelled']);
@@ -29,6 +30,7 @@ return new class extends Migration
             $table->boolean('has_certificate')->default(false);
             $table->boolean('notify_attendees')->default(false);
             $table->boolean('notify_attendance')->default(false);
+            $table->boolean('attendance_code_is_valid')->default(false);
             $table->timestamps();
         });
     }

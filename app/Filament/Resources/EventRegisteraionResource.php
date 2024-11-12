@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\EventRegisteraionResource\Pages;
 use App\Filament\Resources\EventRegisteraionResource\RelationManagers;
 use App\Models\EventRegisteraion;
+use App\Notifications\EventRegisterationStatusUpdateNotification;
 use BladeUI\Icons\Components\Icon;
 use Filament\Forms;
 use Filament\Forms\Components\Select;

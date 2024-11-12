@@ -93,7 +93,7 @@
                                         </div> --}}
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{{ route('contact') }}">Team</a>
+                            <a class="nav-link" href="{{ route('team') }}">Team</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link " href="{{ route('gallery.index') }}">Gallery</a>
@@ -143,6 +143,16 @@
                                             </li>
                                         </ul> --}}
                         </li>
+                        @guest
+                        <li class="nav-item" > <a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                        @endguest
+                        @auth
+                        <li class="nav-item" > <a class="nav-link" href="{{ route('profile.index') }}">Profile</a></li>
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <li class="nav-item" > <button class="nav-link">Logout</button> </li>
+                        </form>
+                        @endauth
                     </ul>
                     <!-- /.navbar-nav -->
                     <div class="offcanvas-footer d-lg-none">

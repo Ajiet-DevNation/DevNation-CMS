@@ -21,7 +21,7 @@ class EventsFactory extends Factory
             'description' => $this->faker->sentence(),
             'event_type' => $this->faker->randomElement(['webinar', 'workshop', 'seminar']),
             'location' => $this->faker->city(),
-            'banner' => $this->faker->imageUrl(),
+            // 'banner' => 'https://placehold.co/300x300',
             'speaker' => $this->faker->name(),
             'speaker_mail' => $this->faker->email(),
             'status' => $this->faker->randomElement(['draft', 'published']),
@@ -31,7 +31,8 @@ class EventsFactory extends Factory
             'start_date' => $this->faker->dateTimeBetween('-1 month', '+1 month'),
             'end_date' => $this->faker->dateTimeBetween('+1 month', '+2 month'),
             'has_certificate' => $this->faker->boolean(),
-
+            'attendence_code' => $this->faker->regexify('[A-Z]{3}[0-9]{3}'),
+            'attendance_code_is_valid' => $this->faker->boolean(),
         ];
     }
 }

@@ -4,9 +4,10 @@
             <div class="col-lg-4">
                 <div class="widget">
                     <h3 class="h2 mb-3 text-white">Join the Community</h3>
-                    <p class="lead mb-5 text-justify" style="text-decoration: none">Let's make something great together. We are a community by over 500+
+                    <p class="lead mb-5 text-justify" style="text-decoration: none">Let's make something great together.
+                        We are a community by over 500+
                         students. Join us by signing up to DevNation and grow together.</p>
-                    <a href="#" class="btn btn-white  rounded-pill">Join Us</a>
+                    <a href="{{ route('user.showRegister') }}" class="btn btn-white  rounded-pill">Join Us</a>
                 </div>
                 <!-- /.widget -->
             </div>
@@ -33,6 +34,7 @@
                         <li><a href="{{ route('event.index') }}">Events</a></li>
                         <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
                         <li><a href="{{ route('contact') }}">Contact</a></li>
+                        <li><a href="{{ route('team') }}">Our Team</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->
@@ -42,8 +44,7 @@
                 <div class="widget">
                     <h4 class="widget-title text-white mb-3">Get in Touch</h4>
                     <address></address>
-                    <a href="/"><span
-                            class="__cf_email__">drshnbhandary@gmail.com</span></a><br />
+                    <a href="/"><span class="__cf_email__">drshnbhandary@gmail.com</span></a><br />
                     +91 90 1900 3490
                 </div>
                 <!-- /.widget -->

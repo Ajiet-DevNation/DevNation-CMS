@@ -26,6 +26,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+
 
 class GalleryResource extends Resource
 {
@@ -50,9 +52,10 @@ class GalleryResource extends Resource
             ->schema([
                 Section::make('Gallery Information')->schema([
                     TextInput::make('name')->label('Name')->columnSpanFull()->required(),
-                    FileUpload::make('image')->image()->acceptedFileTypes(['image/*'])->required()
+                    FileUpload::make('image')->image()->acceptedFileTypes(['image/jpeg', 'image/png', 'image/gif', 'image/webp'])->required()
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                        ->directory('galleries')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
+                        ->directory('galleries')->uploadingMessage('Uploading...')->downloadable()
+                        ->preserveFilenames()->openable(),
                     Textarea::make('description')->label('Description')->required()->rows(3),
                 ])->columns(2)->collapsible(),
                 Section::make('Meta Data')->schema([
@@ -63,7 +66,8 @@ class GalleryResource extends Resource
                 Section::make('Gallery Images and Control')->schema([
                     FileUpload::make('gallery_images')->image()->acceptedFileTypes(['image/*'])->multiple()
                         ->deleteUploadedFileUsing(fn($file) => Storage::disk('public')->delete($file))
-                        ->directory('gallery_images')->uploadingMessage('Uploading...')->downloadable()->preserveFilenames()->openable(),
+                        ->directory('gallery_images')->uploadingMessage('Uploading...')
+                        ->downloadable()->preserveFilenames()->openable(),
                     Toggle::make('is_published')->label('Published')->default(false),
                 ])->columns(2)->collapsible(),
             ]);
