@@ -1,0 +1,101 @@
+---
+name: DevNation CMS Feature Request 🌟
+description: Suggest a feature for DevNation CMS.
+title: "[Feat]: "
+labels: ["enhancement", "Hacktoberfest", "DevNation"]
+assignees: ["Ajiet-DevNation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <h1 align="center">DevNation CMS - Hacktoberfest 2024</h1>
+        <p align="center">
+          <img src="https://github.com/user-attachments/assets/5121ff55-079b-4393-9588-0cf2d2790909">
+        </p>
+        
+        <p align="center">
+          <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Ajiet-DevNation/DevNation-CMS">
+          <img alt="GitHub forks" src="https://img.shields.io/github/forks/Ajiet-DevNation/DevNation-CMS">
+          <img alt="contributors" src="https://img.shields.io/github/contributors/Ajiet-DevNation/DevNation-CMS">
+          <img alt="GitHub stars" src="https://img.shields.io/github/stars/Ajiet-DevNation/DevNation-CMS">
+        </p>
+
+        ## 🎉 Welcome to the DevNation CMS Feature Request Form!
+        Thank you for contributing to DevNation CMS! Please ensure you've checked for existing issues before suggesting a new feature.
+        
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search the existing issues to see if a similar feature has already been requested.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Please provide a detailed description of the feature you are requesting.
+      placeholder: Describe the new feature or enhancement you'd like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this feature enhance your use of the project?
+      placeholder: Describe a specific use case or scenario where this feature would be beneficial.
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: What benefits would this feature bring to the project or community?
+      placeholder: Explain the advantages of implementing this feature.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - High
+        - Medium
+        - Low
+      default: Medium
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: roles
+    attributes:
+      label: Your Role in DevNation CMS
+      options:
+        - label: "I'm a GSSoC contributor"
+          required: false
+        - label: "I'm a Hacktoberfest contributor"
+          required: false
+        - label: "I'm a DevNation Community Member"
+          required: false
+        - label: "I want to work on this feature"
+          required: false
+        - label: "I'm willing to provide further clarification or assistance if needed."
+          required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: "I agree to follow this project's Code of Conduct"
+          required: true
+
+footer: |
+  ### Need help?
+  - Refer to [DevNation CMS Documentation](https://github.com/Ajiet-DevNation/DevNation-CMS)
+  - Join our [Discord Community](https://discord.gg/devnation)
