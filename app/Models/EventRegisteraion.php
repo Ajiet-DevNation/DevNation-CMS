@@ -29,7 +29,6 @@ class EventRegisteraion extends Model
     }
 
     protected $casts = [
-        'attended' => 'boolean',
     ];
 
     protected static function booted()
