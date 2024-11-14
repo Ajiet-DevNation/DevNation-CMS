@@ -1,0 +1,47 @@
+name: 📃 Documentation
+description: Suggest an idea or improvement for the documentation
+title: "📃 Documentation Update: "
+labels: 
+  - Documentation
+  - gssoc24-ext
+  - hacktoberfest
+  - hacktoberfest-accepted
+  - gssoc
+  - gssoc24
+  - gssoc-extd
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🚀 Thank you for contributing to the DevNation CMS Documentation!
+
+        Please provide as much detail as possible to ensure your suggestion is clear and actionable. Your contribution helps us improve the quality and accessibility of our documentation.
+
+  - type: textarea
+    id: doc-description
+    attributes:
+      label: 📄 Describe the Documentation Update
+      description: |
+        Please provide a clear and concise description of the documentation that needs to be updated or added. Be specific to help us understand the improvements required.
+      placeholder: "E.g., Update the installation guide to include steps for macOS users."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason-needed
+    attributes:
+      label: 💡 Why is This Update Needed?
+      description: |
+        Explain the importance of this documentation update. How will it help contributors or users of the project? Provide relevant examples if possible.
+      placeholder: "E.g., The current documentation lacks clarity for new contributors."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context or Screenshots
+      description: |
+        Add any other context, screenshots, or references that could help us understand the scope of this documentation update.
+      placeholder: "E.g., Attach a screenshot of the outdated section."

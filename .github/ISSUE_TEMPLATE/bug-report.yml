@@ -1,0 +1,108 @@
+name: DevNation CMS Bug Report 🐛
+description: File a bug report for the DevNation CMS project.
+title: "[Bug]: "
+labels: ["bug", "Hacktoberfest", "DevNation"]
+assignees: ["Ajiet-DevNation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <h1 align="center">DevNation CMS - Hacktoberfest 2024</h1>
+        <p align="center">
+          <img src="https://github.com/user-attachments/assets/5121ff55-079b-4393-9588-0cf2d2790909">
+        </p>
+        
+        <p align="center">
+          <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Ajiet-DevNation/DevNation-CMS">
+          <img alt="GitHub forks" src="https://img.shields.io/github/forks/Ajiet-DevNation/DevNation-CMS">
+          <img alt="contributors" src="https://img.shields.io/github/contributors/Ajiet-DevNation/DevNation-CMS">
+          <img alt="GitHub stars" src="https://img.shields.io/github/stars/Ajiet-DevNation/DevNation-CMS">
+        </p>
+        
+        ## 🎉 Welcome Hacktoberfest Contributors!
+        
+        Thank you for contributing to DevNation CMS! Please ensure you've checked for existing issues before filing a new bug report.
+        
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search the existing issues to see if a similar bug has already been reported.
+      options:
+        - label: I have searched the existing issues
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Provide a detailed description of the issue you encountered.
+      placeholder: Describe the bug in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what you expected to happen instead.
+      placeholder: Describe the expected behavior...
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the issue.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Add Screenshots
+      description: Upload screenshots to help explain your problem.
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Other
+
+  - type: checkboxes
+    id: roles
+    attributes:
+      label: Your Role in DevNation CMS
+      options:
+        - label: "I'm a GSSoC contributor"
+          required: false
+        - label: "I'm a Hacktoberfest contributor"
+          required: false
+        - label: "I'm a DevNation Community Member"
+          required: false
+        - label: "I want to work on this issue"
+          required: false
+        - label: "I'm willing to provide further clarification or assistance if needed."
+          required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: "I agree to follow this project's Code of Conduct"
+          required: true
+
+footer: |
+  ### Need help?
+  - Refer to [DevNation CMS Documentation](https://github.com/Ajiet-DevNation/DevNation-CMS)
+  - Join our [Discord Community](https://discord.gg/devnation)

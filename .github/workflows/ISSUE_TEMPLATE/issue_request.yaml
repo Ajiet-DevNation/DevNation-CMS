@@ -1,0 +1,62 @@
+name: 📑 Feature Request
+description: Suggest an idea or enhancement for this project
+title: "📑 Feature Request: "
+labels: 
+  - enhancement
+  - gssoc24-ext
+  - hacktoberfest
+  - hacktoberfest-accepted
+  - gssoc
+  - gssoc24
+  - gssoc-extd
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🚀 Thank you for taking the time to suggest a Feature Request!
+        Your feedback helps us improve the project. Please provide as much detail as possible to help us understand your suggestion.
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: 💡 What problem does this feature address?
+      description: |
+        Please provide a brief one-liner title summarizing the feature or the problem it addresses.
+      placeholder: "E.g., Improve user authentication flow for better security."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: 🛠️ Describe Your Solution
+      description: |
+        A clear and concise description of the feature you'd like to see implemented. How will it solve the problem?
+      placeholder: "E.g., Implement OAuth2.0 for secure user authentication."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 🔄 Alternative Solutions Considered
+      description: |
+        Describe any alternative solutions or features you have considered. This helps us explore different approaches.
+      placeholder: "E.g., Use JWT-based authentication as a fallback option."
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: |
+        Add any other context, details, or screenshots related to the feature request here.
+      placeholder: "E.g., Screenshots of similar implementations, links to relevant resources."
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📷 Relevant Screenshots (if available)
+      description: |
+        Attach any relevant screenshots that support your feature request.
+      placeholder: "E.g., Attach a mockup or design sketch here."
