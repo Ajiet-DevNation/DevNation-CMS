@@ -93,7 +93,9 @@ class EventsResource extends Resource
                     TextInput::make('attendence_code')->label('Attendance Code')->placeholder('Enter the attendance code'),
                     ToggleButtons::make('attendance_code_is_valid')->label('Attendace Code is Active?')->boolean()->grouped()->default(false),
                     ToggleButtons::make('notify_attendance')->label('Take Attendance?')->boolean()->grouped()->default(false),
-                ])->columns(4)->collapsible(),
+                    ToggleButtons::make('take_quiz')->label('Take Quiz?')->boolean()->grouped()->default(false),
+                    ToggleButtons::make('take_feedback')->label('Take Feedback?')->boolean()->grouped()->default(false),
+                ])->columns(3)->collapsible(),
                 Section::make('Event Settings')->schema([
                     ToggleButtons::make('is_featured')->label('is Featured?')->boolean()->grouped()->default(false),
                     ToggleButtons::make('requires_registration')->label('Requires Registration?')->boolean()->grouped()->default(false),
