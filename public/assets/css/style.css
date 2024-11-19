@@ -40655,3 +40655,18 @@ footer.bg-dark.angled.upper-start:before {
 .swiper-controls{
     display: none;
 }
+.Developers{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:2rem;
+    justify-content: space-around;
+    row-gap: 2rem;
+}
+.DevelopersD{
+    text-align: center;
+    padding-inline: 2rem;
+    
+}
+.DeveloperI{
+    border-radius: 50%;
+}

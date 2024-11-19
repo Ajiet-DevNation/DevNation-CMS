@@ -361,5 +361,177 @@
       </div>
     </div>
   </div>
+
+  <div class="DevelopersD">
+
+    <h2 class="display-4 mb-3 px-lg-14">Our Core Community Members</h2>
+    <div class="Developers">
+    
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+    <div class="swiper-slide" role="group" aria-label="3 / 20" style="width: 356.667px; margin-right: 30px;">
+      <article>
+        <a href="http://">
+          <figure class="overlay overlay-1 hover-scale rounded-circle mb-6 De">
+              <img style="object-fit:cover; width:100%; height:100% !important;" src="https://ui-avatars.com/api/?name=Donnell+Rodriguez&amp;color=7F9CF5&amp;background=EBF4FF" alt="Donnell Rodriguez">
+          </figure>
+          <div class="post-header">
+            
+            <h2 class="post-title h3 mb-3">
+              <center>Donnell Rodriguez</center>
+            </h2>
+          </div>
+        </a> 
+      </article>
+  </div>
+  </div>
 </section>
 @endsection

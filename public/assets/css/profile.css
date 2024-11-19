@@ -10,6 +10,9 @@
         justify-items: center !important;
         height: fit-content !important;
     }
+    .userSocial i{
+        color:#c8c8c8 !important;
+    }
     .acertificate {
         padding-left: 0rem !important;
     }
@@ -39,6 +42,7 @@
         justify-items: center;
         padding-left: 0px !important;
     }
+   
     .uil-image-edit::before{
         scale:1 !important;
         transform: translate(-50%, -50%) !important;
@@ -279,6 +283,9 @@ button {
     align-content: center;
 }
 
+#edit{
+    margin-top: 1rem;
+}
 #edit::before {
     content: "\eb0e";
     font-family: Unicons;
