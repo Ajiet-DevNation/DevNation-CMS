@@ -36,17 +36,6 @@ jobs:
       - name: Run migrations
         run: php artisan migrate --env=testing
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.18' 
-
-      - name: Install Node.js dependencies
-        run: npm install 
-
-      - name: Run front-end build
-        run: npm run dev  
-
       - name: Run tests
         run: php artisan test
 
