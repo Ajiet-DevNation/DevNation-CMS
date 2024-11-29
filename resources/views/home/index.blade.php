@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg" alt="" />
+    <figure class="position-absoute" style="bottom: 0; left: 0;"><img src="assets/img/photos/bg11.jpg" alt="bg-image" />
     </figure>
 </section>
 <section class="wrapper bg-gray">
@@ -280,7 +280,7 @@
                                             href="{{ route('event.show', $event->id) }}">
                                             @if ($event->banner == null)
                                             <img style="object-fit:cover; width:100%; height:100% !important;"
-                                                src="https://placehold.co/300x425" alt=""><span class="bg"></span>
+                                                src="https://placehold.co/300x425" alt="placehold"><span class="bg"></span>
                                             <figcaption>
                                                 <h5 class="from-top mb-0">Read More</h5>
                                             </figcaption>
@@ -398,7 +398,7 @@
 
                                         <img style="object-fit:cover; width:100%; height:100% !important;"
                                             src="{{ str_contains($member->image, 'ui-avatars.com') ? $member->image : Storage::url($member->image) }}"
-                                            alt=""><span class="bg"></span>
+                                            alt="member"><span class="bg"></span>
 
 
                                     </figure>
@@ -439,7 +439,7 @@
                     <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
                         <div class="col-md-8 col-lg-6 order-lg-2">
                             <figure class="rounded"><img src="assets/img/photos/about24.jpg"
-                                    srcset="./assets/img/photos/about24@2x.jpg 2x" alt=""></figure>
+                                    srcset="./assets/img/photos/about24@2x.jpg 2x" alt="about"></figure>
                         </div>
                         <!--/column -->
                         <div class="col-lg-6">
@@ -484,7 +484,7 @@
                     <div class="row gy-10 gx-lg-8 gx-xl-12 mb-14 mb-md-16 align-items-center">
                         <div class="col-md-8 col-lg-6">
                             <figure class="rounded"><img src="assets/img/photos/about25.jpg"
-                                    srcset="./assets/img/photos/about25@2x.jpg 2x" alt=""></figure>
+                                    srcset="./assets/img/photos/about25@2x.jpg 2x" alt="about"></figure>
                         </div>
                         <!--/column -->
                         <div class="col-lg-6">

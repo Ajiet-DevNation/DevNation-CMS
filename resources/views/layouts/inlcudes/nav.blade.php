@@ -26,7 +26,7 @@
                                                         <a class="dropdown-item" href="demo1.html">
                                                             <figure class="rounded lift d-none d-lg-block"><img
                                                                     src="assets/img/demos/mi1.jpg"
-                                                                    srcset="./assets/img/demos/mi1@2x.jpg 2x" alt="">
+                                                                    srcset="./assets/img/demos/mi1@2x.jpg 2x" alt="mi1">
                                                             </figure>
                                                             <span class="d-lg-none">Demo 1</span>
                                                         </a>
