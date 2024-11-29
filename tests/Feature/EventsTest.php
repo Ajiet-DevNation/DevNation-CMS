@@ -16,7 +16,7 @@ class EventsTest extends TestCase
         // Vytvor event bez banner obrázka
         $event = Events::create([
             'name' => 'Test Event',
-            'event_type' => 'Conference',
+            'event_type' => 'conference',
             'description' => 'This is a test event',
             'start_date' => now(),
             'end_date' => now()->addDays(1),
@@ -44,7 +44,7 @@ class EventsTest extends TestCase
         // Vytvor event s banner obrázkom
         $event = Events::create([
             'name' => 'Test Event with Banner',
-            'event_type' => 'Conference',
+            'event_type' => 'conference',
             'description' => 'This is a test event with a banner',
             'start_date' => now(),
             'end_date' => now()->addDays(1),
@@ -76,7 +76,7 @@ class EventsTest extends TestCase
         // Vytvor event s banner obrázkom
         $event = Events::create([
             'name' => 'Test Event with Resized Banner',
-            'event_type' => 'Conference',
+            'event_type' => 'conference',
             'description' => 'This is a test event with a resized banner',
             'start_date' => now(),
             'end_date' => now()->addDays(1),
