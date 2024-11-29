@@ -96,3 +96,4 @@ class EventsTest extends TestCase
         $this->assertEquals(300, $height);
     }
 }
+
