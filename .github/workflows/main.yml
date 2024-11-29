@@ -19,5 +19,8 @@ jobs:
         php-version: '8.2.12'  
     - name: Install dependencies  
       run: composer install
+    - name: Create SQLite database file
+      run: |
+        touch database/database.sqlite
     - name: Run tests       # Spustí testy cez Laravel Artisan.
       run: php artisan test
