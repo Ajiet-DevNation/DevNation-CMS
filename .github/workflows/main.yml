@@ -4,23 +4,38 @@ on:
   push:
     branches:
       - main
-      - feature/*  
-  pull_request:     # Spustí sa pri vytvorení pull requestu.
+      - feature/*
+  pull_request: 
 
 jobs:
   test:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code   
-      uses: actions/checkout@v2
-    - name: Set up PHP      
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2.12'  
-    - name: Install dependencies  
-      run: composer install
-    - name: Create SQLite database file
-      run: |
-        touch database/database.sqlite
-    - name: Run tests       # Spustí testy cez Laravel Artisan.
-      run: php artisan test
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2.12'
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Create SQLite database file
+        run: |
+          touch database/database.sqlite
+
+      - name: Set application key
+        run: |
+          php artisan key:generate
+
+      - name: Run migrations
+        run: php artisan migrate --env=testing
+
+      - name: Run tests
+        run: php artisan test
+      
+      - name: Clear cache
+        run: php artisan config:clear && php artisan cache:clear
