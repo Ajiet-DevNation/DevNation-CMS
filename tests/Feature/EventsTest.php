@@ -21,6 +21,7 @@ class EventsTest extends TestCase
             'start_date' => now(),
             'end_date' => now()->addDays(1),
             'location' => 'Test Location',
+            'status' => 'published',
             'speaker' => 'Test Speaker',
             'speaker_mail' => 'speaker@example.com', // Pridali sme speaker_mail
         ]);
@@ -48,6 +49,7 @@ class EventsTest extends TestCase
             'start_date' => now(),
             'end_date' => now()->addDays(1),
             'location' => 'Test Location',
+            'status' => 'published',
             'speaker' => 'Test Speaker',
             'speaker_mail' => 'speaker@example.com', // Pridali sme speaker_mail
             'banner' => $image->store('banners', 'public'),
@@ -79,6 +81,7 @@ class EventsTest extends TestCase
             'start_date' => now(),
             'end_date' => now()->addDays(1),
             'location' => 'Test Location',
+            'status' => 'published',
             'speaker' => 'Test Speaker',
             'speaker_mail' => 'speaker@example.com', // Pridali sme speaker_mail
             'banner' => $image->store('banners', 'public'),
@@ -93,3 +96,4 @@ class EventsTest extends TestCase
         $this->assertEquals(300, $height);
     }
 }
+
