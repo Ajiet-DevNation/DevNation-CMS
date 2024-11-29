@@ -21,7 +21,7 @@ jobs:
           php-version: '8.2.12'
 
       - name: Cache Composer dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.composer/cache
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
@@ -57,7 +57,7 @@ jobs:
           php-version: '8.2.12'
 
       - name: Cache Composer dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.composer/cache
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
