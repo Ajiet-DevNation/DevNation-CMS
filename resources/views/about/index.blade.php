@@ -27,7 +27,7 @@
   </div>
   <!-- /.container -->
   <figure class="position-relative" style="bottom: 0; left: 0; z-index: 2;"><img
-      src="{{ asset('assets/img/photos/bg12.jpg') }}" alt="" /></figure>
+      src="{{ asset('assets/img/photos/bg12.jpg') }}" alt="bg-image" /></figure>
 </section>
 
 <!-- /section -->
@@ -52,7 +52,7 @@
       </div>
       <div class="col-lg-6">
         <img src="{{ asset('assets/img/icons/lineal/megaphone.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"
-          alt="" />
+          alt="megaphone" />
         <h2 class="display-4 mb-3">Who Are We?</h2>
         <p class="lead fs-lg">We are a dynamic student-led association dedicated to fostering innovation,
           collaboration, and growth in the world of technology.</p>
@@ -86,7 +86,7 @@
     <div class="row mb-5">
       <div class="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
         <img src="{{ asset('assets/img/icons/lineal/list.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"
-          alt="" />
+          alt="list" />
         <h2 class="display-4 mb-4 px-lg-14">Our Approach to Empowering Tech Enthusiasts</h2>
       </div>
     </div>
@@ -228,7 +228,7 @@
     <div class="row mb-3">
       <div class="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
         <img src="{{ asset('assets/img/icons/lineal/team.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"
-          alt="" />
+          alt="Our Core Community Members" />
         <h2 class="display-4 mb-3 px-lg-14">Our Core Community Members</h2>
       </div>
     </div>
@@ -288,25 +288,25 @@
         <div class="row align-items-center counter-wrapper gy-6 text-center">
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/check.svg') }}"
-              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="check" />
             <h4 class="counter text-decoration-none">50+</h4>
             <p class="text-decoration-none">Events Organized</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/user.svg') }}"
-              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="user" />
             <h4 class="counter">1000+</h4>
             <p class="text-decoration-none">Active Members</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/briefcase-2.svg') }}"
-              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="briefcase" />
             <h4 class="counter">20+</h4>
             <p class="text-decoration-none">Industry Partners</p>
           </div>
           <div class="col-md-3">
             <img src="{{ asset('assets/img/icons/lineal/award-2.svg') }}"
-              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="" />
+              class="svg-inject icon-svg icon-svg-lg text-primary mb-3" alt="award" />
             <h4 class="counter">15+</h4>
             <p class="text-decoration-none">Hackathons Hosted</p>
           </div>
@@ -328,7 +328,7 @@
       </div>
       <div class="col-lg-6">
         <img src="{{ asset('assets/img/icons/lineal/telemarketer.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"
-          alt="" />
+          alt="telemarketer" />
         <h2 class="display-4 mb-8">Ready to join the DevNation community?</h2>
         <div class="d-flex flex-row">
           <div>

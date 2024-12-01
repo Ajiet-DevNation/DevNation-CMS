@@ -18,7 +18,7 @@
     <div class="row mb-3">
       <div class="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
         <img src="{{ asset('assets/img/icons/lineal/team.svg') }}" class="svg-inject icon-svg icon-svg-md mb-4"
-          alt="" />
+          alt="team" />
         <div class="mx-auto text-center">
           <h2 class="display-4 mb-3 px-lg-14">The Pillars of Our Community</h2>
           <p class="lead fs-lg mb-10">These individuals form the backbone of DevNation, each contributing their unique
