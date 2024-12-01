@@ -79,14 +79,16 @@ class EventController extends Controller
                         $registration->save();
                         return redirect()->back()->with('success', 'Attendance marked successfully.');
                     } else {
-                        dd('Attendance code is incorrect.');
-                        return redirect()->back()->with('error', 'You are not registered for this event.');
+                        // dd('Attendance code is incorrect.');
+                        return redirect()->back()->with('error', 'Attendance code is incorrect.');
                     }
                 } else {
-                    dd('Attendance code is not active.');
+                    // dd('Attendance code is not active.');
+                    return redirect()->back()->with('error', 'Attendance code is not active.');
                 }
             } else {
-                dd('You are not registered for this event.');
+                // dd('You are not registered for this event.');
+                return redirect()->back()->with('error', 'You are not registered for this event...');
             }
         }
     }

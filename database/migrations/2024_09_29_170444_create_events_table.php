@@ -31,6 +31,8 @@ return new class extends Migration
             $table->boolean('notify_attendees')->default(false);
             $table->boolean('notify_attendance')->default(false);
             $table->boolean('attendance_code_is_valid')->default(false);
+            $table->boolean('take_quiz')->default(false);
+            $table->boolean('take_feedback')->default(false);
             $table->timestamps();
         });
     }

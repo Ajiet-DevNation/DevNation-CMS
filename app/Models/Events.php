@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Notifications\EventNotification;
+use App\Notifications\FeedbackNotification;
 use App\Notifications\NotifyAttendenceOfEventToUserNotification;
 use App\Notifications\NotifyEventToUserNotification;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -20,7 +21,7 @@ class Events extends Model
         'end_date',
         'event_type',
         'location',
-        'banner', // Image field that we want to resize
+        'banner',
         'poster',
         'speaker',
         'speaker_mail',
@@ -31,6 +32,8 @@ class Events extends Model
         'has_certificate',
         'notify_attendees',
         'notify_attendance',
+        'take_quiz',
+        'take_feedback',
         'attendence_code',
         'attendance_code_is_valid',
     ];
@@ -72,10 +75,38 @@ class Events extends Model
                 $registrations = EventRegisteraion::where('event_id', $event->id)
                     ->where('status', 'success')
                     ->get();
-    
+
                 foreach ($registrations as $registration) {
                     $registration->user->notify(new NotifyAttendenceOfEventToUserNotification($event));
                 }
+            }
+
+            if ($event->isDirty('take_feedback') && $event->take_feedback) {
+                $feedbackForm = FeedBackForm::where('event_id', $event->id)->first();
+                $registrations = EventRegisteraion::where('event_id', $event->id)->get();
+                // dd($feedbackForm);
+                $feedbackForm->feedback_active = true;
+                $feedbackForm->save();
+                if ($feedbackForm && $feedbackForm->feedback_active) {
+                    foreach ($registrations as $registration) {
+                        $registration->user->notify(new FeedbackNotification($feedbackForm->form_link));
+                    }
+                }
+
+            }
+            
+            if ($event->isDirty('take_quiz') && $event->take_quiz) {
+                $feedbackForm = FeedBackForm::where('event_id', $event->id)->first();
+                $registrations = EventRegisteraion::where('event_id', $event->id)->get();
+                // dd($feedbackForm);
+                $feedbackForm->feedback_active = true;
+                $feedbackForm->save();
+                if ($feedbackForm && $feedbackForm->feedback_active) {
+                    foreach ($registrations as $registration) {
+                        $registration->user->notify(new FeedbackNotification($feedbackForm->form_link));
+                    }
+                }
+
             }
         });
     }
@@ -114,5 +145,10 @@ class Events extends Model
         } catch (\Exception $e) {
             return $imagePath; // Return the original path if resizing fails
         }
+    }
+
+    public function feedbackForm()
+    {
+        return $this->hasOne(FeedBackForm::class, 'event_id');
     }
 }

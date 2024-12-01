@@ -30,6 +30,11 @@
                         value="{{ $profile->name }}" />
                 </div>
             </div>
+            <div class="userSocial">
+                <a href="#"><i class="uil uil-linkedin"></i></a>
+                            <a href="#"><i class="uil uil-instagram"></i></a>
+                            <a href="#"><i class="uil uil-github"></i></a>
+            </div>
             <button type="button" id = 'edit' class="tab_btn">
                 <span>EDIT</span>
             </button>
