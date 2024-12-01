@@ -70,13 +70,13 @@
                                     style="width: 320px;height: 220px;">
                                     @if ($event->banner == null)
                                         <img style="object-fit:cover; width:100%; height:100% !important;"
-                                            src="https://placehold.co/300x300" alt=""><span class="bg"></span>
+                                            src="https://placehold.co/300x300" alt="placehold"><span class="bg"></span>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>
                                         </figcaption>
                                     @else
                                         <img style="object-fit:cover; width:100%; height:100% !important;"
-                                            src="{{ Storage::url($event->banner) }}" alt=""><span
+                                            src="{{ Storage::url($event->banner) }}" alt="banner"><span
                                             class="bg"></span>
                                         <figcaption>
                                             <h5 class="from-top mb-0">Read More</h5>

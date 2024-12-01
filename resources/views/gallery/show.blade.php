@@ -17,7 +17,7 @@
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 mx-auto">
             @for ($i = 0; $i < ceil(count($gallery->gallery_images) / 3); $i++)
                 <figure class="hover-scale rounded mb-6">
-                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt=""><span class="bg"></span>
+                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt="gallery_image"><span class="bg"></span>
                 </figure>
             @endfor
         </div>
@@ -25,7 +25,7 @@
         <div class="col-lg-4 mb-4 mb-lg-0">
             @for ($i = ceil(count($gallery->gallery_images) / 3); $i < ceil((2 * count($gallery->gallery_images)) / 3); $i++)
                 <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt=""><span class="bg"></span>
+                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt="gallery_image"><span class="bg"></span>
                 </figure>
             @endfor
 
@@ -39,7 +39,7 @@
 
             @for ($i = ceil((2 * count($gallery->gallery_images)) / 3); $i < count($gallery->gallery_images); $i++)
                 <figure class="overlay overlay-1 hover-scale rounded mb-6">
-                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt=""><span class="bg"></span>
+                    <img src="{{ Storage::url($gallery->gallery_images[$i]) }}" alt="gallery_image"><span class="bg"></span>
                 </figure>
             @endfor
 
