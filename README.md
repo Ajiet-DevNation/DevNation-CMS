@@ -1,7 +1,7 @@
 <h1 align="center">DevNation CMS - Hacktoberfest 2024</h1>
-<p align="center">
+<!-- <p align="center">
      <img src="https://github.com/user-attachments/assets/5121ff55-079b-4393-9588-0cf2d2790909"> 
-</p>
+</p> -->
 
 <p align="center">
    <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Ajiet-DevNation/DevNation-CMS">
