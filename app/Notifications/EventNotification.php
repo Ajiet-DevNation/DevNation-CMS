@@ -17,12 +17,14 @@ class EventNotification extends Notification
 
     protected $event;
     protected $registeration;
-    public function __construct( $event, $registeration )
+
+    // Constructor for submission to give events and registration
+    public function __construct($event, $registeration)
     {
         $this->event = $event;
         $this->registeration = $registeration;
     }
-
+    
     /**
      * Get the notification's delivery channels.
      *
@@ -36,17 +38,19 @@ class EventNotification extends Notification
     /**
      * Get the mail representation of the notification.
      */
+    // Email design using HTML
     public function toMail(object $notifiable): MailMessage
     {
-        return (new MailMessage)
-        ->subject('Event Registration Successful')
-        ->greeting('Greetings! ' . $notifiable->name)
-        ->line('Your registration for the event'. $this->event->name .' has been successfully completed.')
-        ->line('status of your registeration for the '. $this->event->name .' is ' . $this->registeration->status .'')
-        ->line('We look forward to your esteemed presence at the event.')
-        ->action('View Event', url('/event-details/' . $this->event->id))
-        ->line('Thank you for completing your registration!');
-    }
+       //Returning MailMessage with HTML code 
+       return (new MailMessage)
+       ->subject('Event Registration Successful')
+       ->view('events.event_registration', [
+           'userName' => $notifiable->name,
+           'eventName' => $this->event->name,
+           'registrationStatus' => $this->registeration->status,
+           'eventUrl' => url('/event-details/' . $this->event->id),
+       ]);
+}
 
     /**
      * Get the array representation of the notification.

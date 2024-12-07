@@ -1,0 +1,44 @@
+name: DevNation-CMS CI
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request: 
+
+jobs:
+  build_and_test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2.12'
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Create .env file from .env.example
+        run: cp .env.example .env || echo "APP_KEY=base64:$(openssl rand -base64 32)" > .env
+
+      - name: Generate application key
+        run: php artisan key:generate
+
+      - name: Create SQLite database
+        run: |
+          touch database/database.sqlite
+
+      - name: Run migrations
+        run: php artisan migrate --env=testing
+
+      - name: Run tests
+        run: php artisan test
+
+      - name: Clear cache
+        run: php artisan config:clear && php artisan cache:clear
